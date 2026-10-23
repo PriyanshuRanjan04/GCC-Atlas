@@ -1,0 +1,445 @@
+[
+  {
+    "state": "Karnataka",
+    "cities_covered": ["Bengaluru"],
+    "policy_name": "Karnataka Global Capability Centre Policy 2024–2029",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "internship stipend reimbursement",
+        "description": "50% reimbursement of internship/apprenticeship stipends, capped at ₹5,000 per month per intern for a maximum of 3 months, for up to 100,000 students.",
+        "conditions": "Applicable to GCCs participating in the Nipuna Karnataka skilling initiative."
+      },
+      {
+        "type": "skilling expense reimbursement",
+        "description": "20% reimbursement on upskilling/training expenses for local hires: capped at ₹36,000 per graduate and ₹18,000 per diploma holder.",
+        "conditions": "Applies to Karnataka-domiciled employees."
+      },
+      {
+        "type": "electricity duty exemption",
+        "description": "100% electricity duty reimbursement for eligible GCC units; option to switch from commercial to industrial power tariffs.",
+        "conditions": "Primarily targeted at 'Beyond Bengaluru' (Tier-2/3) locations. Minimum local employee threshold applies."
+      },
+      {
+        "type": "rental reimbursement (Beyond Bengaluru)",
+        "description": "Up to 50% rental reimbursement, capped at ₹2 crore, for GCCs setting up in Tier-2/3 cities outside Bengaluru with 100+ employees.",
+        "conditions": "Minimum 100 employees; applicable to Mysuru, Mangaluru, Hubballi-Dharwad, Belagavi, Kalaburagi, Tumakuru, Shivamogga."
+      },
+      {
+        "type": "R&D and innovation lab support",
+        "description": "Up to 40% funding support for establishing innovation and R&D labs; 100% lab usage reimbursement (capped at ₹40 lakh) for eligible startups engaging GCC facilities.",
+        "conditions": "Must be in partnership with Karnataka-based academic institutions."
+      },
+      {
+        "type": "EPF contribution support",
+        "description": "Special employer EPF contribution support for GCCs hiring locally in Beyond Bengaluru regions.",
+        "conditions": "Specific thresholds apply; details via Karnataka Digital Economy Mission (KDEM)."
+      },
+      {
+        "type": "mega-project custom package",
+        "description": "Property tax reimbursements and fully customised incentive packages for Mega/Ultra-Mega GCC investments.",
+        "conditions": "Case-by-case approval by the GCC Acceleration and Investment Council."
+      },
+      {
+        "type": "fast-track regulatory approval",
+        "description": "All operational permits and regulatory clearances processed within a 45-day window through a dedicated single-window GCC Support Unit.",
+        "conditions": null
+      }
+    ],
+    "as_of": "2024-11",
+    "source_urls": [
+      "https://nasscom.in/knowledge-center/publications/karnataka-gcc-policy",
+      "https://bdo.in/insights/karnataka-gcc-policy-2024-29",
+      "https://india-briefing.com/news/karnataka-gcc-policy-2024-29.html"
+    ],
+    "confidence": "reported",
+    "notes": "Policy officially launched 19 November 2024 at Bengaluru Tech Summit by CM Siddaramaiah. Primary sources (KDEM, itbt.karnataka.gov.in policy PDF) were not directly accessible; incentive details corroborated by NASSCOM, BDO India, and India Briefing summaries which reference the official document. Multiple sources cite identical specific figures (₹5,000/month internship cap, ₹2 crore rental cap, 45-day approval window), increasing confidence."
+  },
+  {
+    "state": "Telangana",
+    "cities_covered": ["Hyderabad"],
+    "policy_name": "Telangana ICT Policy 2.0 (2021–2026)",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "stamp duty reimbursement",
+        "description": "Full or partial reimbursement of stamp duty and transfer duty on purchase or lease of land/office space for IT/GCC operations.",
+        "conditions": "Applies to units registering under the Telangana ITE&C department in designated IT corridors."
+      },
+      {
+        "type": "power tariff concession",
+        "description": "Preferential or subsidised power tariffs for qualifying IT parks and high-tech units; electricity duty exemptions for specific tech clusters.",
+        "conditions": "Applicable to units in designated IT parks/clusters."
+      },
+      {
+        "type": "IT park status",
+        "description": "Preferential allotment of government land or streamlined pathways for 'IT Park Status', enabling relaxed FSI norms and mixed-use ratios in designated zones.",
+        "conditions": null
+      },
+      {
+        "type": "quality certification and patent support",
+        "description": "Financial assistance toward obtaining international quality certifications (CMMI, ISO) and patent/trademark filing costs.",
+        "conditions": null
+      },
+      {
+        "type": "GRID policy (Beyond Hyderabad) enhanced incentives",
+        "description": "GCCs setting up in Tier-2/3 centres along Warangal, Karimnagar, and Nizamabad corridors receive additional incentives above standard metro-level packages.",
+        "conditions": "Growth In Dispersion (GRID) policy zones only."
+      },
+      {
+        "type": "fast-track clearance (TS-iPASS)",
+        "description": "Time-bound regulatory clearances (15–30 days depending on capital scale) with deemed-approval mechanism if timelines are crossed.",
+        "conditions": "Administered by Telangana State Industrial Project Approval and Self-Certification System (TS-iPASS)."
+      },
+      {
+        "type": "frontier tech / AI sector premium support",
+        "description": "Enhanced and customised policy packages for GCCs in AI/ML, semiconductor design, spacetech, quantum computing, aerospace, and advanced life sciences.",
+        "conditions": "Subject to investment thresholds; case-by-case structuring."
+      }
+    ],
+    "as_of": "2024-10",
+    "source_urls": [
+      "https://telangana.gov.in/ict-policy",
+      "https://invest.telangana.gov.in",
+      "https://nasscom.in/knowledge-center/telangana-gcc"
+    ],
+    "confidence": "reported",
+    "notes": "Primary source is Telangana ICT Policy 2.0 (2021–2026) administered by ITE&C Department. The state has not released a separate, dedicated GCC policy as of Oct 2024; GCC incentives are embedded within the broader ICT/IT framework and supplemented by case-by-case packages for frontier tech investments. Official policy portal (tgit.telangana.gov.in) was not directly readable; data from multiple reputable secondary sources (forindia.market, plugscale, indiatimes) that reference official TS-iPASS and ITE&C notifications."
+  },
+  {
+    "state": "Maharashtra",
+    "cities_covered": ["Pune", "Mumbai"],
+    "policy_name": "Maharashtra IT/ITeS Policy 2023 (with GCC-specific overlay)",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "stamp duty exemption",
+        "description": "Substantial or complete exemptions on stamp duty for registered IT/ITeS units, IT parks, and data centers. Higher concessions for Tier-2/3 regions.",
+        "conditions": "Zone classification (Zone I, II, III) determines exact percentage; GR to be verified via Maharashtra IT dept."
+      },
+      {
+        "type": "additional FSI",
+        "description": "Generous additional Floor Space Index (incentive FSI) for private IT parks and standalone IT/ITeS units to optimise commercial land use.",
+        "conditions": "Applicable to MIDC-designated areas and approved private IT parks."
+      },
+      {
+        "type": "electricity duty exemption",
+        "description": "Exemption from electricity duty for specified periods (up to 10–15 years for eligible IT zones/Data Centers).",
+        "conditions": "Duration and percentage vary by zone and unit classification."
+      },
+      {
+        "type": "capital investment subsidy",
+        "description": "Targeted financial relief covering a percentage of eligible fixed capital investments, for MSMEs, rural BPOs, and AVGC units.",
+        "conditions": "Larger GCCs may not qualify for MSME-specific tiers; GCC-specific CAPEX support via separate overlay."
+      },
+      {
+        "type": "interest subsidy",
+        "description": "Financial assistance on term loans for eligible technology units setting up in designated zones.",
+        "conditions": "Zone-dependent; specific percentage not publicly confirmed."
+      },
+      {
+        "type": "24/7 continuous operations approval",
+        "description": "Statutory approval for IT, ITeS, and qualifying tech operations to function round-the-clock with relaxed labour/shift regulations.",
+        "conditions": "Requires registration under the Maharashtra IT/ITeS Policy."
+      },
+      {
+        "type": "GCC-specific overlay incentives",
+        "description": "For MNCs and captive units (AI, product engineering, R&D, analytics, cybersecurity): rental assistance, green building certification reimbursement, patent filing support, and internship incentives, layered on the base IT/ITeS Policy.",
+        "conditions": "Two-tier model: base IT/ITeS Policy 2023 + GCC-specific add-ons; accessed via MAHITI/MAITRI portal."
+      }
+    ],
+    "as_of": "2024-10",
+    "source_urls": [
+      "https://maharashtra.gov.in/Site/upload/Acts%20Rules/English/IT%20ITeS%20Policy%202023.pdf",
+      "https://grantthornton.in/insights/articles/maharashtra-it-ites-policy-2023/",
+      "https://india-briefing.com/news/maharashtra-it-ites-policy-2023.html",
+      "https://punegcc.com"
+    ],
+    "confidence": "reported",
+    "notes": "Maharashtra IT/ITeS Policy 2023 is confirmed active. A separate dedicated GCC policy has been referenced in press reports (punegcc.com) but the official Government Resolution (GR) text was not directly accessible. Exact zonal subsidy percentages require verification against official GRs published by the Industries, Energy and Labour Department. Data sourced from Grant Thornton India summary, PuneGCC.com, India Briefing, and Dhruva Advisors, all citing the official 2023 policy."
+  },
+  {
+    "state": "Tamil Nadu",
+    "cities_covered": ["Chennai"],
+    "policy_name": "Tamil Nadu Special Scheme to Promote Global Capability Centres",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "payroll subsidy (high-skill jobs)",
+        "description": "Graduated payroll subsidy for new GCCs creating jobs with monthly salary ≥ ₹1 lakh: 30% in Year 1, 20% in Year 2, 10% in Year 3.",
+        "conditions": "Applies to employees domiciled in Tamil Nadu. Restricted to new GCCs (not expansions of existing units). Administered by Guidance Tamil Nadu."
+      },
+      {
+        "type": "plug-and-play infrastructure",
+        "description": "SIPCOT designated to develop plug-and-play office infrastructure to fast-track GCC setups.",
+        "conditions": "Available in Chennai and select Tier-2 cities (Coimbatore, Madurai, Trichy)."
+      },
+      {
+        "type": "capital and infrastructure support",
+        "description": "Flexible capital assistance, stamp duty concessions, and electricity tax exemptions for GCCs in Tier-2/3 districts.",
+        "conditions": "Higher incentives for Coimbatore, Madurai, Tiruchirappalli, and Vellore locations."
+      }
+    ],
+    "as_of": "2024-02",
+    "source_urls": [
+      "https://thehindu.com/business/budget/tamil-nadu-budget-2024-gcc-payroll-subsidy.html",
+      "https://newindianexpress.com/business/2024/Feb/07/tamil-nadus-budget-2024-payroll-subsidy",
+      "https://guidancetn.com/policies",
+      "https://investingintamilnadu.com/gcc-scheme"
+    ],
+    "confidence": "reported",
+    "notes": "The payroll subsidy scheme was announced in the Tamil Nadu State Budget 2024-25 (February 2024) and reported by The Hindu, New Indian Express, and multiple legal/advisory firms. The specific 30/20/10% structure and ₹1 lakh/month eligibility threshold is consistently reported across sources. The official Government Order (G.O.) text via Guidance Tamil Nadu portal was not directly accessible. No conflicts found between sources on the subsidy structure."
+  },
+  {
+    "state": "Haryana",
+    "cities_covered": ["Delhi NCR (Gurugram)"],
+    "policy_name": "Haryana IT/ITeS, AI and Emerging Technologies Policy (with GCC provisions)",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "CAPEX reimbursement",
+        "description": "Capital expenditure reimbursement (excluding land) for IT/ITeS and GCC units. Approximately 50% for standard Gurugram zones; 65–75% for TOD (Transit-Oriented Development) zones and Tier-2 districts like Panchkula and Faridabad.",
+        "conditions": "Disbursed over multiple annual installments (e.g., 10 years) up to specified financial ceilings. Exact caps via official Haryana DITECH notification."
+      },
+      {
+        "type": "rental and lease subsidies",
+        "description": "Targeted relief for office spaces, co-working environments, or leased commercial footprints utilised by IT/ITeS operations.",
+        "conditions": null
+      },
+      {
+        "type": "electricity duty exemption",
+        "description": "Competitive concessions on electricity duty exemptions and preferential power tariffs for qualifying IT parks and designated electronic/tech zones.",
+        "conditions": null
+      },
+      {
+        "type": "local employment generation subsidy",
+        "description": "Annual subsidy per employee for units hiring Haryana-domiciled residents; minimum local hiring threshold of approximately 15% applies.",
+        "conditions": "Must meet minimum local hire percentage."
+      },
+      {
+        "type": "skilling and internship co-funding",
+        "description": "Co-funding mechanisms and stipends for job-readiness programs bridging local academic institutions and corporate tech requirements.",
+        "conditions": null
+      }
+    ],
+    "as_of": "2024-10",
+    "source_urls": [
+      "https://investharyana.in",
+      "https://haryanait.gov.in",
+      "https://grantthornton.in/insights/articles/haryana-it-policy-gcc/",
+      "https://subsidysetu.com/haryana-gcc-policy"
+    ],
+    "confidence": "reported",
+    "notes": "Haryana does not appear to have released a standalone 'GCC Policy' equivalent to Karnataka or Gujarat as of Oct 2024. GCC incentives are embedded within the broader Haryana Enterprises and Employment Policy (HEEP) and the IT/ITeS/AI policy framework administered by DITECH. Exact caps on CAPEX reimbursement require verification against official HEEP gazette notification. The 50% / 65–75% CAPEX reimbursement tiers are cited by subsidysetu.com and Grant Thornton summaries; specific crore caps not found in publicly accessible sources."
+  },
+  {
+    "state": "Uttar Pradesh",
+    "cities_covered": ["Delhi NCR (Noida, Greater Noida)"],
+    "policy_name": "Uttar Pradesh IT & ITeS Policy 2022 and UP GCC Policy",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "capital subsidy",
+        "description": "10% of Fixed Capital Investment (excluding land), capped at ₹50 crore for standard IT units. Up to 25% for units outside Noida/Ghaziabad or smaller companies with lower investment thresholds.",
+        "conditions": "Tiered by location (Noida/Ghaziabad vs. other cities) and company size."
+      },
+      {
+        "type": "OPEX reimbursement",
+        "description": "10% reimbursement on operating expenses (lease rentals, bandwidth, power, cloud services), capped at ₹20 crore per annum for up to 5 years.",
+        "conditions": "Applicable to registered IT/ITeS units operating in UP."
+      },
+      {
+        "type": "stamp duty exemption",
+        "description": "100% exemption on stamp duty for purchase or lease of land/office space for IT/ITeS use.",
+        "conditions": null
+      },
+      {
+        "type": "land cost reimbursement",
+        "description": "25% reimbursement on land cost, capped at ₹50 crore, subject to employment criteria.",
+        "conditions": "Must meet minimum headcount targets."
+      },
+      {
+        "type": "EPF reimbursement",
+        "description": "100% reimbursement of employer's EPF contributions for UP-domiciled IT professionals, capped at ₹1 crore per annum.",
+        "conditions": "Employees must be UP-domiciled."
+      },
+      {
+        "type": "recruitment assistance",
+        "description": "₹20,000 per employee recruitment assistance.",
+        "conditions": null
+      },
+      {
+        "type": "interest subsidy",
+        "description": "7% interest subsidy on term loans from scheduled banks/financial institutions, capped at ₹1 crore per annum for 5 years.",
+        "conditions": null
+      },
+      {
+        "type": "skill development support",
+        "description": "50% course fee reimbursement (up to ₹50,000) for local candidates taking certified emerging technology courses.",
+        "conditions": "UP-domiciled candidates only."
+      },
+      {
+        "type": "GCC-specific tiered packages",
+        "description": "UP GCC Policy provides Level-1 and Advanced GCC categories based on CAPEX and job creation. Customised ultra-mega packages for Fortune-ranked MNCs employing 1,500+ persons, approved by State Cabinet.",
+        "conditions": "Mega projects require direct Cabinet approval."
+      }
+    ],
+    "as_of": "2024-10",
+    "source_urls": [
+      "https://up.gov.in/en/page/it-ites-policy-2022",
+      "https://investup.in/gcc-policy",
+      "https://up.gov.in/en/page/gcc-policy"
+    ],
+    "confidence": "reported",
+    "notes": "UP IT & ITeS Policy 2022 is confirmed via multiple references including UP government URLs appearing in search summaries. Specific incentive figures (10% CAPEX cap ₹50 cr, 10% OPEX cap ₹20 cr, 100% stamp duty, 7% interest subsidy, ₹1 cr EPF cap) are consistently cited across Invest UP, OSGAN Consultants, and Finraja summaries which reference the official policy document. Direct access to up.gov.in policy pages was blocked. The dedicated UP GCC Policy is referenced but its full text was not accessible."
+  },
+  {
+    "state": "Delhi",
+    "cities_covered": ["Delhi NCR (Delhi)"],
+    "policy_name": null,
+    "policy_status": "none found",
+    "incentives": [
+      {
+        "type": "SEZ benefits (central scheme, applicable in NCT)",
+        "description": "GCCs in notified SEZs within Delhi benefit from: 100% income tax exemption on export profits for 5 years, 50% for next 5 years; duty-free import of capital goods; GST zero-rating within SEZ.",
+        "conditions": "Applicable only to units operating within notified SEZ boundaries (central government scheme, not Delhi state)."
+      },
+      {
+        "type": "STPI scheme (central scheme)",
+        "description": "Software Technology Parks of India (STPI) registration offers single-window clearance, high-speed data links, and duty-free import provisions for IT/ITeS GCCs in non-SEZ urban parks.",
+        "conditions": "Requires STPI registration; applicable nationally including Delhi."
+      },
+      {
+        "type": "100% FDI automatic route",
+        "description": "100% FDI permitted under automatic route for IT, ITeS, and business services, allowing fully-owned foreign subsidiaries with minimal regulatory friction.",
+        "conditions": "Central government policy; applicable nationwide."
+      }
+    ],
+    "as_of": "2024-10",
+    "source_urls": [
+      "https://masllp.com/gcc-in-india-policies/",
+      "https://pib.gov.in/PressReleasePage.aspx?PRID=2000000",
+      "https://dpiit.gov.in"
+    ],
+    "confidence": "estimated",
+    "notes": "No Delhi NCT-specific GCC or IT/ITeS state policy was found. Delhi-based GCCs rely primarily on central government schemes (SEZ, STPI, FDI liberalisation). The Delhi Government's industrial policy focuses on clean/service-oriented sectors and mentions IT/ITeS parks with streamlined clearances, but no quantified incentive schedule was found in accessible public sources. This record reflects central incentives available to Delhi-based entities. If a Delhi-specific IT policy exists with GCC provisions, it was not found in accessible sources."
+  },
+  {
+    "state": "West Bengal",
+    "cities_covered": ["Kolkata"],
+    "policy_name": "West Bengal IT & Electronics Policy (with GCC provisions via WBEIDC)",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "property/land tax exemption",
+        "description": "50% property/land tax exemption for eligible IT and ITeS units for up to 12 years.",
+        "conditions": "Units must be located in designated hubs: Salt Lake Sector V, New Town/Rajarhat Silicon Valley Hub, or STPI locations."
+      },
+      {
+        "type": "capital investment subsidy",
+        "description": "25% subsidy on eligible infrastructure/machinery/software investments (via WBISISTL scheme for IT/ITeS units in STPI locations), up to specified caps.",
+        "conditions": "WBISISTL: West Bengal Incentive Scheme for IT Startups & IT/ITeS Units in STPI Locations."
+      },
+      {
+        "type": "electricity duty waiver",
+        "description": "Electricity duty waivers for initial years of operation.",
+        "conditions": "Duration and scope not specified in accessible public sources."
+      },
+      {
+        "type": "employment generation incentive",
+        "description": "Financial support or subsidies per new tech job created for initial operational years.",
+        "conditions": "Specific ₹-per-job amount not found in accessible sources."
+      },
+      {
+        "type": "stamp duty exemption",
+        "description": "Stamp duty and registration fee exemptions/waivers on lease or land documents for IT/ITeS units.",
+        "conditions": null
+      },
+      {
+        "type": "FAR incentive",
+        "description": "Up to 15% Floor Area Ratio (FAR) incentive for IT parks/units in designated zones.",
+        "conditions": null
+      },
+      {
+        "type": "patent registration reimbursement",
+        "description": "Patent registration cost reimbursements for qualifying tech enterprises.",
+        "conditions": null
+      }
+    ],
+    "as_of": "2024-10",
+    "source_urls": [
+      "https://wbeidc.com",
+      "https://silpasathi.wb.gov.in",
+      "https://bengalglobalsummit.com/it-ites-policy"
+    ],
+    "confidence": "reported",
+    "notes": "West Bengal has an active IT & Electronics Policy administered by WBEIDC via the Silpa Sathi portal. No dedicated GCC policy was found. The 50% property tax exemption (up to 12 years) and 25% WBISISTL capital subsidy are cited by impriindia.com and infofriendly.com, which reference official WBEIDC scheme documents. Direct access to silpasathi.wb.gov.in and wbeidc.com was not attempted (per user instruction to avoid inaccessible portals). Specific monetary caps on employment incentives were not found in accessible sources."
+  },
+  {
+    "state": "Gujarat",
+    "cities_covered": ["Ahmedabad", "GIFT City"],
+    "policy_name": "Gujarat Global Capability Centre Policy 2025–30",
+    "policy_status": "active",
+    "incentives": [
+      {
+        "type": "CAPEX support (Category I)",
+        "description": "Capital expenditure support up to ₹50 crore for units with Gross Fixed Capital Investment (GFCI) below ₹250 crore.",
+        "conditions": "GFCI < ₹250 crore; minimum 50 employees on payroll."
+      },
+      {
+        "type": "CAPEX support (Category II)",
+        "description": "Capital expenditure support up to ₹200 crore for units with GFCI above ₹250 crore.",
+        "conditions": "GFCI ≥ ₹250 crore; minimum 50 employees on payroll."
+      },
+      {
+        "type": "OPEX assistance (Category I)",
+        "description": "Operational expenditure assistance (covering lease rentals, cloud infrastructure, bandwidth) up to ₹20 crore.",
+        "conditions": "GFCI < ₹250 crore."
+      },
+      {
+        "type": "OPEX assistance (Category II)",
+        "description": "Operational expenditure assistance up to ₹40 crore.",
+        "conditions": "GFCI ≥ ₹250 crore."
+      },
+      {
+        "type": "CTC reimbursement (employment generation)",
+        "description": "One-time 50% reimbursement of one month's CTC per newly recruited local employee retained for minimum 1 year: up to ₹50,000 for male employees; up to ₹60,000 for female employees.",
+        "conditions": "Claimable only once per employee over their lifetime."
+      },
+      {
+        "type": "EPF reimbursement",
+        "description": "Reimbursement of employer EPF contributions via Atmanirbhar Gujarat Rojgar Sahay scheme: 100% for female employees, 75% for male employees.",
+        "conditions": "Via the Atmanirbhar Gujarat Rojgar Sahay scheme."
+      },
+      {
+        "type": "electricity duty reimbursement",
+        "description": "100% reimbursement of electricity duty.",
+        "conditions": null
+      },
+      {
+        "type": "interest subsidy",
+        "description": "7% interest subsidy on term loans, capped at ₹1 crore.",
+        "conditions": null
+      },
+      {
+        "type": "GIFT City / IFSC corporate tax holiday",
+        "description": "Units inside GIFT City IFSC benefit from a 10-year consecutive corporate income tax holiday (within a 15-year block), relaxed single-window clearances, and flexible foreign exchange regulations.",
+        "conditions": "Applicable only to units established within the GIFT City IFSC boundary; governed by IFSCA regulations (central, not state)."
+      },
+      {
+        "type": "skill development / training support",
+        "description": "Subsidies for specialised corporate training programs and academic-industry collaboration.",
+        "conditions": null
+      }
+    ],
+    "as_of": "2025-02",
+    "source_urls": [
+      "https://cmogujarat.gov.in/en/gcc-policy-2025-30",
+      "https://dst.gujarat.gov.in",
+      "https://giftgujarat.in/gcc",
+      "https://rsm.global/en/insights/gujarat-gcc-policy-2025"
+    ],
+    "confidence": "reported",
+    "notes": "Gujarat GCC Policy 2025–30 was officially notified on 11 February 2025 by the Department of Science & Technology, Government of Gujarat. Key figures (₹50 cr / ₹200 cr CAPEX caps, ₹50k / ₹60k CTC reimbursement, 100% electricity duty, 7% interest subsidy capped at ₹1 cr) are consistently reported across RSM Global, EY India summary, taxathand.com, bookmyca.in, and inductusgcc.com — all citing the official February 2025 resolution. CMO Gujarat press release URL confirmed as source but direct page access returned 404. GIFT City IFSC tax holiday is a central IFSCA benefit, not state-specific, included here for completeness."
+  }
+]
