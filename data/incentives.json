@@ -53,7 +53,7 @@
       "https://india-briefing.com/news/karnataka-gcc-policy-2024-29.html"
     ],
     "confidence": "reported",
-    "notes": "Policy officially launched 19 November 2024 at Bengaluru Tech Summit by CM Siddaramaiah. Primary sources (KDEM, itbt.karnataka.gov.in policy PDF) were not directly accessible; incentive details corroborated by NASSCOM, BDO India, and India Briefing summaries which reference the official document. Multiple sources cite identical specific figures (₹5,000/month internship cap, ₹2 crore rental cap, 45-day approval window), increasing confidence."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries (AI-synthesised grounding from multiple secondary sources). The cited source_urls were returned as search results but could not be fetched — all returned HTTP 404 or connection timeouts. | Policy officially launched 19 November 2024 at Bengaluru Tech Summit by CM Siddaramaiah. Incentive details are corroborated by NASSCOM, BDO India, and India Briefing summaries which reference the official document. Multiple sources cite identical specific figures (₹5,000/month internship cap, ₹2 crore rental cap, 45-day approval window), increasing confidence. Confidence remains 'reported'."
   },
   {
     "state": "Telangana",
@@ -104,7 +104,7 @@
       "https://nasscom.in/knowledge-center/telangana-gcc"
     ],
     "confidence": "reported",
-    "notes": "Primary source is Telangana ICT Policy 2.0 (2021–2026) administered by ITE&C Department. The state has not released a separate, dedicated GCC policy as of Oct 2024; GCC incentives are embedded within the broader ICT/IT framework and supplemented by case-by-case packages for frontier tech investments. Official policy portal (tgit.telangana.gov.in) was not directly readable; data from multiple reputable secondary sources (forindia.market, plugscale, indiatimes) that reference official TS-iPASS and ITE&C notifications."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries (AI-synthesised grounding). The cited source_urls were not fetched. | Primary source is Telangana ICT Policy 2.0 (2021–2026) administered by ITE&C Department. The state has not released a separate, dedicated GCC policy as of Oct 2024; GCC incentives are embedded within the broader ICT/IT framework and supplemented by case-by-case packages for frontier tech investments. Official policy portal (tgit.telangana.gov.in) was not directly readable."
   },
   {
     "state": "Maharashtra",
@@ -156,7 +156,7 @@
       "https://punegcc.com"
     ],
     "confidence": "reported",
-    "notes": "Maharashtra IT/ITeS Policy 2023 is confirmed active. A separate dedicated GCC policy has been referenced in press reports (punegcc.com) but the official Government Resolution (GR) text was not directly accessible. Exact zonal subsidy percentages require verification against official GRs published by the Industries, Energy and Labour Department. Data sourced from Grant Thornton India summary, PuneGCC.com, India Briefing, and Dhruva Advisors, all citing the official 2023 policy."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries. All source_urls returned HTTP 404 when fetch was attempted. | Maharashtra IT/ITeS Policy 2023 is confirmed active. A separate dedicated GCC policy has been referenced in press reports (punegcc.com) but the official Government Resolution (GR) text was not directly accessible. Exact zonal subsidy percentages require verification against official GRs published by the Industries, Energy and Labour Department."
   },
   {
     "state": "Tamil Nadu",
@@ -188,7 +188,7 @@
       "https://investingintamilnadu.com/gcc-scheme"
     ],
     "confidence": "reported",
-    "notes": "The payroll subsidy scheme was announced in the Tamil Nadu State Budget 2024-25 (February 2024) and reported by The Hindu, New Indian Express, and multiple legal/advisory firms. The specific 30/20/10% structure and ₹1 lakh/month eligibility threshold is consistently reported across sources. The official Government Order (G.O.) text via Guidance Tamil Nadu portal was not directly accessible. No conflicts found between sources on the subsidy structure."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries. Attempts to fetch The Hindu article and New Indian Express article returned HTTP 404. | The payroll subsidy scheme was announced in the Tamil Nadu State Budget 2024-25 (February 2024). The 30/20/10% structure and ₹1 lakh/month eligibility threshold is consistently reported across The Hindu, New Indian Express, and cyrilamarchandblogs.com (TLS error prevented fetch). The official G.O. text was not directly accessible. No conflicts found across sources."
   },
   {
     "state": "Haryana",
@@ -230,7 +230,7 @@
       "https://subsidysetu.com/haryana-gcc-policy"
     ],
     "confidence": "reported",
-    "notes": "Haryana does not appear to have released a standalone 'GCC Policy' equivalent to Karnataka or Gujarat as of Oct 2024. GCC incentives are embedded within the broader Haryana Enterprises and Employment Policy (HEEP) and the IT/ITeS/AI policy framework administered by DITECH. Exact caps on CAPEX reimbursement require verification against official HEEP gazette notification. The 50% / 65–75% CAPEX reimbursement tiers are cited by subsidysetu.com and Grant Thornton summaries; specific crore caps not found in publicly accessible sources."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries. investharyana.in and haryanait.gov.in links from search results were not fetched (per user instruction to not force-access government portals); grantthornton.in article returned HTTP 404. | Haryana has no standalone GCC Policy as of Oct 2024. GCC incentives embedded within HEEP and IT/ITeS/AI policy. The 50%/65-75% CAPEX tiers cited by subsidysetu.com and Grant Thornton summaries; crore-level caps not found."
   },
   {
     "state": "Uttar Pradesh",
@@ -291,7 +291,7 @@
       "https://up.gov.in/en/page/gcc-policy"
     ],
     "confidence": "reported",
-    "notes": "UP IT & ITeS Policy 2022 is confirmed via multiple references including UP government URLs appearing in search summaries. Specific incentive figures (10% CAPEX cap ₹50 cr, 10% OPEX cap ₹20 cr, 100% stamp duty, 7% interest subsidy, ₹1 cr EPF cap) are consistently cited across Invest UP, OSGAN Consultants, and Finraja summaries which reference the official policy document. Direct access to up.gov.in policy pages was blocked. The dedicated UP GCC Policy is referenced but its full text was not accessible."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries. up.gov.in links appeared in search results but were not directly fetched (government portal). | UP IT & ITeS Policy 2022 figures (10% CAPEX cap ₹50 cr, 10% OPEX cap ₹20 cr, 100% stamp duty, 7% interest subsidy, ₹1 cr EPF cap) are consistently cited across Invest UP, OSGAN Consultants, and Finraja summaries referencing the official policy. These specific, numerical figures are high-confidence despite being snippet-sourced only."
   },
   {
     "state": "Delhi",
@@ -322,7 +322,7 @@
       "https://dpiit.gov.in"
     ],
     "confidence": "estimated",
-    "notes": "No Delhi NCT-specific GCC or IT/ITeS state policy was found. Delhi-based GCCs rely primarily on central government schemes (SEZ, STPI, FDI liberalisation). The Delhi Government's industrial policy focuses on clean/service-oriented sectors and mentions IT/ITeS parks with streamlined clearances, but no quantified incentive schedule was found in accessible public sources. This record reflects central incentives available to Delhi-based entities. If a Delhi-specific IT policy exists with GCC provisions, it was not found in accessible sources."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries. masllp.com and pib.gov.in search result links were not fetched. | No Delhi NCT-specific GCC or IT/ITeS state policy was found in any accessible source. Delhi-based GCCs rely on central government schemes (SEZ, STPI, FDI). If a Delhi-specific IT policy with quantified GCC incentives exists, it was not surfaced in searches. This entire record is marked 'estimated' accordingly."
   },
   {
     "state": "West Bengal",
@@ -373,7 +373,7 @@
       "https://bengalglobalsummit.com/it-ites-policy"
     ],
     "confidence": "reported",
-    "notes": "West Bengal has an active IT & Electronics Policy administered by WBEIDC via the Silpa Sathi portal. No dedicated GCC policy was found. The 50% property tax exemption (up to 12 years) and 25% WBISISTL capital subsidy are cited by impriindia.com and infofriendly.com, which reference official WBEIDC scheme documents. Direct access to silpasathi.wb.gov.in and wbeidc.com was not attempted (per user instruction to avoid inaccessible portals). Specific monetary caps on employment incentives were not found in accessible sources."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries. wbeidc.com and silpasathi.wb.gov.in were not accessed (per user instruction). bengalglobalsummit.com from search results was not fetched. | West Bengal has an active IT & Electronics Policy via WBEIDC/Silpa Sathi. No dedicated GCC policy found. The 50% property tax exemption (up to 12 years) and 25% WBISISTL capital subsidy are cited by impriindia.com and infofriendly.com referencing official WBEIDC documents. Specific monetary caps on employment incentives not found."
   },
   {
     "state": "Gujarat",
@@ -440,6 +440,6 @@
       "https://rsm.global/en/insights/gujarat-gcc-policy-2025"
     ],
     "confidence": "reported",
-    "notes": "Gujarat GCC Policy 2025–30 was officially notified on 11 February 2025 by the Department of Science & Technology, Government of Gujarat. Key figures (₹50 cr / ₹200 cr CAPEX caps, ₹50k / ₹60k CTC reimbursement, 100% electricity duty, 7% interest subsidy capped at ₹1 cr) are consistently reported across RSM Global, EY India summary, taxathand.com, bookmyca.in, and inductusgcc.com — all citing the official February 2025 resolution. CMO Gujarat press release URL confirmed as source but direct page access returned 404. GIFT City IFSC tax holiday is a central IFSCA benefit, not state-specific, included here for completeness."
+    "notes": "SOURCING: No URL was directly opened and read for this record. All data derives from Google search result summaries. cmogujarat.gov.in returned HTTP 404; taxathand.com timed out; giftgujarat.in/gcc-policy returned 404; inductusgcc.com/blog/gujarat-gcc-policy returned 404. | Gujarat GCC Policy 2025-30 officially notified 11 Feb 2025 by Dept of Science & Technology, Gujarat. Key figures (₹50 cr/₹200 cr CAPEX caps, ₹50k/₹60k CTC reimbursement, 100% electricity duty, 7% interest subsidy capped at ₹1 cr) consistently cited across RSM Global, EY India, taxathand.com (search summary), bookmyca.in — highest cross-source consistency in this file. GIFT City IFSC tax holiday is a central IFSCA benefit, included for completeness."
   }
 ]

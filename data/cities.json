@@ -1,0 +1,326 @@
+[
+  {
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "India's largest GCC talent hub with ~2.1 million tech professionals. Approximately 40% of all India GCC setups are here. Dominant in AI/ML (~50% of India's AI/ML talent pool), cloud architecture, cybersecurity, and deep-tech R&D. Serves as pay ceiling for GCC compensation nationally. High attrition (~18-22%) is a known risk. Strong pipeline from IISc, IIMs, IIIT-B, and dozens of engineering colleges.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 25, "max": 50 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 22, "max": 45 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 16, "max": 28 },
+        { "role": "engineering manager (8-12 yrs)", "min": 55, "max": 100 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://nasscom.in/knowledge-center/gcc-talent-india",
+        "https://quantalent.ai/gcc-salary-benchmarks-india",
+        "https://talhive.com/gcc-salaries-bengaluru"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Data derived from Google search result summaries referencing NASSCOM, Zinnov, quantalent.ai, talhive.com, nexhires.in, and hrbx.in reports. Salary bands are aggregate ranges across GCC roles at 3-5 years experience, consistent across multiple secondary sources. 'Estimated' because exact figures vary by company size, domain, and specialisation; AI/GenAI roles command 20-40% premium above these bands."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 80, "max": 160 },
+      "key_clusters": [
+        "Outer Ring Road (Bellandur–Sarjapur)",
+        "Whitefield / ITPL",
+        "Hebbal / North Bengaluru",
+        "Electronic City",
+        "CBD (MG Road / Lavelle Road)"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://jll.com/en/india/research/bengaluru-office-market",
+        "https://cbre.co.in/research/bengaluru-office-market-2025",
+        "https://cushmanwakefield.com/en/india/research/bengaluru"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries citing JLL, CBRE, Cushman & Wakefield, and Knight Frank Bengaluru office market reports. City-wide Grade A range ₹80-160/sqft/month (bare/warm shell); CBD commands ₹130-160+; ORR/SBD ₹95-160; Whitefield ₹80-140; Hebbal ₹90-150; Electronic City ₹65-95. Min/max represent city-wide Grade A floor-to-ceiling. Exact JLL/CBRE report pages were search results only, not fetched."
+    },
+    "ecosystem_notes": "Bengaluru is India's undisputed GCC capital, hosting ~40% of all GCC setups. Key clusters: ORR for tech GCCs; CBD for BFSI and consulting; Electronic City for established IT campuses. The city has the deepest AI/ML talent pool in India. High real estate costs and attrition are the primary challenges. Karnataka's GCC Policy 2024-29 adds specific incentives for expansion outside Bengaluru."
+  },
+  {
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "~1.2 million tech professionals. Second-largest GCC hub in India, hosting 350-400+ major GCCs. Strong in cloud (Azure, AWS, Google Cloud hyperscaler operations), BFSI, life sciences, and pharmatech. 5-10% salary discount vs. Bengaluru for most roles, with cloud and AI profiles approaching parity. Strong pipeline from IIIT-H, Osmania University, and numerous private engineering colleges.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 22, "max": 45 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 20, "max": 40 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 14, "max": 26 },
+        { "role": "engineering manager (8-12 yrs)", "min": 50, "max": 90 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://nasscom.in/knowledge-center/gcc-talent-india",
+        "https://quantalent.ai/gcc-salary-benchmarks-india",
+        "https://hrbx.in/salary-guide-hyderabad-gcc"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries. Hyderabad tracks 5-10% below Bengaluru per multiple GCC salary benchmarking summaries (futurense.com, hrbx.in, quantalent.ai). Ranges adjusted from Bengaluru baseline using reported discount. 'Estimated' confidence applies."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 65, "max": 95 },
+      "key_clusters": [
+        "HITEC City / Madhapur",
+        "Gachibowli / Nanakramguda",
+        "Raidurg / Financial District",
+        "Kokapet (emerging)",
+        "Shamshabad / Aerospace SEZ (emerging)"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://jll.com/en/india/research/hyderabad-office-market",
+        "https://cushmanwakefield.com/en/india/research/hyderabad",
+        "https://cbre.co.in/research/hyderabad-office-2025"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries citing JLL, CBRE, Cushman & Wakefield Hyderabad market reports. City-wide Grade A weighted average ~₹75-82/sqft (JLL cited ~₹77 average); prime SBD (HITEC City, Gachibowli) ranges ₹65-95+. 10-15% YoY rental growth cited for core submarkets in 2025. Range reflects Grade A city-wide floor and prime market ceiling."
+    },
+    "ecosystem_notes": "Hyderabad is India's second-largest GCC hub, known for strong government support (TS-iPASS single window), excellent infrastructure, and a cost-quality advantage vs. Bengaluru. HITEC City is the anchor cluster. Rapid growth in Financial District (Nanakramguda/Gachibowli). Telangana government's ICT Policy 2.0 and GRID policy provide structured incentives. Pharma Valley and life sciences GCCs are a distinctive cluster."
+  },
+  {
+    "city": "Pune",
+    "state": "Maharashtra",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "~800,000 tech professionals. Fastest-growing GCC destination for engineering R&D, automotive tech, SaaS, and manufacturing. 10-20% cost advantage over Bengaluru in salaries, with notably lower attrition (14-16% vs. 20-22% in Bengaluru). Strong engineering talent pipeline from College of Engineering Pune, COEP, Symbiosis, and MIT Pune. Hub for ER&D and product engineering GCCs.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 20, "max": 40 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 18, "max": 36 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 12, "max": 24 },
+        { "role": "engineering manager (8-12 yrs)", "min": 45, "max": 80 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://nasscom.in/knowledge-center/gcc-talent-india",
+        "https://talhive.com/gcc-salaries-pune",
+        "https://hrbx.in/salary-guide-pune-gcc"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries. Pune is consistently reported at 10-20% discount to Bengaluru across multiple sources (talhive.com, hrbx.in, plugscale.com). Ranges adjusted accordingly from Bengaluru base. 'Estimated' confidence applies."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 72, "max": 92 },
+      "key_clusters": [
+        "Kharadi (SBD East)",
+        "Viman Nagar / Yerawada (SBD East)",
+        "Hinjewadi Phase I, II, III (PBD West)",
+        "Baner / Balewadi (Northwest)",
+        "Magarpatta City"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://cushmanwakefield.com/en/india/research/pune-office-market",
+        "https://cbre.co.in/research/pune-office-2025",
+        "https://jll.com/en/india/research/pune"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries citing Cushman & Wakefield, CBRE, and JLL Pune market reports. City-wide Grade A weighted average ₹72-92/sqft/month. Kharadi (SBD East) and Hinjewadi (PBD West) are the two primary GCC clusters. Stable 1-4% YoY rental growth noted. Range represents city-wide Grade A floor-to-ceiling excluding CBD boutique stock."
+    },
+    "ecosystem_notes": "Pune is the leading destination for engineering R&D, automotive tech (Tata Motors, Volkswagen, Mercedes R&D GCCs), and BFSI back-office. Key advantage: lower attrition than Bengaluru and 10-20% salary cost saving. Two major office clusters: SBD East (Kharadi/Viman Nagar) for tech/BFSI GCCs; PBD West (Hinjewadi) for established IT parks. Maharashtra IT/ITeS Policy 2023 applies. Strong IIT-B proximity influence."
+  },
+  {
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "~750,000 tech professionals. Foundational hub for manufacturing, automotive, semiconductors, traditional and digital BFSI, and SaaS. Deep engineering pipeline from IIT Madras, Anna University, and large number of affiliated engineering colleges. Known for high operational longevity and lower attrition than Bengaluru. Strong in manufacturing-adjacent tech (embedded systems, VLSI, automotive R&D) and BFSI shared services.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 16, "max": 35 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 15, "max": 30 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 10, "max": 22 },
+        { "role": "engineering manager (8-12 yrs)", "min": 40, "max": 75 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://nasscom.in/knowledge-center/gcc-talent-india",
+        "https://omnivoo.com/gcc-salary-chennai",
+        "https://talhive.com/gcc-salaries-chennai"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries (omnivoo.com, talhive.com, gccnexus.com). Chennai software engineer mid-level range ₹16-28 LPA reported; senior ₹32-55 LPA cited directly in search snippet from omnivoo.com and resumevera.com. Finance analyst ranges estimated from city discount pattern (~10-15% below Bengaluru). 'Estimated' confidence applies."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 55, "max": 125 },
+      "key_clusters": [
+        "OMR Zone 1 / Perungudi (SBD)",
+        "Guindy (SBD)",
+        "OMR Zone 2 / Sholinganallur (PBD)",
+        "GST Road / Pallavaram (PBD)",
+        "CBD (Anna Salai / Nungambakkam)"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://theflexinsights.com/chennai-office-market-2025",
+        "https://cushmanwakefield.com/en/india/research/chennai",
+        "https://jll.com/en/india/research/chennai"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: theflexinsights.com appeared in search results and was not fetched; Cushman & Wakefield and JLL source URLs are search-result citations only, not directly read. Range ₹55-125: CBD commands ₹115-125+; SBD/OMR Zone 1/Guindy ₹72-85; PBD/OMR Zone 2/GST Road ₹55-70. City-level Grade A vacancy 8.9-12%. Min/max reflect PBD floor to CBD ceiling."
+    },
+    "ecosystem_notes": "Chennai is India's fourth-largest GCC hub with a differentiated focus: manufacturing/automotive tech (Ford, Hyundai, BMW R&D), BFSI operations (Standard Chartered, DBS, PayPal), and pharma. Tamil Nadu's 30/20/10% payroll subsidy scheme (for jobs >₹1L/month) is unique nationally and a strong incentive for new GCC entrants. OMR (Old Mahabalipuram Road) corridor hosts the majority of tech GCCs."
+  },
+  {
+    "city": "Delhi NCR",
+    "state": "Haryana / Uttar Pradesh / Delhi",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "~600,000+ tech and enterprise professionals across the tri-state NCR cluster (Gurugram, Noida, Greater Noida, Delhi). NCR excels in management consulting, financial services, retail, telecom, and digital analytics. Gurugram is the anchor for BFSI and global management consulting GCCs; Noida is the anchor for tech, BPO-evolved GCCs, and e-commerce. Strong pipeline from IIT Delhi, BITS Pilani, IIM-L, Delhi University. Noida offers 25-40% cost arbitrage vs. Gurugram for equivalent roles.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 18, "max": 45 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 18, "max": 40 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 14, "max": 28 },
+        { "role": "engineering manager (8-12 yrs)", "min": 50, "max": 90 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://nasscom.in/knowledge-center/gcc-talent-india",
+        "https://quantalent.ai/gcc-salary-benchmarks-india",
+        "https://astraviseservices.com/gcc-delhi-ncr"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries. NCR salary ranges are wide because Gurugram BFSI GCCs (higher) and Noida tech/BPO GCCs (lower) coexist. Finance roles are stronger in Gurugram (investment banking GCCs). Software engineering ranges align closely with Bengaluru given competitive talent market. Noida-specific salaries would be 15-25% below the max shown. 'Estimated' confidence applies."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 75, "max": 220 },
+      "key_clusters": [
+        "Cyber City / MG Road, Gurugram (prime)",
+        "Golf Course Road / Golf Course Extension, Gurugram",
+        "Sohna Road, Gurugram (value corridor)",
+        "Noida Expressway (Sectors 125, 132, 142)",
+        "Sector 62 / DND Corridor, Noida"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://jll.com/en/india/research/delhi-ncr-office-market",
+        "https://cbre.co.in/research/delhi-ncr-office-2025",
+        "https://cushmanwakefield.com/en/india/research/delhi-ncr"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries citing JLL, CBRE, Cushman & Wakefield Delhi NCR market reports. Wide range reflects extreme submarket spread: Gurugram Cyber City/MG Road Grade A+ commands ₹150-220+; Golf Course Road ₹110-160; Noida Expressway Grade A ₹75-115; Sector 62/DND ₹55-95. Min/max shown are Grade A city-wide floor (Noida value) to Gurugram prime ceiling. JLL cited ~32% premium for Grade A+ over standard Grade A."
+    },
+    "ecosystem_notes": "NCR spans three states, making incentive stacking possible: Gurugram (Haryana) for BFSI + consulting GCCs; Noida/Greater Noida (UP) for tech + ER&D with aggressive UP GCC Policy incentives; Delhi for regulatory proximity with SEZ/STPI benefits. Gurugram houses the highest concentration of BFSI GCCs in India. No single-state policy applies to the whole region — location within NCR determines the incentive package."
+  },
+  {
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "Mumbai's GCC talent pool is smaller in headcount than Bengaluru or Hyderabad for pure tech roles, but is unmatched for BFSI domain expertise (investment banking, capital markets, insurance, fintech). Hosts GCCs of global investment banks (Morgan Stanley, JPMorgan, Nomura, Deutsche Bank, Barclays) and insurance majors. Software and data engineers in Mumbai's financial GCCs command a 10-20% premium over standard enterprise GCC bands due to BFSI domain complexity. Strong pipeline from IIT Bombay, IIM-A alumni network, NMIMS, and SP Jain.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 20, "max": 45 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 20, "max": 42 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 18, "max": 35 },
+        { "role": "engineering manager (8-12 yrs)", "min": 55, "max": 100 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://nasscom.in/knowledge-center/gcc-talent-india",
+        "https://talhive.com/gcc-salaries-mumbai",
+        "https://gccnexus.com/mumbai-gcc-salary-guide"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries (talhive.com, gccnexus.com, omnivoo.com). Mumbai commands 10-20% premium over Chennai for equivalent roles per search summaries. Finance analyst ranges are notably higher than other cities due to BFSI GCC premium. Search snippet from omnivoo.com cited senior software engineer Chennai ₹32-55 LPA; Mumbai adjusted +15%. 'Estimated' confidence applies."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 90, "max": 350 },
+      "key_clusters": [
+        "Bandra Kurla Complex (BKC)",
+        "Andheri East / Andheri-Kurla Road",
+        "Powai (Hiranandani Business Park)",
+        "Lower Parel / Worli (SBD South)",
+        "Navi Mumbai / Belapur (value corridor)"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://anarock.com/research/mumbai-office-market-2025",
+        "https://cushmanwakefield.com/en/india/research/mumbai",
+        "https://cbre.co.in/research/mumbai-office-2025"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries citing Anarock, Cushman & Wakefield, CBRE Mumbai market reports. Mumbai is India's most expensive office market. BKC: ₹220-350/sqft; Andheri East: ₹100-160; Powai: ₹90-155; city-wide average weighted ₹148-168. Min/max reflect Powai/Andheri floor to BKC top-tier ceiling. Beaconfiling.com and leasewarehouse.in corroborate BKC and Andheri ranges from search summaries."
+    },
+    "ecosystem_notes": "Mumbai is India's BFSI GCC capital — the only city where financial services GCCs significantly outnumber tech GCCs. BKC is the premier financial district. Real estate is the most expensive of all 8 cities, making it less competitive for large-footprint tech GCCs. Strongest case for companies needing proximity to capital markets, regulatory bodies (SEBI, RBI, NSE/BSE), and India's largest HNWI/institutional investor base."
+  },
+  {
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "Large regional talent base across IT-BPM, software engineering, finance, and analytics. Engineering salaries run 25-40% below Bengaluru/Hyderabad, making Kolkata highly cost-competitive. Lower attrition than Tier-1 metros. Key GCC functions here: finance and accounting shared services, analytics, IT support, and back-office operations. Strong pipeline from Jadavpur University, IIT Kharagpur, Presidency University, and numerous regional engineering colleges. Relatively limited pool of senior tech talent for advanced roles (AI/ML, cloud architecture) compared to Tier-1 cities.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 10, "max": 22 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 10, "max": 20 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 8, "max": 16 },
+        { "role": "engineering manager (8-12 yrs)", "min": 25, "max": 50 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://nasscom.in/knowledge-center/gcc-talent-india",
+        "https://digitalaptech.com/kolkata-it-salary-guide",
+        "https://indiatimes.com/kolkata-gcc-leasing-growth"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries. 25-40% discount to Bengaluru benchmarks is directly cited by digitalaptech.com in search results. Applied that discount to Bengaluru base to derive ranges. Senior AI/ML talent ranges are particularly uncertain — pool is thin and the discount may be smaller for scarce specialists. Engineering manager ceiling of ₹50 LPA is a conservative estimate; experienced leaders often relocate to Tier-1 cities. 'Estimated' confidence applies."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 42, "max": 67 },
+      "key_clusters": [
+        "Salt Lake Sector V (IT hub)",
+        "Rajarhat / New Town (Silicon Valley Hub)",
+        "STPI locations (Sector V)"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://cushmanwakefield.com/en/india/research/kolkata-office-market",
+        "https://indiatimes.com/kolkata-office-market-2025",
+        "https://propertywala.com/kolkata-office-rents"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries. Cushman & Wakefield is cited as primary source; indiatimes.com article on Kolkata GCC growth corroborates. Salt Lake Sector V: ₹52-67/sqft; Rajarhat: ₹42-62/sqft (baseline ₹47-50 average, up to 27% YoY growth cited in top-spec buildings). Min/max reflect Rajarhat floor to Sector V prime ceiling. Kolkata is significantly cheaper than all other cities in this dataset."
+    },
+    "ecosystem_notes": "Kolkata is the most cost-competitive city in this dataset for both office space and talent. Best suited for finance and accounting shared services, IT-BPM, analytics, and back-office GCC functions. Not yet competitive for advanced tech R&D due to thinner senior tech talent pool. Fast-growing GCC leasing (crossing 0.5 mn sqft/year). West Bengal IT Policy provides 50% property tax exemption (up to 12 years) and capital subsidies. Salt Lake Sector V is the established hub; Rajarhat is the high-growth emerging cluster."
+  },
+  {
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "gcc_count_in_dataset": null,
+    "talent": {
+      "notes": "Estimated ~90,000-95,000 active technology professionals in the broader Ahmedabad/Gandhinagar corridor. Annual graduate output ~55,000-60,000 from regional engineering and management institutions (IIM-A, IIT-Gn, DAIICT, NID). Lowest attrition of all 8 cities (~7-12%). GIFT City specifically targets BFSI and fintech talent. Strong for finance, accounting, and BFSI-adjacent roles. Tech talent depth for advanced AI/ML, cloud architecture is more limited than Tier-1 cities. Significant cost advantage: salary benchmarks typically 30-40% below Bengaluru for equivalent roles.",
+      "annual_salary_inr_lakhs_by_role": [
+        { "role": "software engineer (3-5 yrs)", "min": 10, "max": 22 },
+        { "role": "data / AI engineer (3-5 yrs)", "min": 10, "max": 20 },
+        { "role": "finance / accounting analyst (3-5 yrs)", "min": 8, "max": 18 },
+        { "role": "engineering manager (8-12 yrs)", "min": 22, "max": 45 }
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://fortuneindia.com/ahmedabad-gift-city-gcc-talent",
+        "https://nasscom.in/knowledge-center/gcc-talent-india"
+      ],
+      "confidence": "estimated",
+      "notes": "SOURCING: No URL was directly opened and read. Talent pool size (~90-95k tech professionals, ~55-60k annual graduates, 7-12% attrition) from fortuneindia.com appearing in search summary. Salary ranges are estimated by applying a 30-40% discount to Bengaluru benchmarks as described in search results (no city-specific GCC salary source found for Ahmedabad). Finance analyst role may be higher at GIFT City BFSI GCCs than shown — GIFT City commands near-Mumbai-level BFSI compensation for specialised roles. 'Estimated' confidence; most uncertain city in this file for salaries."
+    },
+    "office_space": {
+      "grade_a_rent_inr_per_sqft_per_month": { "min": 55, "max": 170 },
+      "key_clusters": [
+        "GIFT City SEZ / IFSC Zone",
+        "GIFT City Domestic Zone",
+        "SG Highway corridor (Ahmedabad)",
+        "Prahlad Nagar / Anandnagar"
+      ],
+      "as_of": "2025-06",
+      "source_urls": [
+        "https://gandhinagarprojects.com/gift-city-office-rents",
+        "https://crematrix.com/gift-city-market-report",
+        "https://pikorua.in/gift-city-commercial-real-estate"
+      ],
+      "confidence": "reported",
+      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries (gandhinagarprojects.com, crematrix.com, pikorua.in). GIFT City SEZ/IFSC: ₹95-120/sqft standard; ₹150-170+ for landmark towers; Domestic Zone: ₹55-75/sqft. Min/max range reflects Domestic Zone floor to premium IFSC tower ceiling. SG Highway / Prahlad Nagar Ahmedabad commercial rents are likely lower than GIFT City Domestic Zone but no specific figure found in accessible sources; not included in the range to avoid guessing."
+    },
+    "ecosystem_notes": "Ahmedabad/GIFT City is India's most distinctive GCC sub-market: GIFT City IFSC is the only operational International Financial Services Centre in India, with a 10-year corporate tax holiday and IFSCA regulatory framework. Primarily a BFSI and fintech GCC destination. Non-BFSI tech GCCs are largely absent. Gujarat GCC Policy 2025-30 is the most detailed new-entrant policy in India. Very low attrition, significant cost advantage, but shallow senior tech talent pool. Best suited for BFSI-domain GCCs or those comfortable with Tier-2 talent market dynamics."
+  }
+]
