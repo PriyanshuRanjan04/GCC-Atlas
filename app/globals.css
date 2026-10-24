@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ─────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --canvas: #0A0F1E;
+    --surface: #111827;
+    --surface-2: #1A2235;
+    --border: #1F2D45;
+    --teal: #00C9A7;
+    --teal-dim: #00A88A;
+    --text-primary: #E5E7EB;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+  }
+
+  html {
+    background-color: var(--canvas);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-text-primary font-sans antialiased;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231F2D45' fill-opacity='0.25'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--canvas); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--teal-dim); }
+}
+
+/* ── Component utilities ─────────────────────────────────────────────────── */
+@layer components {
+  .card {
+    @apply bg-surface border border-border rounded-xl shadow-card transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:border-teal/30 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal text-text-inverse font-semibold text-sm transition-all duration-200 hover:bg-teal-dim hover:shadow-teal active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border bg-surface-2 text-text-primary font-medium text-sm transition-all duration-200 hover:border-teal/40 hover:bg-surface active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full bg-surface-2 border border-border rounded-lg px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-teal/60 focus:ring-1 focus:ring-teal/20 transition-colors;
+  }
+
+  .select-field {
+    @apply input-field appearance-none cursor-pointer;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase text-teal;
+  }
+
+  .null-value {
+    @apply text-text-muted italic text-sm;
+  }
+
+  .teal-glow {
+    text-shadow: 0 0 30px rgba(0, 201, 167, 0.4);
+  }
+}
