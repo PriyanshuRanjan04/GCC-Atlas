@@ -65,8 +65,8 @@ export async function POST(req: NextRequest): Promise<Response> {
   // ── 3. Check GROQ_API_KEY availability ──────────────────────────────────
   if (!process.env.GROQ_API_KEY) {
     const fallbackText = retrieval.computedAnswer
-      ? `Ask Atlas AI is currently in offline mode (API key not configured). Here are the exact numbers computed directly from our database:\n\n${retrieval.computedAnswer}`
-      : "I don't have access to the AI service right now (GROQ_API_KEY is not configured on this server). Please explore the Directory and City Explorer to view the raw sourced records.";
+      ? `The AI assistant is temporarily unavailable. Here are the exact figures from the dataset:\n\n${retrieval.computedAnswer}`
+      : "The AI assistant is temporarily unavailable. Please explore the Directory and City Explorer to view the sourced records.";
 
     return textStreamResponse(fallbackText, retrieval.sources);
   }
@@ -106,8 +106,8 @@ ${retrieval.contextText}`;
 
     // Unavailable / Network fallback
     const errorFallback = retrieval.computedAnswer
-      ? `The AI service is temporarily unavailable, but here is the exact data from our database:\n\n${retrieval.computedAnswer}`
-      : "Ask Atlas is temporarily unavailable. Please try your question again in a moment, or browse the Directory and City Explorer.";
+      ? `The AI assistant is temporarily unavailable. Here are the exact figures from the dataset:\n\n${retrieval.computedAnswer}`
+      : "The AI assistant is temporarily unavailable. Please try your question again in a moment, or browse the Directory and City Explorer.";
 
     return textStreamResponse(errorFallback, retrieval.sources);
   }

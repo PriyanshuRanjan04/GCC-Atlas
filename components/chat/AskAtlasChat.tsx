@@ -23,11 +23,10 @@ const STARTER_QUESTIONS = [
 ];
 
 interface Props {
-  embedded?: boolean; // true on /chat page, false in side drawer
   onClose?: () => void;
 }
 
-export function AskAtlasChat({ embedded = true, onClose }: Props) {
+export function AskAtlasChat({ onClose }: Props) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -159,11 +158,11 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
       style={{
         display: "flex",
         flexDirection: "column",
-        height: embedded ? "720px" : "100%",
-        maxHeight: embedded ? "calc(100vh - 12rem)" : "100vh",
+        height: "100%",
+        maxHeight: "100vh",
         background: "var(--color-surface)",
-        borderRadius: embedded ? "0.875rem" : "0",
-        border: embedded ? "1px solid var(--color-border)" : "none",
+        borderRadius: 0,
+        border: "none",
         overflow: "hidden",
         position: "relative",
       }}
@@ -171,21 +170,22 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
       {/* ── Chat Header ─────────────────────────────────────────────────── */}
       <div
         style={{
-          padding: "1rem 1.25rem",
+          padding: "1rem 1.5rem",
           borderBottom: "1px solid var(--color-border)",
           background: "var(--color-surface-2)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           gap: "1rem",
+          flexShrink: 0,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
           <div
             style={{
-              width: "2rem",
-              height: "2rem",
-              borderRadius: "0.5rem",
+              width: "2.25rem",
+              height: "2.25rem",
+              borderRadius: "0.625rem",
               background: "var(--color-teal-muted)",
               border: "1px solid rgba(0, 201, 167, 0.3)",
               display: "flex",
@@ -199,14 +199,14 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
           </div>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1rem", color: "var(--color-text-primary)" }}>
+              <span style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.0625rem", color: "var(--color-text-primary)" }}>
                 Ask Atlas
               </span>
               <span
                 style={{
                   fontSize: "0.6875rem",
                   fontWeight: 600,
-                  padding: "0.1rem 0.4375rem",
+                  padding: "0.125rem 0.5rem",
                   borderRadius: "9999px",
                   background: "rgba(0, 201, 167, 0.12)",
                   color: "var(--color-teal)",
@@ -217,7 +217,7 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
               </span>
             </div>
             <div style={{ fontSize: "0.75rem", color: "var(--color-text-secondary)", marginTop: "0.125rem" }}>
-              Strictly grounded in the GCC Atlas dataset
+              Answers sourced strictly from the GCC Atlas dataset
             </div>
           </div>
         </div>
@@ -231,8 +231,8 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.35rem",
-                padding: "0.35rem 0.65rem",
-                borderRadius: "0.35rem",
+                padding: "0.375rem 0.75rem",
+                borderRadius: "0.4rem",
                 border: "1px solid var(--color-border)",
                 background: "var(--color-surface)",
                 color: "var(--color-text-secondary)",
@@ -247,47 +247,13 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
             </button>
           )}
 
-          {!embedded && (
-            <Link
-              href="/chat"
-              onClick={onClose}
-              title="Open full page"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.25rem",
-                padding: "0.35rem 0.65rem",
-                borderRadius: "0.35rem",
-                border: "1px solid var(--color-border)",
-                background: "var(--color-surface)",
-                color: "var(--color-text-secondary)",
-                fontSize: "0.75rem",
-                fontFamily: "var(--font-sans)",
-                textDecoration: "none",
-                transition: "all 0.15s ease",
-                whiteSpace: "nowrap",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--color-teal)";
-                (e.currentTarget as HTMLAnchorElement).style.color = "var(--color-teal)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--color-border)";
-                (e.currentTarget as HTMLAnchorElement).style.color = "var(--color-text-secondary)";
-              }}
-            >
-              <span>Open full page</span>
-              <ExternalLink size={11} />
-            </Link>
-          )}
-
           {onClose && (
             <button
               onClick={onClose}
               aria-label="Close Ask Atlas"
               style={{
-                padding: "0.35rem",
-                borderRadius: "0.35rem",
+                padding: "0.4rem",
+                borderRadius: "0.4rem",
                 border: "1px solid var(--color-border)",
                 background: "var(--color-surface)",
                 color: "var(--color-text-secondary)",
@@ -295,9 +261,10 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                transition: "all 0.15s ease",
               }}
             >
-              <X size={16} />
+              <X size={17} />
             </button>
           )}
         </div>
@@ -308,45 +275,45 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
         style={{
           flex: 1,
           overflowY: "auto",
-          padding: "1.25rem",
+          padding: "1.5rem",
           display: "flex",
           flexDirection: "column",
-          gap: "1.25rem",
+          gap: "1.375rem",
         }}
       >
         {messages.length === 0 && (
-          <div style={{ margin: "auto 0", padding: "1rem 0" }}>
-            <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+          <div style={{ margin: "auto 0", padding: "0.75rem 0" }}>
+            <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
               <div
                 style={{
-                  width: "3rem",
-                  height: "3rem",
+                  width: "3.25rem",
+                  height: "3.25rem",
                   borderRadius: "1rem",
                   background: "var(--color-teal-muted)",
                   border: "1px solid rgba(0, 201, 167, 0.25)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  margin: "0 auto 0.75rem",
-                  fontSize: "1.5rem",
+                  margin: "0 auto 0.875rem",
+                  fontSize: "1.625rem",
                 }}
               >
                 💬
               </div>
-              <h3 style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.0625rem", color: "var(--color-text-primary)", marginBottom: "0.35rem" }}>
+              <h3 style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.125rem", color: "var(--color-text-primary)", marginBottom: "0.5rem" }}>
                 Ask anything about India&apos;s GCCs
               </h3>
-              <p style={{ fontSize: "0.8125rem", color: "var(--color-text-secondary)", maxWidth: "26rem", margin: "0 auto", lineHeight: 1.6 }}>
+              <p style={{ fontSize: "0.8125rem", color: "var(--color-text-secondary)", maxWidth: "28rem", margin: "0 auto", lineHeight: 1.65 }}>
                 Every answer cites exact records, confidence levels, and dates from the dataset. No invented companies or figures.
               </p>
             </div>
 
             {/* Clickable starter questions */}
             <div>
-              <div style={{ fontSize: "0.6875rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--color-teal)", marginBottom: "0.625rem" }}>
+              <div style={{ fontSize: "0.6875rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--color-teal)", marginBottom: "0.75rem" }}>
                 Suggested questions
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
                 {STARTER_QUESTIONS.map((q) => (
                   <button
                     key={q}
@@ -354,19 +321,20 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
                     onClick={() => handleSend(q)}
                     style={{
                       textAlign: "left",
-                      padding: "0.625rem 0.875rem",
-                      borderRadius: "0.5rem",
+                      padding: "0.75rem 1rem",
+                      borderRadius: "0.5625rem",
                       border: "1px solid var(--color-border)",
                       background: "var(--color-surface-2)",
                       color: "var(--color-text-primary)",
-                      fontSize: "0.8125rem",
+                      fontSize: "0.875rem",
                       fontFamily: "var(--font-sans)",
                       cursor: "pointer",
                       transition: "all 0.15s ease",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "space-between",
-                      gap: "0.5rem",
+                      gap: "0.75rem",
+                      lineHeight: 1.5,
                     }}
                     onMouseEnter={(e) => {
                       (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--color-teal)";
@@ -378,7 +346,7 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
                     }}
                   >
                     <span>{q}</span>
-                    <span style={{ color: "var(--color-teal)", fontSize: "0.875rem" }}>→</span>
+                    <span style={{ color: "var(--color-teal)", fontSize: "1rem", flexShrink: 0 }}>→</span>
                   </button>
                 ))}
               </div>
@@ -396,7 +364,7 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: isUser ? "flex-end" : "flex-start",
-                gap: "0.35rem",
+                gap: "0.375rem",
               }}
             >
               <div
@@ -412,14 +380,14 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
 
               <div
                 style={{
-                  maxWidth: isUser ? "85%" : "92%",
-                  padding: "0.875rem 1.125rem",
+                  maxWidth: isUser ? "82%" : "94%",
+                  padding: "0.9375rem 1.125rem",
                   borderRadius: isUser ? "0.875rem 0.875rem 0.25rem 0.875rem" : "0.875rem 0.875rem 0.875rem 0.25rem",
                   background: isUser ? "var(--color-teal)" : "var(--color-surface-2)",
                   color: isUser ? "#0A0F1E" : "var(--color-text-primary)",
                   border: isUser ? "none" : "1px solid var(--color-border)",
-                  fontSize: "0.875rem",
-                  lineHeight: 1.65,
+                  fontSize: "0.9rem",
+                  lineHeight: 1.7,
                   wordBreak: "break-word",
                   boxShadow: isUser ? "0 2px 10px rgba(0, 201, 167, 0.2)" : "none",
                 }}
@@ -502,20 +470,21 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
       {/* ── Input Bar ─────────────────────────────────────────────────────── */}
       <div
         style={{
-          padding: "0.875rem 1.25rem 1rem",
+          padding: "1rem 1.5rem 1.25rem",
           borderTop: "1px solid var(--color-border)",
           background: "var(--color-surface-2)",
+          flexShrink: 0,
         }}
       >
         <div
           style={{
             display: "flex",
             alignItems: "flex-end",
-            gap: "0.5rem",
+            gap: "0.625rem",
             background: "var(--color-surface)",
             border: "1px solid var(--color-border)",
-            borderRadius: "0.625rem",
-            padding: "0.5rem 0.75rem",
+            borderRadius: "0.75rem",
+            padding: "0.625rem 0.875rem",
             transition: "border-color 0.15s ease",
           }}
         >
@@ -524,7 +493,7 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
             value={input}
             onChange={(e) => setInput(e.target.value.slice(0, 500))}
             onKeyDown={handleKeyDown}
-            placeholder="Ask a question (e.g. rent in Pune, BFSI GCCs in Mumbai)..."
+            placeholder="Ask about cities, GCCs, incentives..."
             rows={1}
             maxLength={500}
             style={{
@@ -532,13 +501,13 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
               background: "transparent",
               border: "none",
               color: "var(--color-text-primary)",
-              fontSize: "0.875rem",
+              fontSize: "0.9rem",
               fontFamily: "var(--font-sans)",
               resize: "none",
               outline: "none",
               minHeight: "1.5rem",
-              maxHeight: "6rem",
-              lineHeight: 1.5,
+              maxHeight: "7rem",
+              lineHeight: 1.6,
             }}
           />
 
@@ -548,8 +517,8 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
             disabled={!input.trim() || loading}
             aria-label="Send question"
             style={{
-              padding: "0.45rem",
-              borderRadius: "0.4rem",
+              padding: "0.5rem",
+              borderRadius: "0.5rem",
               border: "none",
               background: input.trim() && !loading ? "var(--color-teal)" : "var(--color-surface-2)",
               color: input.trim() && !loading ? "#0A0F1E" : "var(--color-text-secondary)",
@@ -561,7 +530,7 @@ export function AskAtlasChat({ embedded = true, onClose }: Props) {
               flexShrink: 0,
             }}
           >
-            <Send size={15} />
+            <Send size={16} />
           </button>
         </div>
 

@@ -1,23 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
-import { Sparkles, MessageSquare, X } from "lucide-react";
+import { Sparkles, X } from "lucide-react";
 import { AskAtlasChat } from "./AskAtlasChat";
 
 export function FloatingAskAtlas() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
-
-  // If user is already on the dedicated /chat page, do not show the floating widget
-  const isChatPage = pathname === "/chat";
 
   // Close drawer on Escape key
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape" && open) {
-        setOpen(false);
-      }
+      if (e.key === "Escape" && open) setOpen(false);
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -30,16 +23,12 @@ export function FloatingAskAtlas() {
     } else {
       document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [open]);
-
-  if (isChatPage) return null;
 
   return (
     <>
-      {/* ── Floating Launcher Button ───────────────────────────────────────── */}
+      {/* ── Floating Launcher Button ────────────────────────────────────────── */}
       <button
         onClick={() => setOpen(true)}
         aria-label="Open Ask Atlas grounded AI chat"
@@ -49,7 +38,7 @@ export function FloatingAskAtlas() {
           bottom: "1.75rem",
           right: "1.75rem",
           zIndex: 45,
-          display: "flex",
+          display: open ? "none" : "flex",
           alignItems: "center",
           gap: "0.5rem",
           padding: "0.6875rem 1.125rem",
@@ -71,7 +60,7 @@ export function FloatingAskAtlas() {
         <span>Ask Atlas</span>
       </button>
 
-      {/* ── Slide-Over Side Drawer ────────────────────────────────────────── */}
+      {/* ── Slide-Over Side Drawer ─────────────────────────────────────────── */}
       {open && (
         <div
           style={{
@@ -91,35 +80,33 @@ export function FloatingAskAtlas() {
               background: "rgba(10, 15, 30, 0.75)",
               backdropFilter: "blur(6px)",
               WebkitBackdropFilter: "blur(6px)",
-              transition: "opacity 0.25s ease",
             }}
           />
 
-          {/* Drawer container (440px desktop, 100vw mobile) */}
+          {/* Drawer — 500px desktop, 100vw mobile */}
           <div
             className="ask-atlas-drawer"
             style={{
               position: "relative",
-              width: "440px",
+              width: "500px",
               maxWidth: "100vw",
               height: "100%",
               background: "var(--color-surface)",
               borderLeft: "1px solid var(--color-border)",
-              boxShadow: "-8px 0 32px rgba(0, 0, 0, 0.6)",
+              boxShadow: "-8px 0 40px rgba(0, 0, 0, 0.65)",
               display: "flex",
               flexDirection: "column",
               zIndex: 65,
               animation: "slideInRight 0.28s cubic-bezier(0.16, 1, 0.3, 1)",
             }}
           >
-            <AskAtlasChat embedded={false} onClose={() => setOpen(false)} />
+            <AskAtlasChat onClose={() => setOpen(false)} />
           </div>
         </div>
       )}
 
       <style>{`
         .floating-ask-atlas-btn:hover {
-          background: var(--color-teal-dim) !important;
           transform: translateY(-2px) scale(1.02);
           box-shadow: 0 6px 24px rgba(0, 201, 167, 0.6) !important;
         }
@@ -128,12 +115,8 @@ export function FloatingAskAtlas() {
         }
 
         @keyframes slideInRight {
-          from {
-            transform: translateX(100%);
-          }
-          to {
-            transform: translateX(0);
-          }
+          from { transform: translateX(100%); }
+          to   { transform: translateX(0);    }
         }
 
         @media (max-width: 768px) {
