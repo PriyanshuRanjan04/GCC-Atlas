@@ -3,53 +3,39 @@
 /**
  * CityMapLeaflet.tsx
  *
- * OpenStreetMap raster tile base layer styled with a custom dark-teal CSS filter.
- * Tile source: https://tile.openstreetmap.org/{z}/{x}/{y}.png
- * Attribution: (c) OpenStreetMap contributors (ODbL).
- *
- * No external tile API key required.
- * Initial view centered on India (21N, 79E, zoom 5 on desktop, 4 on mobile).
- * Panning constrained with maxBounds.
- * Scroll-wheel zoom is disabled to prevent page scroll traps (+/- buttons enabled).
+ * Vector GeoJSON base layer styled for the dark slate theme:
+ * - India states: DataMeet maps (CC BY 4.0) official boundary including J&K and Ladakh,
+ *   rendered in dark slate (#1a2438) with thin lighter borders (#2c3d59).
+ * - Surrounding countries: Natural Earth 110m (Public Domain) rendered in dimmer slate (#0c1322).
+ * - Zero external tile requests or API keys required. Works 100% offline.
+ * - Teal bubbles with the value printed next to the city name (e.g. "Bengaluru 17").
+ * - Non-overlapping label placement (Mumbai into Arabian Sea, Pune inland east).
+ * - Scroll-wheel zoom disabled to avoid trapped page scroll (+/- buttons enabled).
  */
 
 import { useEffect, useRef } from "react";
-import type { Map as LMap, CircleMarker, Marker } from "leaflet";
+import type { Map as LMap, CircleMarker, Marker, GeoJSON as LGeoJSON } from "leaflet";
 import { CITY_COORDS, MICRO_MARKETS } from "@/lib/geo";
 import type { CityRichData, LayerType } from "./CitiesClient";
 import "leaflet/dist/leaflet.css";
 
 /* ── Constants ──────────────────────────────────────────────────────────── */
 
-const INDIA_CENTER: [number, number] = [21.0, 79.0];
+const INDIA_CENTER: [number, number] = [21.8, 78.8];
 
-// Max bounds limiting panning strictly around India and immediate surroundings
+// Max bounds limiting panning strictly around India and South Asia
 const PAN_BOUNDS: [[number, number], [number, number]] = [
-  [4.5, 64.0],   // SW: Indian Ocean / Arabian Sea
-  [38.5, 100.0], // NE: Himalayas / Bay of Bengal
+  [4.0, 60.0],   // SW: Indian Ocean / Arabian Sea
+  [38.5, 99.0],  // NE: Himalayas / Bay of Bengal
 ];
-
-const LAYER_COLORS: Record<LayerType, string> = {
-  captive:   "#00C9A7",
-  rent:      "#F59E0B",
-  salary:    "#60A5FA",
-  ecosystem: "#C084FC",
-};
-
-const LAYER_LABELS: Record<LayerType, string> = {
-  captive:   "Captive GCC count",
-  rent:      "Grade A rent (midpoint ₹/sqft/mo)",
-  salary:    "SW Eng salary (midpoint ₹L/yr)",
-  ecosystem: "Ecosystem maturity score",
-};
 
 // Min and max bubble radius in pixels
 const R_MIN = 8;
-const R_MAX = 28;
+const R_MAX = 26;
 
 // Non-overlapping label placements relative to each city center
 const LABEL_DIRECTIONS: Record<string, { align: "left" | "right"; dy: number }> = {
-  "Mumbai":    { align: "right", dy: 0 },  // West into Arabian Sea (prevents overlap with Pune)
+  "Mumbai":    { align: "right", dy: 0 },  // West into Arabian Sea (avoids overlap with Pune)
   "Pune":      { align: "left",  dy: 2 },  // East inland
   "Bengaluru": { align: "right", dy: 0 },  // West
   "Chennai":   { align: "left",  dy: 0 },  // East into Bay of Bengal
@@ -57,6 +43,26 @@ const LABEL_DIRECTIONS: Record<string, { align: "left" | "right"; dy: number }> 
   "Delhi NCR": { align: "left",  dy: -4 }, // East
   "Ahmedabad": { align: "right", dy: 0 },  // West (GIFT City)
 };
+
+/* ── In-Memory GeoJSON Cache ─────────────────────────────────────────────── */
+
+let geoCachePromise: Promise<[any, any]> | null = null;
+
+function loadGeoData(): Promise<[any, any]> {
+  if (!geoCachePromise) {
+    geoCachePromise = Promise.all([
+      fetch("/geo/neighbours.geojson").then((r) => {
+        if (!r.ok) throw new Error("Failed to load neighbours.geojson");
+        return r.json();
+      }),
+      fetch("/geo/india_states.geojson").then((r) => {
+        if (!r.ok) throw new Error("Failed to load india_states.geojson");
+        return r.json();
+      }),
+    ]);
+  }
+  return geoCachePromise;
+}
 
 /* ── Helpers ─────────────────────────────────────────────────────────────── */
 
@@ -76,6 +82,19 @@ function getLayerValue(d: CityRichData, layer: LayerType, industry: string): num
   return d.ecosystemMaturity;
 }
 
+function formatCityValue(cityName: string, val: number, layer: LayerType): string {
+  if (cityName === "Ahmedabad" && layer === "captive") {
+    return "(GIFT)";
+  }
+  if (layer === "rent") {
+    return `₹${Math.round(val)}`;
+  }
+  if (layer === "salary") {
+    return `₹${val.toFixed(1).replace(".0", "")}L`;
+  }
+  return String(Math.round(val));
+}
+
 function sqrtRadius(value: number, maxValue: number): number {
   if (maxValue <= 0 || value <= 0) return R_MIN;
   const ratio = Math.sqrt(value) / Math.sqrt(maxValue);
@@ -87,28 +106,32 @@ function sqrtRadius(value: number, maxValue: number): number {
 export default function CityMapLeaflet({
   data, activeLayer, industryFilter, selectedCity, showMicroMarkets, onCityClick,
 }: Props) {
-  const containerRef   = useRef<HTMLDivElement>(null);
-  const mapRef         = useRef<LMap | null>(null);
-  const cityMarkersRef = useRef<{ marker: CircleMarker; city: string; label: Marker }[]>([]);
-  const mmMarkersRef   = useRef<CircleMarker[]>([]);
+  const containerRef    = useRef<HTMLDivElement>(null);
+  const mapRef          = useRef<LMap | null>(null);
+  const indiaLayerRef   = useRef<LGeoJSON | null>(null);
+  const cityMarkersRef  = useRef<{ marker: CircleMarker; city: string; label: Marker }[]>([]);
+  const mmMarkersRef    = useRef<CircleMarker[]>([]);
 
-  /* ── Init map once ────────────────────────────────────────────────────── */
+  /* ── Init map & base GeoJSON once ──────────────────────────────────────── */
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
+    let isMounted = true;
 
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const L = require("leaflet") as typeof import("leaflet");
 
     const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
-    const initialZoom = isMobile ? 4 : 5;
+    const initialZoom = isMobile ? 4.2 : 4.8;
 
     const map = L.map(containerRef.current, {
       center: INDIA_CENTER,
       zoom: initialZoom,
-      minZoom: 4,
+      zoomSnap: 0.1,
+      zoomDelta: 0.5,
+      minZoom: 3.8,
       maxZoom: 9,
       maxBounds: PAN_BOUNDS,
-      maxBoundsViscosity: 0.9,
+      maxBoundsViscosity: 0.95,
       scrollWheelZoom: false, // Prevents trapped page scroll (use +/- zoom buttons)
       zoomControl: true,
       attributionControl: true,
@@ -116,28 +139,74 @@ export default function CityMapLeaflet({
 
     mapRef.current = map;
 
-    // OpenStreetMap standard raster tiles with custom dark filter
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      className: "dark-osm-tiles",
-      maxZoom: 9,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>',
-    }).addTo(map);
+    // Custom attribution for community GeoJSON boundaries
+    map.attributionControl.addAttribution(
+      'Boundaries: <a href="https://github.com/datameet/maps" target="_blank" rel="noopener">DataMeet</a> (CC BY 4.0) · <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>'
+    );
 
-    // Initial resize invalidation to prevent cut-off rendering
+    // Load vector GeoJSON layers
+    loadGeoData()
+      .then(([neighboursData, indiaData]) => {
+        if (!isMounted || !mapRef.current) return;
+
+        // 1. Surrounding countries (dimmer slate background layer)
+        L.geoJSON(neighboursData, {
+          style: {
+            fillColor: "#0b1220",
+            fillOpacity: 0.9,
+            color: "#182236",
+            weight: 0.75,
+          },
+          interactive: false,
+        }).addTo(map);
+
+        // 2. India states (dark slate #1a2438 with subtle borders #2c3d59)
+        const indiaLayer = L.geoJSON(indiaData, {
+          style: {
+            fillColor: "#1a2438",
+            fillOpacity: 0.95,
+            color: "#2c3d59",
+            weight: 0.85,
+          },
+          onEachFeature: (feature, layer) => {
+            const stateName = feature.properties?.ST_NM;
+            if (stateName) {
+              layer.bindTooltip(stateName, {
+                className: "state-tooltip",
+                sticky: true,
+                direction: "top",
+                offset: [0, -4],
+              });
+              layer.on({
+                mouseover: (e: any) => {
+                  e.target.setStyle({ fillColor: "#22324d", color: "#3e5275", weight: 1.2 });
+                },
+                mouseout: (e: any) => {
+                  e.target.setStyle({ fillColor: "#1a2438", color: "#2c3d59", weight: 0.85 });
+                },
+              });
+            }
+          },
+        }).addTo(map);
+
+        indiaLayerRef.current = indiaLayer;
+      })
+      .catch((err) => {
+        console.error("Error loading boundary GeoJSON:", err);
+      });
+
+    // Handle container resize cleanly
     const timer = setTimeout(() => {
-      if (mapRef.current) {
-        mapRef.current.invalidateSize();
-      }
+      if (mapRef.current) mapRef.current.invalidateSize();
     }, 150);
 
     const observer = new ResizeObserver(() => {
-      if (mapRef.current) {
-        mapRef.current.invalidateSize();
-      }
+      if (mapRef.current) mapRef.current.invalidateSize();
     });
     observer.observe(containerRef.current);
 
     return () => {
+      isMounted = false;
       clearTimeout(timer);
       observer.disconnect();
       map.remove();
@@ -160,7 +229,9 @@ export default function CityMapLeaflet({
     });
     cityMarkersRef.current = [];
 
-    const color = LAYER_COLORS[activeLayer];
+    // All bubbles use teal as the single primary accent colour
+    const TEAL_FILL    = "#00C9A7";
+    const TEAL_OUTLINE = "#5EEAD4";
 
     // Compute max value for square root scaling
     const values = data
@@ -174,16 +245,19 @@ export default function CityMapLeaflet({
       if (!coords) return;
 
       const placement = LABEL_DIRECTIONS[cityName] ?? { align: "left", dy: 0 };
+      const isSelected = selectedCity === cityName;
+      const value = getLayerValue(d, activeLayer, industryFilter);
+      const valStr = formatCityValue(cityName, value, activeLayer);
 
       // ── GIFT City / Ahmedabad (regulated entity hub) ─────────────────────
       if (cityName === "Ahmedabad") {
         const giftMarker = L.circleMarker([coords.lat, coords.lng], {
           radius: 9,
-          color: "#F97316",
-          fillColor: "#F97316",
-          fillOpacity: 0.25,
-          weight: 2,
-          dashArray: "4, 4",
+          color:       isSelected ? "#ffffff" : "#FB923C",
+          fillColor:   "#FB923C",
+          fillOpacity: isSelected ? 0.6 : 0.25,
+          weight:      isSelected ? 2.5 : 1.75,
+          dashArray:   "4, 4",
           interactive: true,
           bubblingMouseEvents: false,
         }).addTo(map);
@@ -194,11 +268,12 @@ export default function CityMapLeaflet({
         );
         giftMarker.on("click", () => onCityClick("Ahmedabad"));
 
-        // Label to the west (align: right)
+        // City label beside bubble (West into Arabian Sea / align: right)
+        const labelText = activeLayer === "captive" ? "Ahmedabad (GIFT)" : `Ahmedabad ${valStr}`;
         const giftLabelIcon = L.divIcon({
           className: "city-bubble-label",
-          html: `<span style="display:inline-block;color:#FB923C;font-size:11px;font-weight:700;white-space:nowrap;text-shadow:0 1px 4px #000, 0 0 6px #000;letter-spacing:0.03em;">GIFT City</span>`,
-          iconAnchor: placement.align === "right" ? [72, 6] : [-16, 6],
+          html: `<span style="display:inline-block;color:#f8fafc;font-size:11px;font-weight:600;white-space:nowrap;text-shadow:0 1px 4px #000, 0 0 8px #000, 0 0 14px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;letter-spacing:0.02em;">${labelText}</span>`,
+          iconAnchor: placement.align === "right" ? [115, 6] : [-16, 6],
         });
         const giftLabel = L.marker([coords.lat, coords.lng], {
           icon: giftLabelIcon,
@@ -209,46 +284,48 @@ export default function CityMapLeaflet({
         return;
       }
 
-      // ── Normal GCC city bubble ───────────────────────────────────────────
-      const value  = getLayerValue(d, activeLayer, industryFilter);
+      // ── Normal GCC city bubble (teal, semi-transparent, brighter outline) ─
       const radius = sqrtRadius(value, maxVal);
-      const isSelected = selectedCity === cityName;
 
       const marker = L.circleMarker([coords.lat, coords.lng], {
         radius,
-        color:       isSelected ? "#ffffff" : color,
-        fillColor:   color,
+        color:       isSelected ? "#ffffff" : TEAL_OUTLINE,
+        fillColor:   TEAL_FILL,
         fillOpacity: isSelected ? 0.85 : 0.55,
-        weight:      isSelected ? 2.5 : 1.5,
+        weight:      isSelected ? 2.5 : 1.75,
         interactive: true,
         bubblingMouseEvents: false,
       }).addTo(map);
 
       // Tooltip
       const valLabel = activeLayer === "rent"   ? `₹${value.toFixed(0)}/sqft/mo`
-                     : activeLayer === "salary" ? `₹${value.toFixed(0)}L/yr`
+                     : activeLayer === "salary" ? `₹${value.toFixed(1)}L/yr`
                      : String(Math.round(value));
 
       marker.bindTooltip(
-        `<strong>${cityName}</strong><br>${LAYER_LABELS[activeLayer]}: ${valLabel}`,
+        `<strong>${cityName}</strong><br>${activeLayer.toUpperCase()}: ${valLabel}`,
         { className: "gcc-tooltip", direction: "top", offset: [0, -radius - 3] }
       );
 
       marker.on("click", () => onCityClick(cityName));
       marker.on("mouseover", function (this: CircleMarker) {
-        if (selectedCity !== cityName) this.setStyle({ fillOpacity: 0.85, weight: 2 });
+        if (selectedCity !== cityName) this.setStyle({ fillOpacity: 0.85, weight: 2.2 });
       });
       marker.on("mouseout", function (this: CircleMarker) {
-        if (selectedCity !== cityName) this.setStyle({ fillOpacity: 0.55, weight: 1.5 });
+        if (selectedCity !== cityName) this.setStyle({ fillOpacity: 0.55, weight: 1.75 });
       });
 
-      // City label beside bubble (Mumbai west into sea; Pune east inland; etc.)
+      // City label beside bubble with current layer's value: "Bengaluru 17", "Mumbai 10", etc.
+      // Mumbai label extends westwards into the Arabian Sea; Pune label extends eastwards inland.
       const offsetDist = Math.round(radius + 7);
-      const anchorX = placement.align === "right" ? offsetDist + 80 : -offsetDist;
+      const isRightAligned = placement.align === "right";
+      const anchorX = isRightAligned ? offsetDist + 96 : -offsetDist;
+
+      const labelContent = `${cityName} ${valStr}`;
 
       const labelIcon = L.divIcon({
         className: "city-bubble-label",
-        html: `<span style="display:inline-block;color:#e2e8f0;font-size:11px;font-weight:600;white-space:nowrap;text-shadow:0 1px 4px #000, 0 0 8px #000;letter-spacing:0.02em;text-align:${placement.align};">${cityName}</span>`,
+        html: `<span style="display:inline-block;color:#f8fafc;font-size:11px;font-weight:600;white-space:nowrap;text-shadow:0 1px 4px #000, 0 0 8px #000, 0 0 14px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;letter-spacing:0.02em;text-align:${placement.align};">${labelContent}</span>`,
         iconAnchor: [anchorX, 6 + placement.dy],
       });
       const label = L.marker([coords.lat, coords.lng], {
@@ -263,18 +340,17 @@ export default function CityMapLeaflet({
 
   /* ── Update selected city highlight ─────────────────────────────────── */
   useEffect(() => {
-    const color = LAYER_COLORS[activeLayer];
     cityMarkersRef.current.forEach(({ marker, city }) => {
       if (city === "Ahmedabad") return;
       const isSelected = city === selectedCity;
       marker.setStyle({
-        color:       isSelected ? "#ffffff" : color,
+        color:       isSelected ? "#ffffff" : "#5EEAD4",
         fillOpacity: isSelected ? 0.85 : 0.55,
-        weight:      isSelected ? 2.5 : 1.5,
+        weight:      isSelected ? 2.5 : 1.75,
       });
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedCity, activeLayer]);
+  }, [selectedCity]);
 
   /* ── Micro-market markers ─────────────────────────────────────────────── */
   useEffect(() => {
@@ -292,13 +368,13 @@ export default function CityMapLeaflet({
       const m = L.circleMarker([mm.lat, mm.lng], {
         radius: 4.5,
         color: "#94a3b8",
-        fillColor: "#94a3b8",
-        fillOpacity: 0.65,
+        fillColor: "#64748b",
+        fillOpacity: 0.7,
         weight: 1,
         bubblingMouseEvents: false,
       }).addTo(map);
       m.bindTooltip(
-        `<strong>${mm.name}</strong><br><em>Approximate micro-market location (${mm.city})</em>`,
+        `<strong>${mm.name}</strong><br><em>Approximate micro-market (${mm.city})</em>`,
         { className: "gcc-tooltip", direction: "top", offset: [0, -6] }
       );
       mmMarkersRef.current.push(m);
@@ -318,19 +394,23 @@ export default function CityMapLeaflet({
           font-family: var(--font-sans), sans-serif;
         }
 
-        /* 
-         * Dark teal CSS filter applied strictly to OSM raster tiles.
-         * Invert + hue-rotate + contrast + saturate aligns OSM standard tiles
-         * perfectly with the dark teal theme, leaving SVG overlays & controls untouched.
-         */
-        .dark-osm-tiles {
-          filter: invert(1) hue-rotate(180deg) brightness(0.8) contrast(0.9) saturate(0.6) !important;
+        /* State hover tooltip */
+        .state-tooltip {
+          background: rgba(15, 23, 42, 0.95) !important;
+          border: 1px solid rgba(44, 61, 89, 0.8) !important;
+          color: #94a3b8 !important;
+          font-size: 11px !important;
+          padding: 3px 7px !important;
+          border-radius: 4px !important;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+          pointer-events: none !important;
         }
+        .state-tooltip::before { display: none !important; }
 
-        /* Tooltip styling */
+        /* City bubble hover tooltip */
         .gcc-tooltip {
           background: rgba(15, 23, 42, 0.95) !important;
-          border: 1px solid rgba(0, 201, 167, 0.3) !important;
+          border: 1px solid rgba(0, 201, 167, 0.4) !important;
           color: #e2e8f0 !important;
           font-size: 12px !important;
           line-height: 1.5 !important;
@@ -350,9 +430,9 @@ export default function CityMapLeaflet({
           user-select: none !important;
         }
 
-        /* Attribution styling */
+        /* Map attribution styling */
         .leaflet-control-attribution {
-          background: rgba(8, 14, 26, 0.85) !important;
+          background: rgba(8, 14, 26, 0.88) !important;
           color: #64748b !important;
           font-size: 10px !important;
           padding: 2px 8px !important;
@@ -365,7 +445,7 @@ export default function CityMapLeaflet({
 
         /* Zoom controls */
         .leaflet-control-zoom a {
-          background: rgba(15, 23, 42, 0.9) !important;
+          background: rgba(15, 23, 42, 0.92) !important;
           color: #94a3b8 !important;
           border-color: rgba(38, 60, 93, 0.8) !important;
         }

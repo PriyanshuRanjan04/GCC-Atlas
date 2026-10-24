@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { Confidence } from "@/lib/types";
 
 interface Props {
@@ -29,6 +29,7 @@ const STYLES: Record<
 
 export function ConfidenceBadge({ confidence, size = "md" }: Props) {
   const [showTooltip, setShowTooltip] = useState(false);
+  const router = useRouter();
   const s = STYLES[confidence];
   const padding = size === "sm" ? "0.125rem 0.5rem" : "0.1875rem 0.625rem";
   const dotSize = size === "sm" ? "6px" : "7px";
@@ -111,18 +112,30 @@ export function ConfidenceBadge({ confidence, size = "md" }: Props) {
             <span style={{ display: "block", marginBottom: "0.375rem" }}>
               {TOOLTIPS[confidence]}
             </span>
-            <Link
-              href="/methodology"
+            {/* Use a <button> not <Link>/<a> so this is safe when nested inside another <a> (e.g. GCC card links) */}
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                router.push("/methodology");
+              }}
               style={{
                 display: "inline-block",
+                background: "none",
+                border: "none",
+                padding: 0,
                 color: "var(--color-teal)",
                 fontWeight: 600,
                 textDecoration: "underline",
                 textUnderlineOffset: "2px",
+                fontSize: "inherit",
+                fontFamily: "inherit",
+                cursor: "pointer",
               }}
             >
               How we rate confidence →
-            </Link>
+            </button>
           </span>
         </span>
       )}

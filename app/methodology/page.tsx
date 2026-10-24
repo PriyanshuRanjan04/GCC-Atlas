@@ -114,24 +114,41 @@ export default function MethodologyPage() {
             <div><span className="text-orange-400 font-medium">IFSC Regulated Entity:</span> GIFT City entities regulated by IFSCA — bank branches, exchanges (NSE IFSC, IIBX), and platform providers. Different regulatory and operational profile from a GCC.</div>
           </div>
         </section>
-        {/* Map tiles attribution */}
+        {/* Map boundaries attribution */}
         <section className="card p-6">
           <h2 className="font-display font-semibold text-text-primary mb-3">Map &amp; Cartography</h2>
           <div className="space-y-2 text-sm text-text-secondary leading-relaxed">
             <p>
-              The City Explorer interactive map uses raster tiles from{" "}
-              <a
-                href="https://www.openstreetmap.org/copyright"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal underline underline-offset-2"
-              >
-                &copy; OpenStreetMap contributors
-              </a>{" "}
-              (Open Database Licence). Tiles are visually styled with a custom dark CSS filter to integrate with the GCC Atlas dark theme without modifying any cartographic geometry.
+              The City Explorer interactive map renders vector GeoJSON boundaries offline without external tile servers:
             </p>
-            <p className="text-text-muted text-xs">
-              Map cartography and city markers are provided for navigational context. All GCC numbers, talent metrics, and real estate estimates are independently sourced and verified.
+            <ul className="list-disc pl-5 space-y-1 text-sm text-text-secondary">
+              <li>
+                <strong className="text-text-primary">India state boundaries:</strong> Sourced from the community-maintained{" "}
+                <a
+                  href="https://github.com/datameet/maps"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal underline underline-offset-2"
+                >
+                  DataMeet maps repository
+                </a>{" "}
+                under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence. Reflects the official Survey of India boundary including Jammu &amp; Kashmir and Ladakh.
+              </li>
+              <li>
+                <strong className="text-text-primary">Regional continental context:</strong> Neighbouring country boundaries from{" "}
+                <a
+                  href="https://www.naturalearthdata.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal underline underline-offset-2"
+                >
+                  Natural Earth
+                </a>{" "}
+                (Public Domain / CC0).
+              </li>
+            </ul>
+            <p className="text-text-muted text-xs mt-3">
+              Cartographic boundaries are provided for spatial orientation and visualization. All GCC entity profiles, talent metrics, and real estate data are independently sourced.
             </p>
           </div>
         </section>
