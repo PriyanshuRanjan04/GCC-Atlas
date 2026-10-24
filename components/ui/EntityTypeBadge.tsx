@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import type { EntityType } from "@/lib/types";
 
 interface Props {
@@ -6,34 +5,47 @@ interface Props {
   size?: "sm" | "md";
 }
 
-const config: Record<EntityType, { label: string; className: string }> = {
+const config: Record<EntityType, { label: string; bg: string; color: string }> = {
   captive_gcc: {
     label: "Captive GCC",
-    className: "bg-blue-500/10 text-blue-400 border border-blue-500/20",
+    bg: "rgba(59,130,246,0.10)",
+    color: "#60A5FA",
   },
   professional_services_delivery: {
     label: "Prof. Services",
-    className: "bg-purple-500/10 text-purple-400 border border-purple-500/20",
+    bg: "rgba(168,85,247,0.10)",
+    color: "#C084FC",
   },
   regulated_ifsc_entity: {
     label: "IFSC Entity",
-    className: "bg-orange-500/10 text-orange-400 border border-orange-500/20",
+    bg: "rgba(249,115,22,0.10)",
+    color: "#FB923C",
   },
   service_provider: {
     label: "Service Provider",
-    className: "bg-gray-500/10 text-gray-400 border border-gray-500/20",
+    bg: "rgba(107,114,128,0.10)",
+    color: "#9CA3AF",
   },
 };
 
 export function EntityTypeBadge({ entityType, size = "md" }: Props) {
   const c = config[entityType];
+  const padding = size === "sm" ? "0.125rem 0.5rem" : "0.25rem 0.625rem";
+
   return (
     <span
-      className={cn(
-        "inline-flex items-center rounded-md font-medium",
-        size === "sm" ? "px-2 py-0.5 text-xs" : "px-2.5 py-1 text-xs",
-        c.className
-      )}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        borderRadius: "0.375rem",
+        fontSize: "0.75rem",
+        fontWeight: 500,
+        padding,
+        background: c.bg,
+        color: c.color,
+        border: `1px solid ${c.color}30`,
+        whiteSpace: "nowrap",
+      }}
     >
       {c.label}
     </span>

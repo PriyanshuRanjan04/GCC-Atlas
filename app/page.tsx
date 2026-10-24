@@ -5,77 +5,166 @@ export default function Home() {
   const stats = getHeadlineStats();
 
   return (
-    <div className="relative">
-      {/* Radial teal glow behind hero */}
-      <div className="absolute inset-0 bg-gradient-radial-teal pointer-events-none" />
+    <div style={{ position: "relative" }}>
+      {/* Radial glow */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "radial-gradient(ellipse 900px 500px at 50% -80px, rgba(0,201,167,0.07) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }}
+      />
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 text-center">
-        <p className="section-label mb-6">India GCC Intelligence Platform</p>
-        <h1 className="font-display font-extrabold text-display-xl text-text-primary leading-tight mb-6 teal-glow">
-          Where Global Companies<br />
-          <span className="text-teal">Build in India</span>
+      <section
+        style={{
+          position: "relative",
+          maxWidth: "80rem",
+          margin: "0 auto",
+          padding: "6rem 1rem 5rem",
+          textAlign: "center",
+        }}
+      >
+        <span className="section-label" style={{ marginBottom: "1.5rem", display: "block" }}>
+          India GCC Intelligence Platform
+        </span>
+
+        <h1
+          className="display-xl teal-glow"
+          style={{ color: "var(--color-text-primary)", marginBottom: "1.375rem" }}
+        >
+          Where Global Companies
+          <br />
+          <span style={{ color: "var(--color-teal)" }}>Build in India</span>
         </h1>
-        <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
-          Research cities, compare incentives, and find the right hub for your Global Capability Centre —
-          all from one transparent, sourced dataset.
+
+        <p
+          style={{
+            fontSize: "1.0625rem",
+            color: "var(--color-text-secondary)",
+            maxWidth: "38rem",
+            margin: "0 auto 2.5rem",
+            lineHeight: 1.7,
+          }}
+        >
+          Research cities, compare incentives, and find the right hub for your
+          Global Capability Centre — all from one transparent, sourced dataset.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <Link href="/directory" className="btn-primary text-base px-7 py-3">
+
+        <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/directory" className="btn-primary" style={{ fontSize: "1rem", padding: "0.75rem 1.75rem" }}>
             Explore Directory
           </Link>
-          <Link href="/cities" className="btn-secondary text-base px-7 py-3">
+          <Link href="/cities" className="btn-secondary" style={{ fontSize: "1rem", padding: "0.75rem 1.75rem" }}>
             Compare Cities
           </Link>
         </div>
 
-        {/* Headline stats */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        {/* Stats */}
+        <div
+          style={{
+            marginTop: "4rem",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "1rem",
+            maxWidth: "36rem",
+            margin: "4rem auto 0",
+          }}
+        >
           {[
             { value: stats.captiveGCCsInDataset, label: "Captive GCCs", sub: "in dataset" },
-            { value: stats.citiesCovered, label: "Cities Covered", sub: "across India" },
+            { value: stats.citiesCovered,         label: "Cities Covered", sub: "across India" },
             { value: stats.statesWithIncentiveData, label: "State Incentive", sub: "records" },
           ].map((s) => (
-            <div key={s.label} className="card py-6 px-4 text-center">
-              <div className="font-display font-extrabold text-4xl text-teal mb-1">{s.value}</div>
-              <div className="text-sm font-semibold text-text-primary">{s.label}</div>
-              <div className="text-xs text-text-muted">{s.sub}</div>
+            <div key={s.label} className="card" style={{ padding: "1.375rem 1rem", textAlign: "center" }}>
+              <div
+                className="stat-num"
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontWeight: 800,
+                  fontSize: "2.5rem",
+                  color: "var(--color-teal)",
+                  lineHeight: 1,
+                  marginBottom: "0.375rem",
+                }}
+              >
+                {s.value}
+              </div>
+              <div style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--color-text-primary)" }}>
+                {s.label}
+              </div>
+              <div style={{ fontSize: "0.75rem", color: "var(--color-text-muted)", marginTop: "0.125rem" }}>
+                {s.sub}
+              </div>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── The Problem ───────────────────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="section-label mb-4">The Problem</p>
-          <h2 className="font-display font-bold text-display-md text-text-primary mb-6">
+      <section
+        style={{
+          maxWidth: "80rem",
+          margin: "0 auto",
+          padding: "5rem 1rem",
+          borderTop: "1px solid var(--color-border)",
+        }}
+      >
+        <div style={{ maxWidth: "44rem", margin: "0 auto", textAlign: "center" }}>
+          <span className="section-label" style={{ marginBottom: "1rem", display: "block" }}>
+            The Problem
+          </span>
+          <h2
+            className="display-md"
+            style={{ color: "var(--color-text-primary)", marginBottom: "1.5rem" }}
+          >
             India's GCC data is fragmented
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed mb-6">
-            Decisions about where to build a Global Capability Centre in India are driven by referrals,
-            anecdote, and scattered consultant PDFs. City comparisons, incentive policies, and talent
-            benchmarks live in different places — if they're public at all.
+          <p
+            style={{
+              color: "var(--color-text-secondary)",
+              fontSize: "1.0625rem",
+              lineHeight: 1.75,
+              marginBottom: "1.125rem",
+            }}
+          >
+            Decisions about where to build a Global Capability Centre in India are
+            driven by referrals, anecdote, and scattered consultant PDFs.
           </p>
-          <p className="text-text-secondary leading-relaxed">
-            GCC Atlas aggregates what's publicly known, labels every figure with its confidence level and source,
-            and is honest about what isn't disclosed. No hallucinated headcounts. No stale estimates presented as facts.
+          <p style={{ color: "var(--color-text-secondary)", lineHeight: 1.75 }}>
+            GCC Atlas aggregates what's publicly known, labels every figure with its
+            confidence level and source, and is honest about what isn't disclosed.
+            No hallucinated headcounts. No stale estimates presented as facts.
           </p>
         </div>
       </section>
 
-      {/* ── Feature Preview ───────────────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
-        <p className="section-label text-center mb-4">What's Inside</p>
-        <h2 className="font-display font-bold text-display-md text-text-primary text-center mb-12">
+      {/* ── Feature cards ────────────────────────────────────────────────── */}
+      <section
+        style={{
+          maxWidth: "80rem",
+          margin: "0 auto",
+          padding: "5rem 1rem",
+          borderTop: "1px solid var(--color-border)",
+        }}
+      >
+        <span className="section-label" style={{ display: "block", textAlign: "center", marginBottom: "1rem" }}>
+          What's Inside
+        </span>
+        <h2
+          className="display-md"
+          style={{ textAlign: "center", color: "var(--color-text-primary)", marginBottom: "3rem" }}
+        >
           Three tools. One platform.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px,1fr))", gap: "1.25rem" }}>
           {[
             {
               icon: "🗂️",
               title: "GCC Directory",
-              desc: "68 captive GCC profiles across 7 cities. Filter by industry, country, entity type, and confidence. Every record has source links.",
+              desc: "68 captive GCC profiles across 7 cities. Search and filter by industry, country, entity type, and confidence. Every record has source links.",
               href: "/directory",
               cta: "Browse Directory",
               live: true,
@@ -83,7 +172,7 @@ export default function Home() {
             {
               icon: "🏙️",
               title: "City Explorer",
-              desc: "Side-by-side city comparisons: talent salary ranges, Grade A rent, state incentives, and captive GCC counts — all sourced.",
+              desc: "Side-by-side city intelligence: talent salary ranges, Grade A rent, state incentives, and captive GCC density — all sourced.",
               href: "/cities",
               cta: "Explore Cities",
               live: true,
@@ -91,23 +180,67 @@ export default function Home() {
             {
               icon: "🧭",
               title: "Setup Advisor",
-              desc: "Answer a few questions about your GCC's function, size, and priorities — get a tailored city shortlist with reasoning.",
+              desc: "Answer a few questions about your GCC's function, size, and priorities — get a tailored city shortlist with data-backed reasoning.",
               href: "/advisor",
               cta: "Coming next phase",
               live: false,
             },
           ].map((f) => (
-            <div key={f.title} className={`card card-hover p-7 flex flex-col ${!f.live ? "opacity-70" : ""}`}>
-              <div className="text-3xl mb-4">{f.icon}</div>
-              <h3 className="font-display font-bold text-lg text-text-primary mb-2">{f.title}</h3>
-              <p className="text-sm text-text-secondary leading-relaxed flex-1 mb-5">{f.desc}</p>
+            <div
+              key={f.title}
+              className={`card${f.live ? " card-hover" : ""}`}
+              style={{ padding: "1.75rem", display: "flex", flexDirection: "column", opacity: f.live ? 1 : 0.72 }}
+            >
+              <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>{f.icon}</div>
+              <h3
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontWeight: 600,
+                  fontSize: "1.0625rem",
+                  color: "var(--color-text-primary)",
+                  marginBottom: "0.5rem",
+                  letterSpacing: "-0.005em",
+                }}
+              >
+                {f.title}
+              </h3>
+              <p
+                style={{
+                  fontSize: "0.9rem",
+                  color: "var(--color-text-secondary)",
+                  lineHeight: 1.65,
+                  flex: 1,
+                  marginBottom: "1.375rem",
+                }}
+              >
+                {f.desc}
+              </p>
               {f.live ? (
-                <Link href={f.href} className="btn-primary self-start text-sm">
+                <Link href={f.href} className="btn-primary" style={{ alignSelf: "flex-start", fontSize: "0.875rem" }}>
                   {f.cta}
                 </Link>
               ) : (
-                <span className="inline-flex items-center gap-2 self-start px-4 py-2 rounded-lg border border-border text-text-muted text-sm">
-                  <span className="w-2 h-2 rounded-full bg-teal/40 animate-pulse" />
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    alignSelf: "flex-start",
+                    padding: "0.5rem 1rem",
+                    borderRadius: "0.5rem",
+                    border: "1px solid var(--color-border)",
+                    color: "var(--color-text-muted)",
+                    fontSize: "0.875rem",
+                  }}
+                >
+                  <span
+                    style={{
+                      width: "0.5rem",
+                      height: "0.5rem",
+                      borderRadius: "50%",
+                      background: "rgba(0,201,167,0.4)",
+                    }}
+                  />
                   {f.cta}
                 </span>
               )}

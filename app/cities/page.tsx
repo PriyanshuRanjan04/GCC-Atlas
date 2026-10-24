@@ -1,100 +1,215 @@
 import type { Metadata } from "next";
-import { allCities, getCityStats } from "@/lib/data";
-import Link from "next/link";
+import { allCities, allGCCs, allIncentives, getIncentiveByState } from "@/lib/data";
+import type { CityRichData } from "@/components/cities/CitiesClient";
+import { CitiesClient } from "@/components/cities/CitiesClient";
 
 export const metadata: Metadata = {
   title: "City Explorer",
-  description: "Compare India's GCC cities — talent salary ranges, office rents, incentives, and captive GCC counts.",
+  description:
+    "Compare India's 7 GCC hubs — interactive map, talent salary ranges, Grade A rent, state incentives, and side-by-side city comparison.",
 };
 
 export default function CitiesPage() {
-  const stats = getCityStats();
+  /* ── Compute rich per-city data from JSON at build time ─────────────────── */
+
+  const cityDataList: CityRichData[] = allCities.map((city) => {
+    const cityGCCs    = allGCCs.filter((g) => g.city === city.city);
+    const captiveGCCs = cityGCCs.filter((g) => g.entity_type === "captive_gcc");
+    const ecoGCCs     = cityGCCs.filter((g) => g.entity_type !== "captive_gcc");
+
+    const rent = city.office_space.grade_a_rent_inr_per_sqft_per_month;
+    const rentMid = Math.round((rent.min + rent.max) / 2);
+
+    const swRole = city.talent.annual_salary_inr_lakhs_by_role.find((r) =>
+      r.role.toLowerCase().includes("software engineer")
+    );
+    const salaryMid = swRole ? Math.round((swRole.min + swRole.max) / 2) : 0;
+
+    const gccsByIndustry: Record<string, number> = {};
+    captiveGCCs.forEach((g) => {
+      gccsByIndustry[g.industry] = (gccsByIndustry[g.industry] ?? 0) + 1;
+    });
+
+    const incentiveRaw = getIncentiveByState(city.state);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const incAny = incentiveRaw as any;
+    const incentives: CityRichData["incentives"] = incAny
+      ? {
+          policy_name: incAny.policy_name,
+          items: Array.isArray(incAny.incentives)
+            ? incAny.incentives.slice(0, 5).map((item: { type: string; description: string }) => ({
+                type: item.type,
+                description: item.description,
+              }))
+            : [],
+          as_of: incAny.as_of,
+          confidence: incAny.confidence,
+        }
+      : null;
+
+    return {
+      city,
+      captiveCount:     captiveGCCs.length,
+      ecosystemCount:   ecoGCCs.length,
+      totalCount:       captiveGCCs.length + ecoGCCs.length,
+      rentMid,
+      salaryMid,
+      ecosystemMaturity: 0, // filled below after normalization
+      gccsByIndustry,
+      topGCCs: captiveGCCs.slice(0, 6).map((g) => ({
+        id: g.id,
+        company_name: g.company_name,
+        entity_type: g.entity_type,
+        industry: g.industry,
+        confidence: g.confidence,
+        headcount: g.headcount,
+        year_established: g.year_established,
+      })),
+      incentives,
+    };
+  });
+
+  // Normalize ecosystem maturity 0–100 by totalCount
+  const maxTotal = Math.max(...cityDataList.map((c) => c.totalCount), 1);
+  cityDataList.forEach((c) => {
+    c.ecosystemMaturity = Math.round((c.totalCount / maxTotal) * 100);
+  });
+
+  // All unique industries across captive GCCs (for map filter dropdown)
+  const allIndustries = [
+    ...new Set(allGCCs.filter((g) => g.entity_type === "captive_gcc").map((g) => g.industry)),
+  ].sort();
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="mb-10">
-        <p className="section-label mb-2">City Intelligence</p>
-        <h1 className="font-display font-extrabold text-display-md text-text-primary mb-3">
+    <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "3rem 1rem 5rem" }}>
+      {/* ── Static header ─────────────────────────────────────────────────── */}
+      <div style={{ marginBottom: "2.5rem" }}>
+        <span className="section-label" style={{ display: "block", marginBottom: "0.5rem" }}>
+          City Intelligence
+        </span>
+        <h1
+          className="display-md"
+          style={{ color: "var(--color-text-primary)", marginBottom: "0.75rem" }}
+        >
           City Explorer
         </h1>
-        <p className="text-text-secondary max-w-2xl">
-          Compare India's 7 GCC hubs across talent, real estate, incentives, and GCC density.
-          Full interactive comparison and map coming in Gate 3.
+        <p style={{ color: "var(--color-text-secondary)", maxWidth: "48rem", lineHeight: 1.7 }}>
+          Compare India's {allCities.length} GCC hubs across talent, real estate, incentives, and
+          GCC density. Click a city bubble on the map to see its full profile, and use{" "}
+          <em>Add to compare</em> to build a side-by-side view.
         </p>
       </div>
 
-      {/* City cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        {allCities.map((city) => {
-          const s = stats.find((st) => st.city === city.city)!;
-          const isGiftCity = city.city === "Ahmedabad";
-          return (
-            <div key={city.city} className={`card card-hover p-6 flex flex-col gap-4 ${isGiftCity ? "border-orange-500/20" : ""}`}>
-              <div>
-                <div className="flex items-center justify-between gap-2 mb-1">
-                  <h2 className="font-display font-bold text-text-primary">{city.city}</h2>
-                  {isGiftCity && (
-                    <span className="badge bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs">
-                      GIFT City
-                    </span>
-                  )}
-                </div>
-                <p className="text-xs text-text-muted">{city.state}</p>
-              </div>
+      {/* ── City cards (existing) ──────────────────────────────────────────── */}
+      <div style={{ marginBottom: "3rem" }}>
+        <span className="section-label" style={{ display: "block", marginBottom: "1rem" }}>
+          City Snapshot Cards
+        </span>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(230px,1fr))",
+            gap: "1rem",
+          }}
+        >
+          {allCities.map((city) => {
+            const d = cityDataList.find((c) => c.city.city === city.city)!;
+            const isGiftCity = city.city === "Ahmedabad";
+            const swEngineer = city.talent.annual_salary_inr_lakhs_by_role.find((r) =>
+              r.role.toLowerCase().includes("software engineer")
+            );
 
-              {isGiftCity ? (
-                <p className="text-xs text-text-secondary leading-relaxed">
-                  Financial services hub — 8 IFSCA-regulated entities + 4 professional services centres.
-                  Zero captive GCCs in current dataset.
-                </p>
-              ) : (
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-text-muted">Captive GCCs</span>
-                    <span className="font-display font-bold text-teal">{s.captiveCount}</span>
+            return (
+              <div
+                key={city.city}
+                className="card card-hover"
+                style={{
+                  padding: "1.25rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.875rem",
+                  borderColor: isGiftCity ? "rgba(249,115,22,0.2)" : undefined,
+                }}
+              >
+                {/* Name */}
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.5rem", marginBottom: "0.2rem" }}>
+                    <h2 style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1.0625rem", color: "var(--color-text-primary)", letterSpacing: "-0.01em" }}>
+                      {city.city}
+                    </h2>
+                    {isGiftCity && (
+                      <span style={{ fontSize: "0.6875rem", fontWeight: 700, padding: "0.1rem 0.45rem", borderRadius: "9999px", background: "rgba(249,115,22,0.12)", border: "1px solid rgba(249,115,22,0.25)", color: "#FB923C", whiteSpace: "nowrap" }}>
+                        GIFT City
+                      </span>
+                    )}
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-text-muted">Grade A Rent</span>
-                    <span className="text-xs text-text-secondary">
-                      ₹{city.office_space.grade_a_rent_inr_per_sqft_per_month.min}–
-                      {city.office_space.grade_a_rent_inr_per_sqft_per_month.max}/sqft
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-text-muted">SW Eng salary</span>
-                    <span className="text-xs text-text-secondary">
-                      {(() => {
-                        const r = city.talent.annual_salary_inr_lakhs_by_role.find(
-                          (r) => r.role.includes("software engineer")
-                        );
-                        return r ? `₹${r.min}–${r.max}L` : "—";
-                      })()}
-                    </span>
-                  </div>
+                  <p style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>{city.state}</p>
                 </div>
-              )}
 
-              <div className="flex flex-wrap gap-1.5 mt-auto pt-3 border-t border-border">
-                {city.office_space.key_clusters.slice(0, 2).map((c) => (
-                  <span key={c} className="text-xs px-2 py-0.5 rounded bg-surface-2 border border-border text-text-muted truncate max-w-[140px]">
-                    {c}
-                  </span>
-                ))}
+                {/* Stats */}
+                {isGiftCity ? (
+                  <p style={{ fontSize: "0.8125rem", color: "var(--color-text-secondary)", lineHeight: 1.6 }}>
+                    Regulated financial hub — {d.ecosystemCount} ecosystem entities. No captive GCCs in dataset.
+                  </p>
+                ) : (
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>Captive GCCs</span>
+                      <span className="stat-num" style={{ fontFamily: "var(--font-sans)", fontWeight: 700, fontSize: "1rem", color: "var(--color-teal)" }}>{d.captiveCount}</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>Grade A Rent</span>
+                      <span style={{ fontSize: "0.75rem", color: "var(--color-text-secondary)" }}>
+                        ₹{city.office_space.grade_a_rent_inr_per_sqft_per_month.min}–{city.office_space.grade_a_rent_inr_per_sqft_per_month.max}/sqft
+                      </span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <span style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>SW Eng salary</span>
+                      <span style={{ fontSize: "0.75rem", color: "var(--color-text-secondary)" }}>
+                        {swEngineer ? `₹${swEngineer.min}–${swEngineer.max}L` : "—"}
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Cluster chips — wrap enabled, full name readable */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "0.375rem",
+                    marginTop: "auto",
+                    paddingTop: "0.75rem",
+                    borderTop: "1px solid var(--color-border)",
+                  }}
+                >
+                  {city.office_space.key_clusters.slice(0, 3).map((c) => (
+                    <span
+                      key={c}
+                      title={c}
+                      style={{
+                        fontSize: "0.6875rem",
+                        padding: "0.1875rem 0.5rem",
+                        borderRadius: "0.3rem",
+                        background: "var(--color-surface-2)",
+                        border: "1px solid var(--color-border)",
+                        color: "var(--color-text-muted)",
+                        wordBreak: "break-word",
+                        maxWidth: "100%",
+                      }}
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
 
-      {/* Coming in Gate 3 */}
-      <div className="mt-12 card p-8 text-center border-dashed">
-        <div className="text-3xl mb-3">🗺️</div>
-        <h3 className="font-display font-semibold text-text-primary mb-2">Interactive Map & Comparison</h3>
-        <p className="text-sm text-text-secondary max-w-md mx-auto">
-          An interactive Leaflet map with markers sized by captive GCC count, side-by-side city comparison
-          for up to 3 cities, and Recharts visualizations — coming in Gate 3.
-        </p>
-      </div>
+      {/* ── Interactive Client Section ─────────────────────────────────────── */}
+      <CitiesClient data={cityDataList} allIndustries={allIndustries} />
     </div>
   );
 }

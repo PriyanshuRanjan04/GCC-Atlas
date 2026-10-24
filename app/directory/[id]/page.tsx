@@ -12,7 +12,15 @@ export async function generateStaticParams() {
   return allGCCs.map((g) => ({ id: g.id }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+// Required in Next.js 16: forces blocking pre-render so `await params` in the
+// component body is resolved at build time, not in a streaming shell.
+export const instant = false;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
   const { id } = await params;
   const gcc = getGCCById(id);
   if (!gcc) return { title: "Not Found" };
@@ -24,74 +32,168 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="py-4 border-b border-border last:border-0">
-      <div className="text-xs font-semibold text-text-muted uppercase tracking-wide mb-1.5">{label}</div>
-      <div className="text-sm text-text-primary">{children}</div>
+    <div
+      style={{
+        padding: "0.875rem 0",
+        borderBottom: "1px solid var(--color-border)",
+      }}
+    >
+      <div
+        style={{
+          fontSize: "0.6875rem",
+          fontWeight: 700,
+          color: "var(--color-text-muted)",
+          textTransform: "uppercase",
+          letterSpacing: "0.08em",
+          marginBottom: "0.3125rem",
+        }}
+      >
+        {label}
+      </div>
+      <div style={{ fontSize: "0.9375rem", color: "var(--color-text-primary)" }}>{children}</div>
     </div>
   );
 }
 
-export default async function GCCDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function GCCDetailPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const gcc = getGCCById(id);
   if (!gcc) notFound();
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      {/* Back */}
-      <Link href="/directory" className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-teal transition-colors mb-8">
-        <ArrowLeft className="w-4 h-4" /> Back to Directory
+    <div style={{ maxWidth: "56rem", margin: "0 auto", padding: "3rem 1rem 5rem" }}>
+      {/* Back link */}
+      <Link
+        href="/directory"
+        className="back-link"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "0.375rem",
+          fontSize: "0.875rem",
+          color: "var(--color-text-muted)",
+          textDecoration: "none",
+          marginBottom: "2rem",
+          transition: "color 0.15s",
+        }}
+      >
+        <ArrowLeft size={14} />
+        Back to Directory
       </Link>
 
-      {/* Header */}
-      <div className="card p-8 mb-6">
-        <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
+      {/* ── Header card ───────────────────────────────────────────────────── */}
+      <div className="card" style={{ padding: "2rem", marginBottom: "1.25rem" }}>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            gap: "1rem",
+            marginBottom: "1.5rem",
+          }}
+        >
           <div>
-            <h1 className="font-display font-extrabold text-display-sm text-text-primary mb-1">
-              {gcc.company_name}
+            <h1
+              className="display-sm"
+              style={{ color: "var(--color-text-primary)", marginBottom: "0.25rem" }}
+            >
+              {gcc!.company_name}
             </h1>
-            <p className="text-text-secondary text-sm">{gcc.entity_name_india}</p>
+            <p style={{ fontSize: "0.9375rem", color: "var(--color-text-secondary)" }}>
+              {gcc!.entity_name_india}
+            </p>
           </div>
-          <div className="flex items-center gap-2 flex-wrap">
-            <ConfidenceBadge confidence={gcc.confidence} />
-            <EntityTypeBadge entityType={gcc.entity_type} />
+          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexWrap: "wrap" }}>
+            <ConfidenceBadge confidence={gcc!.confidence} />
+            <EntityTypeBadge entityType={gcc!.entity_type} />
           </div>
         </div>
 
         {/* Key info grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(130px,1fr))",
+            gap: "0.75rem",
+          }}
+        >
           {[
-            { label: "City", value: gcc.city },
-            { label: "State", value: gcc.state },
-            { label: "Parent Country", value: gcc.parent_country },
-            { label: "Industry", value: gcc.industry },
+            { label: "City", value: gcc!.city },
+            { label: "State", value: gcc!.state },
+            { label: "Parent Country", value: gcc!.parent_country },
+            { label: "Industry", value: gcc!.industry },
           ].map((item) => (
-            <div key={item.label} className="bg-surface-2 rounded-lg p-3">
-              <div className="text-xs text-text-muted mb-1">{item.label}</div>
-              <div className="font-medium text-sm text-text-primary">{item.value}</div>
+            <div
+              key={item.label}
+              style={{
+                background: "var(--color-surface-2)",
+                borderRadius: "0.5rem",
+                padding: "0.75rem",
+                border: "1px solid var(--color-border)",
+              }}
+            >
+              <div style={{ fontSize: "0.6875rem", color: "var(--color-text-muted)", marginBottom: "0.25rem" }}>
+                {item.label}
+              </div>
+              <div
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontWeight: 600,
+                  fontSize: "0.9375rem",
+                  color: "var(--color-text-primary)",
+                }}
+              >
+                {item.value}
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Details */}
-      <div className="card p-6 mb-6">
-        <h2 className="font-display font-semibold text-text-primary mb-2">Details</h2>
-        <div className="divide-y divide-border">
+      {/* ── Details card ──────────────────────────────────────────────────── */}
+      <div className="card" style={{ padding: "1.5rem", marginBottom: "1.25rem" }}>
+        <h2
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontWeight: 700,
+            fontSize: "1rem",
+            color: "var(--color-text-primary)",
+            marginBottom: "0.25rem",
+            letterSpacing: "-0.005em",
+          }}
+        >
+          Details
+        </h2>
+        <div>
           <Field label="Location Detail">
-            <NullableValue value={gcc.location_detail} />
+            <NullableValue value={gcc!.location_detail} />
           </Field>
           <Field label="Year Established">
-            <NullableValue value={gcc.year_established} />
+            <NullableValue value={gcc!.year_established} />
           </Field>
           <Field label="Headcount">
-            <HeadcountValue headcount={gcc.headcount} />
+            <HeadcountValue headcount={gcc!.headcount} />
           </Field>
           <Field label="Functions">
-            {gcc.functions.length > 0 ? (
-              <div className="flex flex-wrap gap-1.5 mt-1">
-                {gcc.functions.map((fn) => (
-                  <span key={fn} className="badge bg-surface-2 border border-border text-text-secondary text-xs">
+            {gcc!.functions.length > 0 ? (
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.375rem", marginTop: "0.375rem" }}>
+                {gcc!.functions.map((fn) => (
+                  <span
+                    key={fn}
+                    style={{
+                      fontSize: "0.75rem",
+                      padding: "0.1875rem 0.625rem",
+                      borderRadius: "0.3rem",
+                      background: "var(--color-surface-2)",
+                      border: "1px solid var(--color-border)",
+                      color: "var(--color-text-secondary)",
+                    }}
+                  >
                     {fn}
                   </span>
                 ))}
@@ -100,22 +202,65 @@ export default async function GCCDetailPage({ params }: { params: Promise<{ id: 
               <span className="null-value">Not disclosed</span>
             )}
           </Field>
+          <div style={{ paddingTop: "0.875rem" }} /> {/* last field no border */}
         </div>
       </div>
 
-      {/* Sourcing */}
-      <div className="card p-6">
-        <h2 className="font-display font-semibold text-text-primary mb-4">Data Sourcing</h2>
-        <div className="mb-4">
-          <SourceLinks urls={gcc.source_urls} />
+      {/* ── Data sourcing card ────────────────────────────────────────────── */}
+      <div className="card" style={{ padding: "1.5rem" }}>
+        <h2
+          style={{
+            fontFamily: "var(--font-sans)",
+            fontWeight: 700,
+            fontSize: "1rem",
+            color: "var(--color-text-primary)",
+            marginBottom: "1rem",
+            letterSpacing: "-0.005em",
+          }}
+        >
+          Data Sourcing
+        </h2>
+        <div style={{ marginBottom: "1rem" }}>
+          <SourceLinks urls={gcc!.source_urls} />
         </div>
-        <div className="mt-4 p-4 rounded-lg bg-surface-2 border border-border">
-          <div className="text-xs text-text-muted font-semibold mb-1.5 uppercase tracking-wide">Researcher Note</div>
-          <p className="text-xs text-text-secondary leading-relaxed">{gcc.notes}</p>
+        <div
+          style={{
+            padding: "1rem",
+            borderRadius: "0.5rem",
+            background: "var(--color-surface-2)",
+            border: "1px solid var(--color-border)",
+          }}
+        >
+          <div
+            style={{
+              fontSize: "0.6875rem",
+              fontWeight: 700,
+              color: "var(--color-text-muted)",
+              textTransform: "uppercase",
+              letterSpacing: "0.08em",
+              marginBottom: "0.375rem",
+            }}
+          >
+            Researcher Note
+          </div>
+          <p style={{ fontSize: "0.8125rem", color: "var(--color-text-secondary)", lineHeight: 1.65 }}>
+            {gcc!.notes}
+          </p>
         </div>
-        <div className="mt-4 flex items-center gap-2">
-          <span className="text-xs text-text-muted">Record ID:</span>
-          <code className="text-xs font-mono text-teal/80">{gcc.id}</code>
+        <div
+          style={{
+            marginTop: "1rem",
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem",
+            fontSize: "0.75rem",
+            color: "var(--color-text-muted)",
+          }}
+        >
+          <span>Record ID:</span>
+          <code style={{ fontFamily: "var(--font-mono)", color: "rgba(0,201,167,0.75)" }}>
+            {gcc!.id}
+          </code>
         </div>
       </div>
     </div>
