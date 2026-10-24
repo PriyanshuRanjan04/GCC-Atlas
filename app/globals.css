@@ -69,6 +69,10 @@
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-2px);
   }
+  .card-subtle-hover { cursor: default; }
+  .card-subtle-hover:hover {
+    border-color: rgba(0,201,167,0.3);
+  }
 
   /* Buttons */
   .btn-primary {

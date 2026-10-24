@@ -1,6 +1,5 @@
 import { getHeadlineStats } from "@/lib/data";
 import Link from "next/link";
-import { AskAtlasCardButton } from "@/components/chat/AskAtlasCardButton";
 
 export default function Home() {
   const stats = getHeadlineStats();
@@ -160,46 +159,47 @@ export default function Home() {
           Four tools. One platform.
         </h2>
 
-        {/* Cards — stretch to equal height so buttons sit at the same baseline */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.25rem", alignItems: "stretch" }}>
+        {/* Cards — equal height and padding */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "1.25rem",
+            alignItems: "stretch",
+          }}
+        >
           {[
             {
               icon: "🗂️",
               title: "GCC Directory",
               desc: "68 captive GCC profiles across 7 cities. Search and filter by industry, country, entity type, and confidence. Every record has source links.",
-              href: "/directory",
-              cta: "Browse Directory",
-              live: true,
             },
             {
               icon: "🏙️",
               title: "City Explorer",
               desc: "Side-by-side city intelligence: talent salary ranges, Grade A rent, state incentives, and captive GCC density — all sourced.",
-              href: "/cities",
-              cta: "Explore Cities",
-              live: true,
             },
             {
               icon: "🧭",
               title: "Setup Advisor",
               desc: "Answer a few questions about industry, team size, budget and priorities, and get a ranked city shortlist with transparent scoring and an AI explanation based only on the dataset.",
-              href: "/advisor",
-              cta: "Try the Advisor",
-              live: true,
             },
             {
               icon: "💬",
               title: "Ask Atlas",
               desc: "Ask questions in plain language and get answers grounded only in our dataset, with source citations and confidence ratings.",
-              href: null,   // uses AskAtlasCardButton — no href needed
-              cta: "Ask Atlas",
-              live: true,
             },
           ].map((f) => (
             <div
               key={f.title}
-              className={`card${f.live ? " card-hover" : ""}`}
-              style={{ padding: "1.75rem", display: "flex", flexDirection: "column", opacity: f.live ? 1 : 0.72 }}
+              className="card card-subtle-hover"
+              style={{
+                padding: "1.75rem",
+                display: "flex",
+                flexDirection: "column",
+                height: "100%",
+                cursor: "default",
+              }}
             >
               <div style={{ fontSize: "2rem", marginBottom: "1rem" }}>{f.icon}</div>
               <h3
@@ -219,48 +219,11 @@ export default function Home() {
                   fontSize: "0.9rem",
                   color: "var(--color-text-secondary)",
                   lineHeight: 1.65,
-                  flex: 1,
-                  marginBottom: "1.375rem",
+                  margin: 0,
                 }}
               >
                 {f.desc}
               </p>
-              {f.live && f.href && f.cta ? (
-                <Link
-                  href={f.href}
-                  className="btn-primary"
-                  style={{ alignSelf: "flex-start", fontSize: "0.875rem" }}
-                >
-                  {f.cta}
-                </Link>
-              ) : f.live && !f.href ? (
-                /* Ask Atlas card — opens the drawer via CustomEvent */
-                <AskAtlasCardButton />
-              ) : (
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                    alignSelf: "flex-start",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "0.5rem",
-                    border: "1px solid var(--color-border)",
-                    color: "var(--color-text-muted)",
-                    fontSize: "0.875rem",
-                  }}
-                >
-                  <span
-                    style={{
-                      width: "0.5rem",
-                      height: "0.5rem",
-                      borderRadius: "50%",
-                      background: "rgba(0,201,167,0.4)",
-                    }}
-                  />
-                  {f.cta}
-                </span>
-              )}
             </div>
           ))}
         </div>
