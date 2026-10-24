@@ -64,6 +64,7 @@ export async function POST(req: NextRequest): Promise<Response> {
 
   // ── 3. Check GROQ_API_KEY availability ──────────────────────────────────
   if (!process.env.GROQ_API_KEY) {
+    console.error("[Ask Atlas Chat Route] GROQ_API_KEY environment variable is not set.");
     const fallbackText = retrieval.computedAnswer
       ? `The AI assistant is temporarily unavailable. Here are the exact figures from the dataset:\n\n${retrieval.computedAnswer}`
       : "The AI assistant is temporarily unavailable. Please explore the Directory and City Explorer to view the sourced records.";
@@ -85,7 +86,7 @@ STRICT GROUNDING RULES — you must follow these absolutely without exception:
 CONTEXT FROM GCC ATLAS DATABASE:
 ${retrieval.contextText}`;
 
-  // ── 5. Stream Completion via Groq (llama-3.3-70b-versatile) ───────────────
+  // ── 5. Stream Completion via Groq (qwen/qwen3.8-27b) ─────────────────────
   const streamResult = await streamCompletion(
     [
       { role: "system", content: systemPrompt },
@@ -96,6 +97,7 @@ ${retrieval.contextText}`;
 
   // ── 6. Handle Errors / Rate Limits Gracefully ────────────────────────────
   if (isError(streamResult)) {
+    console.error(`[Ask Atlas Chat Route] Groq call failed (${streamResult.error}): ${streamResult.message ?? ""}`);
     if (streamResult.error === "rate_limited") {
       return textStreamResponse(
         "Ask Atlas is currently experiencing high request volume (rate limited). Please try asking again in a few moments.",

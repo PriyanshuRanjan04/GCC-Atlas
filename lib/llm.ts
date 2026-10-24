@@ -3,12 +3,11 @@
  * Groq API wrapper — server-side only. Never import in client components.
  * Reads GROQ_API_KEY from process.env; never logs or exposes it.
  *
- * Model: llama-3.3-70b-versatile
- *   Groq's fastest highly-capable chat model as of 2025.
- *   128 K context window, ~500 tok/s throughput.
+ * Model: qwen/qwen3.8-27b
+ *   Groq supported 27B chat/instruct model with high token throughput and low latency.
  */
 
-export const MODEL_ID = "llama-3.3-70b-versatile";
+export const MODEL_ID = "qwen/qwen3.8-27b";
 
 const GROQ_BASE = "https://api.groq.com/openai/v1";
 const TIMEOUT_MS = 28_000;
@@ -47,6 +46,7 @@ export async function streamCompletion(
 ): Promise<StreamResult> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
+    console.error("[Groq] GROQ_API_KEY is not configured in process.env");
     return { error: "unavailable", message: "GROQ_API_KEY is not configured" };
   }
 
@@ -74,15 +74,32 @@ export async function streamCompletion(
       clearTimeout(timer);
 
       if (res.status === 429) {
-        return { error: "rate_limited" };
+        let errorDetail = "";
+        try {
+          const errData = await res.json();
+          errorDetail = errData.error?.message || JSON.stringify(errData);
+        } catch {
+          errorDetail = await res.text().catch(() => "");
+        }
+        console.error(`[Groq HTTP 429 Rate Limit]: ${errorDetail}`);
+        return { error: "rate_limited", message: errorDetail };
       }
 
       if (!res.ok) {
-        if (attempt === 0) {
+        let errorDetail = "";
+        try {
+          const errData = await res.json();
+          errorDetail = errData.error?.message || JSON.stringify(errData);
+        } catch {
+          errorDetail = await res.text().catch(() => "");
+        }
+        console.error(`[Groq HTTP ${res.status} Error]: ${errorDetail}`);
+
+        if (attempt === 0 && res.status >= 500) {
           await sleep(700);
           continue;
         }
-        return { error: "unavailable", message: `Groq ${res.status}` };
+        return { error: "unavailable", message: `Groq ${res.status}: ${errorDetail}` };
       }
 
       // Convert SSE → plain text stream

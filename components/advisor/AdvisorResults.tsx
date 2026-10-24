@@ -100,7 +100,7 @@ function AIExplanation({ result }: { result: ScoringResult }) {
             AI Analysis
           </div>
           <div style={{ fontSize: "0.75rem", color: "var(--color-text-secondary)" }}>
-            {isFallback ? "⚠ AI explanation temporarily unavailable — showing rule-based summary" : "Powered by Groq · llama-3.3-70b-versatile · grounded in dataset only"}
+            {isFallback ? "⚠ AI explanation temporarily unavailable — showing rule-based summary" : "Powered by Groq · qwen/qwen3.8-27b · grounded in dataset only"}
           </div>
         </div>
         {!done && (
