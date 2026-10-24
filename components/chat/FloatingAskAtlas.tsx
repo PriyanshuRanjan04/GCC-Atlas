@@ -16,6 +16,13 @@ export function FloatingAskAtlas() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
+  // Listen for programmatic open requests from other components
+  useEffect(() => {
+    function onOpenRequest() { setOpen(true); }
+    window.addEventListener("open-ask-atlas", onOpenRequest);
+    return () => window.removeEventListener("open-ask-atlas", onOpenRequest);
+  }, []);
+
   // Lock body scroll when drawer is open on mobile
   useEffect(() => {
     if (open) {

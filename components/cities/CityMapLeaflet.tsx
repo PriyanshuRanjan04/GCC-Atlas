@@ -139,6 +139,15 @@ export default function CityMapLeaflet({
 
     mapRef.current = map;
 
+    // ── Create named panes so z-order is stable from the very first render ──
+    // This must happen synchronously, before any layer is added (incl. async GeoJSON).
+    map.createPane("boundaryPane").style.zIndex = "300";
+    map.createPane("bubblesPane").style.zIndex  = "450";
+    map.createPane("labelsPane").style.zIndex   = "500";
+    // Bubbles and labels still receive mouse events; boundary does not.
+    (map.getPane("boundaryPane") as HTMLElement).style.pointerEvents = "none";
+    (map.getPane("labelsPane")   as HTMLElement).style.pointerEvents = "none";
+
     // Custom attribution for community GeoJSON boundaries
     map.attributionControl.addAttribution(
       'Boundaries: <a href="https://github.com/datameet/maps" target="_blank" rel="noopener">DataMeet</a> (CC BY 4.0) · <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>'
@@ -149,7 +158,7 @@ export default function CityMapLeaflet({
       .then(([neighboursData, indiaData]) => {
         if (!isMounted || !mapRef.current) return;
 
-        // 1. Surrounding countries (dimmer slate background layer)
+        // 1. Surrounding countries — below India, no mouse events
         L.geoJSON(neighboursData, {
           style: {
             fillColor: "#0b1220",
@@ -158,9 +167,10 @@ export default function CityMapLeaflet({
             weight: 0.75,
           },
           interactive: false,
+          pane: "boundaryPane",
         }).addTo(map);
 
-        // 2. India states (dark slate #1a2438 with subtle borders #2c3d59)
+        // 2. India states — dark slate, in boundaryPane (below bubbles always)
         const indiaLayer = L.geoJSON(indiaData, {
           style: {
             fillColor: "#1a2438",
@@ -168,6 +178,7 @@ export default function CityMapLeaflet({
             color: "#2c3d59",
             weight: 0.85,
           },
+          pane: "boundaryPane",
           onEachFeature: (feature, layer) => {
             const stateName = feature.properties?.ST_NM;
             if (stateName) {
@@ -260,6 +271,7 @@ export default function CityMapLeaflet({
           dashArray:   "4, 4",
           interactive: true,
           bubblingMouseEvents: false,
+          pane: "bubblesPane",
         }).addTo(map);
 
         giftMarker.bindTooltip(
@@ -278,6 +290,7 @@ export default function CityMapLeaflet({
         const giftLabel = L.marker([coords.lat, coords.lng], {
           icon: giftLabelIcon,
           interactive: false,
+          pane: "labelsPane",
         }).addTo(map);
 
         cityMarkersRef.current.push({ marker: giftMarker, city: cityName, label: giftLabel });
@@ -295,6 +308,7 @@ export default function CityMapLeaflet({
         weight:      isSelected ? 2.5 : 1.75,
         interactive: true,
         bubblingMouseEvents: false,
+        pane: "bubblesPane",
       }).addTo(map);
 
       // Tooltip
@@ -331,6 +345,7 @@ export default function CityMapLeaflet({
       const label = L.marker([coords.lat, coords.lng], {
         icon: labelIcon,
         interactive: false,
+        pane: "labelsPane",
       }).addTo(map);
 
       cityMarkersRef.current.push({ marker, city: cityName, label });
@@ -372,6 +387,7 @@ export default function CityMapLeaflet({
         fillOpacity: 0.7,
         weight: 1,
         bubblingMouseEvents: false,
+        pane: "bubblesPane",
       }).addTo(map);
       m.bindTooltip(
         `<strong>${mm.name}</strong><br><em>Approximate micro-market (${mm.city})</em>`,

@@ -1,5 +1,6 @@
 import { getHeadlineStats } from "@/lib/data";
 import Link from "next/link";
+import { AskAtlasCardButton } from "@/components/chat/AskAtlasCardButton";
 
 export default function Home() {
   const stats = getHeadlineStats();
@@ -159,7 +160,8 @@ export default function Home() {
           Four tools. One platform.
         </h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.25rem" }}>
+        {/* Cards — stretch to equal height so buttons sit at the same baseline */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.25rem", alignItems: "stretch" }}>
           {[
             {
               icon: "🗂️",
@@ -188,9 +190,9 @@ export default function Home() {
             {
               icon: "💬",
               title: "Ask Atlas",
-              desc: "Ask any question in natural language and get answers strictly grounded in our dataset, complete with record-level source citations and confidence ratings. Available as a floating assistant on every page.",
-              href: "/advisor",
-              cta: null, // rendered as a special chip, not a link
+              desc: "Ask questions in plain language and get answers grounded only in our dataset, with source citations and confidence ratings.",
+              href: null,   // uses AskAtlasCardButton — no href needed
+              cta: "Ask Atlas",
               live: true,
             },
           ].map((f) => (
@@ -223,31 +225,17 @@ export default function Home() {
               >
                 {f.desc}
               </p>
-              {f.live && f.cta ? (
-                <Link href={f.href} className="btn-primary" style={{ alignSelf: "flex-start", fontSize: "0.875rem" }}>
+              {f.live && f.href && f.cta ? (
+                <Link
+                  href={f.href}
+                  className="btn-primary"
+                  style={{ alignSelf: "flex-start", fontSize: "0.875rem" }}
+                >
                   {f.cta}
                 </Link>
-              ) : f.live ? (
-                <span
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                    alignSelf: "flex-start",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "0.5rem",
-                    background: "rgba(0,201,167,0.08)",
-                    border: "1px solid rgba(0,201,167,0.3)",
-                    color: "var(--color-teal)",
-                    fontSize: "0.875rem",
-                    fontFamily: "var(--font-sans)",
-                    fontWeight: 600,
-                    letterSpacing: "0.01em",
-                  }}
-                >
-                  <span style={{ fontSize: "1rem" }}>✦</span>
-                  Floating button on every page
-                </span>
+              ) : f.live && !f.href ? (
+                /* Ask Atlas card — opens the drawer via CustomEvent */
+                <AskAtlasCardButton />
               ) : (
                 <span
                   style={{
