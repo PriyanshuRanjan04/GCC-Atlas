@@ -72,7 +72,7 @@ interface Props {
 }
 
 export function CitiesClient({ data, allIndustries }: Props) {
-  const [selectedCity,     setSelectedCity]     = useState<string | null>(null);
+  const [selectedCity,     setSelectedCity]     = useState<string | null>("Bengaluru");
   const [comparedCities,   setComparedCities]   = useState<string[]>([]);
   const [activeLayer,      setActiveLayer]      = useState<LayerType>("captive");
   const [industryFilter,   setIndustryFilter]   = useState("");
@@ -84,7 +84,7 @@ export function CitiesClient({ data, allIndustries }: Props) {
   );
 
   function handleCityClick(city: string) {
-    setSelectedCity((prev) => (prev === city ? null : city));
+    setSelectedCity(city);
   }
 
   function handleAddToCompare(city: string) {
@@ -234,7 +234,7 @@ export function CitiesClient({ data, allIndustries }: Props) {
             <CityPanel
               cityData={selectedData}
               isInComparison={comparedCities.includes(selectedData.city.city)}
-              onClose={() => setSelectedCity(null)}
+              onClose={() => setSelectedCity("Bengaluru")}
               onAddToCompare={handleAddToCompare}
             />
           </div>
@@ -282,7 +282,7 @@ export function CitiesClient({ data, allIndustries }: Props) {
           <CityPanel
             cityData={selectedData}
             isInComparison={comparedCities.includes(selectedData.city.city)}
-            onClose={() => setSelectedCity(null)}
+            onClose={() => setSelectedCity("Bengaluru")}
             onAddToCompare={handleAddToCompare}
           />
         </div>
@@ -307,9 +307,14 @@ export function CitiesClient({ data, allIndustries }: Props) {
               Side-by-Side Comparison
             </span>
             <p style={{ fontSize: "0.875rem", color: "var(--color-text-muted)" }}>
-              {comparedCities.length === 0
-                ? "Add up to 3 cities via the city panel to compare them here."
-                : `Comparing ${comparedCities.length} ${comparedCities.length === 1 ? "city" : "cities"}.${comparedCities.length < 3 ? " Click a city on the map and use \u201cAdd to compare\u201d." : ""}`}
+              {comparedCities.length === 0 ? (
+                <span>Add up to 3 cities via the city panel to compare them here.</span>
+              ) : (
+                <span>
+                  Comparing {comparedCities.length} {comparedCities.length === 1 ? "city" : "cities"}.
+                  {comparedCities.length < 3 && " Click a city on the map and use \u201cAdd to compare\u201d."}
+                </span>
+              )}
             </p>
           </div>
           {comparedCities.length > 0 && (

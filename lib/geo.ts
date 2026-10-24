@@ -17,13 +17,13 @@ export interface MicroMarket {
 
 /** City centroids used as the map anchor for each GCC hub. */
 export const CITY_COORDS: Record<string, CityCoord> = {
-  "Bengaluru": { lat: 12.9716, lng: 77.5946 },
-  "Hyderabad": { lat: 17.3850, lng: 78.4867 },
-  "Pune":      { lat: 18.5204, lng: 73.8567 },
-  "Chennai":   { lat: 13.0827, lng: 80.2707 },
-  "Delhi NCR": { lat: 28.6280, lng: 77.1265 },
-  "Mumbai":    { lat: 19.0760, lng: 72.8777 },
-  "Ahmedabad": { lat: 23.2156, lng: 72.6369 }, // GIFT City SEZ approx.
+  "Bengaluru": { lat: 12.97, lng: 77.59 },
+  "Hyderabad": { lat: 17.39, lng: 78.49 },
+  "Pune":      { lat: 18.52, lng: 73.86 },
+  "Chennai":   { lat: 13.08, lng: 80.27 },
+  "Delhi NCR": { lat: 28.50, lng: 77.10 },
+  "Mumbai":    { lat: 19.08, lng: 72.88 },
+  "Ahmedabad": { lat: 23.16, lng: 72.68 }, // GIFT City / Ahmedabad
 };
 
 /**

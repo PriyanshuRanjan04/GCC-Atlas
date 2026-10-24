@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer
@@ -11,10 +13,10 @@ export function Footer() {
         style={{
           maxWidth: "80rem",
           margin: "0 auto",
-          padding: "2.5rem 1rem",
+          padding: "2.5rem 1.25rem 5rem 1.25rem",
         }}
       >
-        {/* Logo + disclaimer */}
+        {/* Logo + disclaimer + methodology link */}
         <div style={{ marginBottom: "1.75rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.625rem" }}>
             <span
@@ -50,13 +52,24 @@ export function Footer() {
           <p
             style={{
               fontSize: "0.75rem",
-              color: "var(--color-text-muted)",
-              maxWidth: "26rem",
+              color: "var(--color-text-secondary)",
+              maxWidth: "32rem",
               lineHeight: 1.6,
             }}
           >
             Seed dataset: sourced from public reports and news, not exhaustive.
-            Salary and rent figures are estimates. Not for investment decisions.
+            Salary and rent figures are estimates. Not for investment decisions.{" "}
+            <Link
+              href="/methodology"
+              style={{
+                color: "var(--color-teal)",
+                textDecoration: "underline",
+                textUnderlineOffset: "2px",
+                marginLeft: "0.25rem",
+              }}
+            >
+              Methodology
+            </Link>
           </p>
         </div>
 
@@ -72,14 +85,14 @@ export function Footer() {
             gap: "0.5rem",
           }}
         >
-          <span style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
+          <span style={{ fontSize: "0.75rem", color: "var(--color-text-secondary)" }}>
             © 2026 GCC Atlas — prototype.
           </span>
           <span
             style={{
               fontSize: "0.6875rem",
               fontFamily: "var(--font-mono)",
-              color: "rgba(0,201,167,0.5)",
+              color: "rgba(0,201,167,0.6)",
               letterSpacing: "0.05em",
             }}
           >

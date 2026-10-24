@@ -9,9 +9,7 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/directory", label: "Directory" },
   { href: "/cities", label: "City Explorer" },
-  { href: "/methodology", label: "Methodology" },
-  { href: "/advisor", label: "Setup Advisor", soon: true },
-  { href: "/chat", label: "Ask Atlas", soon: true },
+  { href: "/advisor", label: "Setup Advisor" },
 ];
 
 export function Navbar() {
@@ -24,18 +22,18 @@ export function Navbar() {
         position: "sticky",
         top: 0,
         zIndex: 50,
+        width: "100%",
         borderBottom: "1px solid var(--color-border)",
         backgroundColor: "rgba(10,15,30,0.85)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
       }}
     >
-      {/* ── Desktop nav ─────────────────────────────────────────────────── */}
+      {/* ── Full width header with 28px consistent side padding ── */}
       <div
         style={{
-          maxWidth: "80rem",
-          margin: "0 auto",
-          padding: "0 1rem 0 0.75rem",
+          width: "100%",
+          padding: "0 1.75rem", // 28px side padding (within the 24-32px range)
           height: "3.75rem",
           display: "flex",
           alignItems: "center",
@@ -43,7 +41,7 @@ export function Navbar() {
           gap: "1.5rem",
         }}
       >
-        {/* Logo — sits at the left content-column edge */}
+        {/* Logo — sits at the far left edge of padded area */}
         <Link
           href="/"
           onClick={() => setOpen(false)}
@@ -86,12 +84,12 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop links — right-aligned */}
+        {/* Desktop links — far right */}
         <nav
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0.125rem",
+            gap: "0.25rem",
           }}
           className="hidden md:flex"
         >
@@ -114,7 +112,6 @@ export function Navbar() {
                   background: isActive ? "var(--color-teal-muted)" : "transparent",
                   textDecoration: "none",
                   transition: "color 0.15s, background 0.15s",
-                  opacity: link.soon ? 0.65 : 1,
                 }}
                 onMouseEnter={(e) => {
                   if (!isActive) {
@@ -130,32 +127,12 @@ export function Navbar() {
                 }}
               >
                 {link.label}
-                {link.soon && (
-                  <span
-                    style={{
-                      position: "absolute",
-                      top: "-0.375rem",
-                      right: "-0.25rem",
-                      fontSize: "0.5625rem",
-                      fontWeight: 700,
-                      padding: "0.0625rem 0.3125rem",
-                      borderRadius: "0.25rem",
-                      background: "var(--color-surface)",
-                      border: "1px solid var(--color-border)",
-                      color: "var(--color-teal)",
-                      lineHeight: 1.4,
-                      letterSpacing: "0.04em",
-                    }}
-                  >
-                    Soon
-                  </span>
-                )}
               </Link>
             );
           })}
         </nav>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger button */}
         <button
           className="md:hidden"
           onClick={() => setOpen(!open)}
@@ -173,13 +150,13 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* ── Mobile menu ─────────────────────────────────────────────────── */}
+      {/* ── Mobile menu ── */}
       {open && (
         <div
           style={{
             borderTop: "1px solid var(--color-border)",
             background: "var(--color-canvas)",
-            padding: "0.75rem 1rem",
+            padding: "0.75rem 1.25rem",
             display: "flex",
             flexDirection: "column",
             gap: "0.25rem",
@@ -209,11 +186,6 @@ export function Navbar() {
                 }}
               >
                 {link.label}
-                {link.soon && (
-                  <span style={{ fontSize: "0.6875rem", color: "var(--color-teal)", opacity: 0.8 }}>
-                    Coming soon
-                  </span>
-                )}
               </Link>
             );
           })}

@@ -156,10 +156,10 @@ export default function Home() {
           className="display-md"
           style={{ textAlign: "center", color: "var(--color-text-primary)", marginBottom: "3rem" }}
         >
-          Three tools. One platform.
+          Four tools. One platform.
         </h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px,1fr))", gap: "1.25rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.25rem" }}>
           {[
             {
               icon: "🗂️",
@@ -180,10 +180,18 @@ export default function Home() {
             {
               icon: "🧭",
               title: "Setup Advisor",
-              desc: "Answer a few questions about your GCC's function, size, and priorities — get a tailored city shortlist with data-backed reasoning.",
+              desc: "Answer a few questions about industry, team size, budget and priorities, and get a ranked city shortlist with transparent scoring and an AI explanation based only on the dataset.",
               href: "/advisor",
-              cta: "Coming next phase",
-              live: false,
+              cta: "Try the Advisor",
+              live: true,
+            },
+            {
+              icon: "💬",
+              title: "Ask Atlas",
+              desc: "Ask any question in natural language and get answers strictly grounded in our dataset, complete with record-level source citations and confidence ratings.",
+              href: "/chat",
+              cta: "Ask Atlas",
+              live: true,
             },
           ].map((f) => (
             <div

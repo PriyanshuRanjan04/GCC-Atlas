@@ -114,6 +114,27 @@ export default function MethodologyPage() {
             <div><span className="text-orange-400 font-medium">IFSC Regulated Entity:</span> GIFT City entities regulated by IFSCA — bank branches, exchanges (NSE IFSC, IIBX), and platform providers. Different regulatory and operational profile from a GCC.</div>
           </div>
         </section>
+        {/* Map tiles attribution */}
+        <section className="card p-6">
+          <h2 className="font-display font-semibold text-text-primary mb-3">Map &amp; Cartography</h2>
+          <div className="space-y-2 text-sm text-text-secondary leading-relaxed">
+            <p>
+              The City Explorer interactive map uses raster tiles from{" "}
+              <a
+                href="https://www.openstreetmap.org/copyright"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal underline underline-offset-2"
+              >
+                &copy; OpenStreetMap contributors
+              </a>{" "}
+              (Open Database Licence). Tiles are visually styled with a custom dark CSS filter to integrate with the GCC Atlas dark theme without modifying any cartographic geometry.
+            </p>
+            <p className="text-text-muted text-xs">
+              Map cartography and city markers are provided for navigational context. All GCC numbers, talent metrics, and real estate estimates are independently sourced and verified.
+            </p>
+          </div>
+        </section>
       </div>
     </div>
   );

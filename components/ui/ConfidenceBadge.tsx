@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
 import type { Confidence } from "@/lib/types";
 
 interface Props {
@@ -7,7 +11,7 @@ interface Props {
 
 const TOOLTIPS: Record<Confidence, string> = {
   verified:
-    "Verified — confirmed on an official company or government page during this research session (currently 3 records).",
+    "Verified — confirmed on an official company or government page during research.",
   reported:
     "Reported — from a news article, GCC directory, or consultant report. The full source page was not always directly fetched.",
   estimated:
@@ -18,12 +22,13 @@ const STYLES: Record<
   Confidence,
   { bg: string; color: string; dot: string }
 > = {
-  verified:  { bg: "rgba(0,201,167,0.10)",   color: "#00C9A7", dot: "#00C9A7" },
-  reported:  { bg: "rgba(245,158,11,0.10)",  color: "#F59E0B", dot: "#F59E0B" },
-  estimated: { bg: "rgba(248,113,113,0.10)", color: "#F87171", dot: "#F87171" },
+  verified:  { bg: "rgba(0,201,167,0.12)",  color: "#00C9A7", dot: "#00C9A7" },
+  reported:  { bg: "rgba(245,158,11,0.12)", color: "#F59E0B", dot: "#F59E0B" },
+  estimated: { bg: "rgba(248,113,113,0.12)", color: "#F87171", dot: "#F87171" },
 };
 
 export function ConfidenceBadge({ confidence, size = "md" }: Props) {
+  const [showTooltip, setShowTooltip] = useState(false);
   const s = STYLES[confidence];
   const padding = size === "sm" ? "0.125rem 0.5rem" : "0.1875rem 0.625rem";
   const dotSize = size === "sm" ? "6px" : "7px";
@@ -31,8 +36,10 @@ export function ConfidenceBadge({ confidence, size = "md" }: Props) {
 
   return (
     <span
-      title={TOOLTIPS[confidence]}
+      onMouseEnter={() => setShowTooltip(true)}
+      onMouseLeave={() => setShowTooltip(false)}
       style={{
+        position: "relative",
         display: "inline-flex",
         alignItems: "center",
         gap: "0.3125rem",
@@ -63,13 +70,62 @@ export function ConfidenceBadge({ confidence, size = "md" }: Props) {
       <span
         style={{
           fontSize: "0.625rem",
-          opacity: 0.7,
+          opacity: 0.75,
           marginLeft: "0.0625rem",
         }}
         aria-label="Hover for explanation"
       >
         ⓘ
       </span>
+
+      {/* Interactive Tooltip with "How we rate confidence →" link */}
+      {showTooltip && (
+        <span
+          style={{
+            position: "absolute",
+            bottom: "100%",
+            left: "50%",
+            transform: "translateX(-50%)",
+            paddingBottom: "6px",
+            zIndex: 100,
+            pointerEvents: "auto",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              width: "240px",
+              padding: "0.5625rem 0.6875rem",
+              borderRadius: "0.45rem",
+              background: "rgba(17, 24, 39, 0.98)",
+              border: "1px solid var(--color-border)",
+              boxShadow: "0 6px 20px rgba(0, 0, 0, 0.65)",
+              color: "var(--color-text-secondary)",
+              fontSize: "0.75rem",
+              fontWeight: 400,
+              lineHeight: 1.5,
+              whiteSpace: "normal",
+              textAlign: "left",
+            }}
+          >
+            <span style={{ display: "block", marginBottom: "0.375rem" }}>
+              {TOOLTIPS[confidence]}
+            </span>
+            <Link
+              href="/methodology"
+              style={{
+                display: "inline-block",
+                color: "var(--color-teal)",
+                fontWeight: 600,
+                textDecoration: "underline",
+                textUnderlineOffset: "2px",
+              }}
+            >
+              How we rate confidence →
+            </Link>
+          </span>
+        </span>
+      )}
     </span>
   );
 }
