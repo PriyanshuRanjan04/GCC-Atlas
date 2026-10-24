@@ -1,0 +1,1997 @@
+[
+  {
+    "id": "gcc-blr-001",
+    "company_name": "Goldman Sachs",
+    "entity_name_india": "Goldman Sachs Services Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Helios Business Park, Outer Ring Road",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": 2004,
+    "headcount": {
+      "min": 8000,
+      "max": 9000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "software engineering",
+      "quantitative strategies",
+      "risk management",
+      "financial technology"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://www.goldmansachs.com/worldwide/india/",
+      "https://www.livemint.com/companies/news/goldman-sachs-bengaluru-office"
+    ],
+    "notes": "SOURCING: goldmansachs.com/worldwide/india/ fetched this session (JS page, URL confirmed active). Search grounding confirms Bengaluru launched 2004, campus at Helios Business Park inaugurated 2019. Headcount 8000-9000 from search result summaries. year_established=2004 from Livemint search result snippet."
+  },
+  {
+    "id": "gcc-blr-002",
+    "company_name": "Walmart Global Tech",
+    "entity_name_india": "Walmart Global Tech India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Embassy Tech Village, Outer Ring Road",
+    "industry": "Retail / Consumer",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": {
+      "min": 11000,
+      "max": 13000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "retail supply chain technology",
+      "cloud engineering",
+      "data analytics",
+      "AI/ML",
+      "omni-channel platforms"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://tracxn.com/d/companies/walmart-global-tech-india",
+      "https://businessofgcc.com/walmart-global-tech-india"
+    ],
+    "notes": "SOURCING: tracxn.com and businessofgcc.com grounding this session. Headcount 11000-13000 (mid-2024) cited in tracxn.com search results. Described as Walmart largest GCC outside US. year_established not found in retrieved sources -- null."
+  },
+  {
+    "id": "gcc-blr-003",
+    "company_name": "Target Corporation India",
+    "entity_name_india": "Target Corporation India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Embassy Manyata Business Park, Bengaluru",
+    "industry": "Retail / Consumer",
+    "parent_country": "USA",
+    "year_established": 2004,
+    "headcount": {
+      "min": 5000,
+      "max": 6000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "merchandising systems",
+      "supply chain technology",
+      "digital storefronts",
+      "marketing technology"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://tracxn.com/d/companies/target-corporation-india",
+      "https://gcc-pulse.com/target-india"
+    ],
+    "notes": "SOURCING: tracxn.com (incorporation Feb 26 2004) and gcc-pulse.com (5700+ team members) from this session. Year 2004 from tracxn registration data. Headcount 5000-6000 around 5700 figure."
+  },
+  {
+    "id": "gcc-blr-004",
+    "company_name": "AstraZeneca",
+    "entity_name_india": "AstraZeneca India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road, Bengaluru",
+    "industry": "Healthcare / Life Sciences",
+    "parent_country": "UK",
+    "year_established": 2014,
+    "headcount": {
+      "min": 1200,
+      "max": 1600,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "clinical data management",
+      "drug discovery analytics",
+      "regulatory technology",
+      "AI-driven R&D"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://www.astrazeneca.in/our-company/global-hub-india.html",
+      "https://inductusgcc.com/gcc-profiles/astrazeneca-india"
+    ],
+    "notes": "SOURCING: astrazeneca.in grounding this session (close to 1400 professionals). GCC scale-up from ~2014 per healthark.ai grounding. Headcount range 1200-1600 around 1400 figure."
+  },
+  {
+    "id": "gcc-blr-005",
+    "company_name": "Fidelity Investments",
+    "entity_name_india": "Fidelity Business Services India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Bengaluru (primary hub)",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": {
+      "min": 6000,
+      "max": 7500,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "asset management software",
+      "investment platforms",
+      "brokerage systems",
+      "digital product engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://indiatimes.com/fidelity-investments-india-gcc",
+      "https://hyring.com/company/fidelity-business-services-india"
+    ],
+    "notes": "SOURCING: indiatimes.com grounding (~7000 employees across India) and hyring.com (Bengaluru and Chennai) this session. Range 6000-7500 estimated share for Bengaluru as primary hub. year_established not found -- null."
+  },
+  {
+    "id": "gcc-blr-006",
+    "company_name": "Intel Corporation",
+    "entity_name_india": "Intel Technology India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road, Bengaluru",
+    "industry": "Technology / Semiconductors",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "chip design",
+      "graphics architecture",
+      "software engineering",
+      "hardware validation"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://zinnov.com/gcc-landscape-india",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session (largest design center outside the US). No company-disclosed headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-blr-007",
+    "company_name": "Qualcomm",
+    "entity_name_india": "Qualcomm India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road / Whitefield, Bengaluru",
+    "industry": "Technology / Semiconductors",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "5G/6G wireless technology R&D",
+      "mobile platform engineering",
+      "semiconductor design"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://zinnov.com/gcc-landscape-india",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-blr-008",
+    "company_name": "Mercedes-Benz Research and Development India",
+    "entity_name_india": "Mercedes-Benz Research and Development India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Whitefield, Bengaluru",
+    "industry": "Manufacturing / Automotive",
+    "parent_country": "Germany",
+    "year_established": 1996,
+    "headcount": null,
+    "functions": [
+      "connected vehicles",
+      "autonomous driving R&D",
+      "electric mobility",
+      "CAD/CAE",
+      "digital cockpit"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://mbrdi.co.in/about-us/",
+      "https://mercedes-benz.com/en/innovation/mbrdi"
+    ],
+    "notes": "SOURCING: mbrdi.co.in fetched this session (React SPA; domain confirmed active and official). mercedes-benz.com in search grounding. Year 1996 from mercedes-benz.com grounding (founded 1996 as captive). Largest R&D center outside Germany. Headcount not confirmed -- null."
+  },
+  {
+    "id": "gcc-blr-009",
+    "company_name": "Bosch Global Software Technologies",
+    "entity_name_india": "Bosch Global Software Technologies Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Hosur Road / Koramangala, Bengaluru",
+    "industry": "Manufacturing / Automotive",
+    "parent_country": "Germany",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "automotive software",
+      "IoT engineering",
+      "embedded systems",
+      "enterprise software"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://zinnov.com/gcc-landscape-india",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-blr-010",
+    "company_name": "Adobe",
+    "entity_name_india": "Adobe Systems India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road, Bengaluru",
+    "industry": "Technology / Software",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "digital marketing platform engineering",
+      "Document Cloud R&D",
+      "Creative Cloud engineering",
+      "machine learning research"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://zinnov.com/gcc-landscape-india",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-blr-011",
+    "company_name": "Intuit",
+    "entity_name_india": "Intuit India Product Development Centre Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road / Whitefield, Bengaluru",
+    "industry": "Technology / Fintech",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "fintech product development",
+      "AI-driven financial platforms",
+      "TurboTax and QuickBooks R&D",
+      "data engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://zinnov.com/gcc-landscape-india",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-blr-012",
+    "company_name": "Wells Fargo",
+    "entity_name_india": "Wells Fargo India Solutions Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road, Bengaluru",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "enterprise technology",
+      "risk management",
+      "data science",
+      "digital banking"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://zinnov.com/gcc-landscape-india",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: Zinnov/NASSCOM and gccxglobal.com search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-blr-013",
+    "company_name": "JPMorgan Chase (Bengaluru)",
+    "entity_name_india": "JPMorgan Services India Private Limited - Bengaluru",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road, Bengaluru",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "technology infrastructure",
+      "data analytics",
+      "corporate banking technology",
+      "operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://zinnov.com/gcc-landscape-india",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: Zinnov/NASSCOM and scribd.com search grounding this session. Multi-city presence. No Bengaluru-specific headcount -- null. Separate Mumbai record gcc-mum-001 covers Powai GCC."
+  },
+  {
+    "id": "gcc-blr-014",
+    "company_name": "EY Global Delivery Services (Bengaluru)",
+    "entity_name_india": "EY Global Delivery Services India LLP",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Bengaluru (primary strategic hub)",
+    "industry": "Professional Services",
+    "parent_country": "UK",
+    "year_established": 2002,
+    "headcount": null,
+    "functions": [
+      "tax advisory delivery",
+      "assurance",
+      "consulting analytics",
+      "AI center of reimagination"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://businessofgcc.com/ey-global-delivery-services-india",
+      "https://ey.com/en_in/gds"
+    ],
+    "notes": "SOURCING: businessofgcc.com and ey.com grounding this session. EY GDS India total ~80000 across all India centers; city-level split not available -- headcount null. Year 2002 from businessofgcc.com."
+  },
+  {
+    "id": "gcc-hyd-001",
+    "company_name": "Novartis",
+    "entity_name_india": "Novartis Healthcare Private Limited (NOCC)",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "HITEC City / Gachibowli, Hyderabad",
+    "industry": "Healthcare / Life Sciences",
+    "parent_country": "Switzerland",
+    "year_established": null,
+    "headcount": {
+      "min": 9000,
+      "max": 10000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "biomedical research",
+      "drug development",
+      "clinical operations",
+      "data science",
+      "AI and digital technology",
+      "finance",
+      "supply chain"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://economictimes.com/novartis-hyderabad-gcc",
+      "https://medpath.com/novartis-india-gcc"
+    ],
+    "notes": "SOURCING: economictimes.com grounding this session (9000+ employees, ~11% of global workforce). medpath.com grounding (largest hub outside Basel). Headcount range 9000-10000. year_established not found -- null."
+  },
+  {
+    "id": "gcc-hyd-002",
+    "company_name": "Microsoft India R&D (Hyderabad)",
+    "entity_name_india": "Microsoft India R&D Private Limited",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Gachibowli, Hyderabad",
+    "industry": "Technology / Software",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "cloud Azure",
+      "AI/ML engineering",
+      "security solutions",
+      "enterprise product engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com and scribd.com search grounding this session (Gachibowli, one of largest R&D centers outside the US). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-hyd-003",
+    "company_name": "Goldman Sachs (Hyderabad)",
+    "entity_name_india": "Goldman Sachs Services Private Limited - Hyderabad Hub",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Gachibowli / Financial District, Hyderabad",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": 2021,
+    "headcount": null,
+    "functions": [
+      "software engineering",
+      "risk analytics",
+      "data engineering",
+      "global operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://www.goldmansachs.com/worldwide/india/",
+      "https://businessofgcc.com/goldman-sachs-hyderabad"
+    ],
+    "notes": "SOURCING: goldmansachs.com grounding and Livemint search snippet (Hyderabad opened in 2021). year_established=2021. Newer secondary hub. No Hyderabad-specific headcount -- null."
+  },
+  {
+    "id": "gcc-hyd-004",
+    "company_name": "HSBC (Hyderabad)",
+    "entity_name_india": "HSBC Electronic Data Processing India Private Limited",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "HITEC City, Hyderabad",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "technology delivery",
+      "financial operations",
+      "risk analytics",
+      "compliance"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com and scribd.com search grounding this session (HITEC City). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-hyd-005",
+    "company_name": "Apple (Hyderabad)",
+    "entity_name_india": "Apple India Private Limited - Maps and Chip Design Support",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Waverock, Nanakramguda, Hyderabad",
+    "industry": "Technology / Hardware",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "maps development",
+      "chip design support",
+      "software development"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding (Waverock Nanakramguda). Location detail from this source. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-hyd-006",
+    "company_name": "Amazon (Hyderabad)",
+    "entity_name_india": "Amazon Development Centre India Private Limited",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Nanakramguda / Gachibowli, Hyderabad",
+    "industry": "Technology / E-Commerce",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "AWS development",
+      "fulfillment technology",
+      "operations engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. Captive engineering hub not third-party service vendor. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-hyd-007",
+    "company_name": "Wells Fargo (Hyderabad)",
+    "entity_name_india": "Wells Fargo India Solutions Private Limited - Hyderabad",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Gachibowli / Financial District, Hyderabad",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "technology operations",
+      "risk management",
+      "data science",
+      "digital banking infrastructure"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. Separate hub from Bengaluru. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-hyd-008",
+    "company_name": "Hyundai Motor India Engineering",
+    "entity_name_india": "Hyundai Motor India Engineering Private Limited",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Hyderabad (HITEC City area)",
+    "industry": "Manufacturing / Automotive",
+    "parent_country": "South Korea",
+    "year_established": 2006,
+    "headcount": {
+      "min": 1200,
+      "max": 1600,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "automotive R&D",
+      "CAD/CAE",
+      "EV architecture",
+      "connected car platforms",
+      "design engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://hmie.in/",
+      "https://rankiteo.com/hyundai-motor-india-engineering",
+      "https://tracxn.com/d/companies/hyundai-motor-india-engineering"
+    ],
+    "notes": "SOURCING: hmie.in as grounding source (November 2006 Hyderabad). rankiteo.com and tracxn.com grounding (1300-1600 headcount). Range 1200-1600."
+  },
+  {
+    "id": "gcc-hyd-009",
+    "company_name": "Bayer",
+    "entity_name_india": "Bayer Business Services India Private Limited",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "HITEC City / Gachibowli, Hyderabad",
+    "industry": "Healthcare / Life Sciences",
+    "parent_country": "Germany",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "digital innovation",
+      "clinical data management",
+      "enterprise operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://businessofgcc.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: businessofgcc.com search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-hyd-010",
+    "company_name": "Salesforce (Hyderabad)",
+    "entity_name_india": "Salesforce India Private Limited",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Raheja Mindspace, HITEC City, Hyderabad",
+    "industry": "Technology / Software",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "CRM platform engineering",
+      "cloud automation",
+      "product engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding (Raheja Mindspace HITEC City). Location detail from this source. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-pun-001",
+    "company_name": "Barclays (Pune)",
+    "entity_name_india": "Barclays Shared Services Private Limited",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Gera Commerzone, Kharadi, Pune",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": 2007,
+    "headcount": {
+      "min": 9000,
+      "max": 11000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "technology operations",
+      "risk management",
+      "analytics",
+      "global banking technology"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://home.barclays/news/press-releases/2019/12/barclays-india-launches-new-campus-in-pune/",
+      "https://businessofgcc.com/barclays-pune",
+      "https://business-standard.com/barclays-pune-campus"
+    ],
+    "notes": "SOURCING: home.barclays press release in search grounding (Kharadi campus Dec 2019, designed for 9000 employees, largest Barclays facility outside London). businessofgcc.com grounding (10000+ engineers). Year 2007 from businessofgcc.com. Headcount range 9000-11000."
+  },
+  {
+    "id": "gcc-pun-002",
+    "company_name": "BNY Mellon (Pune)",
+    "entity_name_india": "BNY Mellon International Operations India Private Limited",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Kharadi / Viman Nagar, Pune",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": {
+      "min": 5000,
+      "max": 7000,
+      "as_of": "2024-10"
+    },
+    "functions": [
+      "global investment operations",
+      "technology development",
+      "financial infrastructure",
+      "risk engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://bny.com/corporate/global/en/india.html",
+      "https://tracxn.com/d/companies/bny-mellon-international-operations-india"
+    ],
+    "notes": "SOURCING: bny.com and tracxn.com grounding this session. tracxn.com: 11495 employees total across Pune and Chennai as of Oct 31 2024. Pune share estimated 5000-7000. year_established not found -- null."
+  },
+  {
+    "id": "gcc-pun-003",
+    "company_name": "Deutsche Bank (Pune)",
+    "entity_name_india": "Deutsche India Private Limited - Pune Technology Centre",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Magarpatta City / Hinjawadi, Pune",
+    "industry": "BFSI",
+    "parent_country": "Germany",
+    "year_established": null,
+    "headcount": {
+      "min": 8000,
+      "max": 12000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "core banking technology",
+      "engineering solutions",
+      "risk analytics",
+      "software development"
+    ],
+    "confidence": "estimated",
+    "source_urls": [
+      "https://indiatimes.com/deutsche-bank-india-gcc-headcount",
+      "https://businessofgcc.com/deutsche-bank-pune",
+      "https://business-standard.com/deutsche-bank-india"
+    ],
+    "notes": "SOURCING: indiatimes.com and businessofgcc.com search grounding this session. Deutsche total India 20000+; roughly half anchored out of Pune per grounding. Pune headcount 8000-12000 is an ESTIMATED SPLIT not company-disclosed -- confidence downgraded to estimated accordingly. year_established not found -- null."
+  },
+  {
+    "id": "gcc-pun-004",
+    "company_name": "Mastercard (Pune)",
+    "entity_name_india": "Mastercard Technology Private Limited",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Hinjawadi, Pune",
+    "industry": "BFSI / Fintech",
+    "parent_country": "USA",
+    "year_established": 2014,
+    "headcount": {
+      "min": 4800,
+      "max": 6000,
+      "as_of": "2024-10"
+    },
+    "functions": [
+      "payments technology",
+      "cybersecurity",
+      "data analytics",
+      "AI/ML engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://mastercard.com/news/india-tech-hub-pune",
+      "https://tracxn.com/d/companies/mastercard-technology-india",
+      "https://businessofgcc.com/mastercard-pune"
+    ],
+    "notes": "SOURCING: mastercard.com grounding (year 2014 Tech Hub Pune). tracxn.com grounding (4811 employees Feb 29 2024). businessofgcc.com/fortuneindia.com (expanded campus Oct 2024 targeting 5000-6000). Range 4800-6000."
+  },
+  {
+    "id": "gcc-pun-005",
+    "company_name": "Cummins Technical Centre India",
+    "entity_name_india": "Cummins Technical Centre India",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Kothrud, Pune",
+    "industry": "Manufacturing / Energy",
+    "parent_country": "USA",
+    "year_established": 2006,
+    "headcount": {
+      "min": 3000,
+      "max": 3500,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "engine design",
+      "emissions research",
+      "mechanical R&D",
+      "advanced engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://cummins.com/india/technical-center",
+      "https://businessofgcc.com/cummins-india"
+    ],
+    "notes": "SOURCING: cummins.com appeared in search grounding. businessofgcc.com grounding (3200+ engineers). year_established: engineering operations from 2006; Kothrud flagship facility inaugurated 2018. Using 2006 as operational start. Headcount 3000-3500."
+  },
+  {
+    "id": "gcc-pun-006",
+    "company_name": "John Deere India Technology Centre",
+    "entity_name_india": "John Deere India Technology Centre",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Magarpatta City, Pune",
+    "industry": "Manufacturing / Agricultural",
+    "parent_country": "USA",
+    "year_established": 2005,
+    "headcount": {
+      "min": 3100,
+      "max": 5500,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "farm equipment engineering",
+      "embedded systems",
+      "product design",
+      "global IT"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://deere.co.in/en/about-john-deere/india/",
+      "https://businessofgcc.com/john-deere-india"
+    ],
+    "notes": "SOURCING: deere.co.in in search grounding (TLS error on direct fetch; domain confirmed in grounding). businessofgcc.com grounding. Incubation started Feb 2005 per grounding. Headcount range 3100-5500 wide due to scope ambiguity in source."
+  },
+  {
+    "id": "gcc-pun-007",
+    "company_name": "Eaton India Innovation Center",
+    "entity_name_india": "Eaton India Innovation Center",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Magarpatta City, Pune",
+    "industry": "Manufacturing / Energy",
+    "parent_country": "USA",
+    "year_established": 2015,
+    "headcount": {
+      "min": 2500,
+      "max": 3000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "electrical engineering R&D",
+      "aerospace product engineering",
+      "vehicle power management"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://eaton.com/us/en-us/company/news-insights/news/2017/eaton-india-innovation-center-inaugurated.html",
+      "https://businessofgcc.com/eaton-india"
+    ],
+    "notes": "SOURCING: eaton.com appeared in search grounding (EIIC details). businessofgcc.com grounding (2500+ engineers). year_established=2015 (EIIC formal entity). Headcount 2500-3000."
+  },
+  {
+    "id": "gcc-pun-008",
+    "company_name": "UBS (Pune)",
+    "entity_name_india": "UBS Business Solutions India Private Limited",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Kharadi, Pune",
+    "industry": "BFSI",
+    "parent_country": "Switzerland",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "corporate services",
+      "technology",
+      "analytical capabilities",
+      "wealth management support"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccpros.com/pune-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccpros.com and gccxglobal.com search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-pun-009",
+    "company_name": "Siemens (Pune)",
+    "entity_name_india": "Siemens Technology and Services Private Limited",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Hinjawadi, Pune",
+    "industry": "Manufacturing / Industrial",
+    "parent_country": "Germany",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "digital industries",
+      "automation software",
+      "industrial R&D",
+      "engineering simulation"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://tmservices.co.in/pune-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: tmservices.co.in search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-pun-010",
+    "company_name": "Volkswagen Group Technology Solutions India",
+    "entity_name_india": "Volkswagen Group Technology Solutions India Private Limited",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Hinjawadi / Pune",
+    "industry": "Manufacturing / Automotive",
+    "parent_country": "Germany",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "automotive software",
+      "connected vehicle platforms",
+      "engineering R&D"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/pune-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-pun-011",
+    "company_name": "BNY Technology (Pune)",
+    "entity_name_india": "BNY Technology Private Limited",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Kharadi, Pune",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": {
+      "min": 4000,
+      "max": 5000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "technology innovation",
+      "platform engineering",
+      "financial infrastructure"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://bny.com/corporate/global/en/india.html",
+      "https://tracxn.com/d/companies/bny-technology-india"
+    ],
+    "notes": "SOURCING: bny.com and tracxn.com grounding this session. tracxn.com: BNY Technology 4700+ employees across Pune and Chennai. Pune share estimated 4000-5000. Separate legal entity from gcc-pun-002."
+  },
+  {
+    "id": "gcc-pun-012",
+    "company_name": "Citi (Pune)",
+    "entity_name_india": "Citi Service Centre India Private Limited - Pune",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "location_detail": "Kharadi, Pune",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "global banking technology",
+      "operations delivery",
+      "data analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccpros.com/pune-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccpros.com search grounding. Primary Citi GCC is Chennai gcc-chn-003. Pune is a secondary delivery centre. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-chn-001",
+    "company_name": "Standard Chartered Global Business Services",
+    "entity_name_india": "Standard Chartered Global Business Services Private Limited",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "DLF Downtown, Tharamani, Chennai",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": {
+      "min": 12000,
+      "max": 14000,
+      "as_of": "2024-03"
+    },
+    "functions": [
+      "digital banking technology",
+      "process transformation",
+      "compliance",
+      "risk analytics",
+      "global operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://tracxn.com/d/companies/standard-chartered-global-business-services",
+      "https://theflexinsights.com/standard-chartered-chennai",
+      "https://greatplacetowork.in/standard-chartered-india"
+    ],
+    "notes": "SOURCING: tracxn.com grounding (22475 employees across India Mar 2024). theflexinsights.com grounding (over 13000 at DLF Downtown Tharamani). Range 12000-14000. year_established not found -- null."
+  },
+  {
+    "id": "gcc-chn-002",
+    "company_name": "Renault Nissan Technology and Business Centre India",
+    "entity_name_india": "Renault Nissan Technology and Business Centre India Private Limited",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "Mahindra World City, Chengalpattu, Chennai metro",
+    "industry": "Manufacturing / Automotive",
+    "parent_country": "France / Japan",
+    "year_established": null,
+    "headcount": {
+      "min": 7500,
+      "max": 8500,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "vehicle engineering",
+      "digital solutions",
+      "global business services",
+      "ISIT software development"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://rntbci.in/",
+      "https://indiatimes.com/rntbci-chennai-gcc"
+    ],
+    "notes": "SOURCING: rntbci.in in grounding (about-us 404 on direct fetch; domain confirmed). indiatimes.com grounding. Total entity payroll 7500-8500. 3000+ ISIT employees milestone early 2024 per rntbci.in grounding. year_established not found -- null."
+  },
+  {
+    "id": "gcc-chn-003",
+    "company_name": "Citi (Chennai)",
+    "entity_name_india": "Citibank India - Global Operations and Technology Chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR / Sholinganallur, Chennai",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "technology operations",
+      "analytics",
+      "operations delivery",
+      "compliance"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://flexiple.com/gcc/chennai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: flexiple.com search grounding (pioneer in India captive space, extensive tech and operations networks out of Chennai). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-chn-004",
+    "company_name": "BNY Mellon (Chennai)",
+    "entity_name_india": "BNY Mellon International Operations India Private Limited - Chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR / Sholinganallur, Chennai",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": {
+      "min": 4000,
+      "max": 6000,
+      "as_of": "2024-10"
+    },
+    "functions": [
+      "global investment operations",
+      "technology development",
+      "financial infrastructure"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://bny.com/corporate/global/en/india.html",
+      "https://tracxn.com/d/companies/bny-mellon-international-operations-india"
+    ],
+    "notes": "SOURCING: bny.com and tracxn.com grounding this session (11495 total Pune and Chennai). Chennai share estimated 4000-6000. City split not disclosed. year_established not found -- null."
+  },
+  {
+    "id": "gcc-chn-005",
+    "company_name": "Barclays (Chennai)",
+    "entity_name_india": "Barclays Shared Services Private Limited - Chennai",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR Corridor, Chennai",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "global service centre technology",
+      "core banking operations",
+      "risk analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://flexiple.com/gcc/chennai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: flexiple.com search grounding. Primary Barclays GCC is Pune gcc-pun-001. Chennai is a secondary hub. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-chn-006",
+    "company_name": "PayPal (Chennai)",
+    "entity_name_india": "PayPal Holdings India Private Limited",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR, Chennai",
+    "industry": "BFSI / Fintech",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "payments technology",
+      "fraud analytics",
+      "risk engineering",
+      "global operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/chennai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding this session. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-chn-007",
+    "company_name": "DBS Bank (Chennai)",
+    "entity_name_india": "DBS Bank India Limited - Technology Hub",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR, Chennai",
+    "industry": "BFSI",
+    "parent_country": "Singapore",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "digital banking technology",
+      "API banking",
+      "AI/ML for banking",
+      "global IT operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/chennai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-chn-008",
+    "company_name": "Worldline India",
+    "entity_name_india": "Worldline India Technology Private Limited",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR / TIDEL Park area, Chennai",
+    "industry": "BFSI / Fintech",
+    "parent_country": "France",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "payment processing technology",
+      "digital payment platforms",
+      "credit risk engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://kasbusinessconsulting.com/chennai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: kasbusinessconsulting.com search grounding (Worldline cited as FinTech captive on OMR). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-chn-009",
+    "company_name": "Ford Business Solutions India",
+    "entity_name_india": "Ford Business Solutions India Private Limited",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR, Chennai",
+    "industry": "Manufacturing / Automotive",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "automotive digital engineering",
+      "R&D engineering talent pool",
+      "embedded systems"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://sansovi.com/chennai-gcc-automotive",
+      "https://tmservices.co.in/chennai-gcc-directory"
+    ],
+    "notes": "SOURCING: sansovi.com and tmservices.co.in search grounding (Chennai vital for automotive digital and R&D engineering). Ford manufacturing plant closed 2021; technology/GCC entity continued. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-chn-010",
+    "company_name": "AstraZeneca (Chennai)",
+    "entity_name_india": "AstraZeneca India Private Limited - Chennai Hub",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "location_detail": "OMR, Chennai",
+    "industry": "Healthcare / Life Sciences",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": {
+      "min": 1500,
+      "max": 2500,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "R&D support",
+      "clinical data management",
+      "global IT operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://www.astrazeneca.in/our-company/global-hub-india.html",
+      "https://inductusgcc.com/gcc-profiles/astrazeneca-india"
+    ],
+    "notes": "SOURCING: astrazeneca.in grounding (3000-4000 employee footprint across Bengaluru and Chennai). Bengaluru primary ~1400; remainder 1500-2500 estimated for Chennai. year_established not found -- null."
+  },
+  {
+    "id": "gcc-ncr-001",
+    "company_name": "American Express",
+    "entity_name_india": "American Express Banking Corporation India",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Sector 74A, Gurugram",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": {
+      "min": 10000,
+      "max": 12000,
+      "as_of": "2024-05"
+    },
+    "functions": [
+      "technology",
+      "digital product engineering",
+      "AI Centre of Excellence",
+      "finance",
+      "global operations",
+      "risk analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://americanexpress.com/en-us/newsroom/articles/india-largest-office",
+      "https://economictimes.com/american-express-gurugram-campus-2024"
+    ],
+    "notes": "SOURCING: americanexpress.com grounding (largest worldwide office Gurugram). economictimes.com grounding (May 2024 campus opening Sector 74A ~1 million sqft). Headcount 10000+ from businessofgcc.com grounding. Range 10000-12000. year_established not found -- null."
+  },
+  {
+    "id": "gcc-ncr-002",
+    "company_name": "McKinsey Knowledge Centre India",
+    "entity_name_india": "McKinsey Global Capabilities and Services India",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "Professional Services",
+    "parent_country": "USA",
+    "year_established": 1998,
+    "headcount": {
+      "min": 6000,
+      "max": 8000,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "business research",
+      "analytics",
+      "AI engineering QuantumBlack",
+      "consulting knowledge services"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://mckinsey.com/careers/our-locations/india",
+      "https://businessofgcc.com/mckinsey-gurugram"
+    ],
+    "notes": "SOURCING: mckinsey.com grounding (year 1998; largest client capabilities hub globally). businessofgcc.com grounding (~7000 professionals). Range 6000-8000."
+  },
+  {
+    "id": "gcc-ncr-003",
+    "company_name": "EY Global Delivery Services (Gurugram)",
+    "entity_name_india": "EY Global Delivery Services India LLP - Gurugram",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "Professional Services",
+    "parent_country": "UK",
+    "year_established": 2002,
+    "headcount": null,
+    "functions": [
+      "tax advisory",
+      "assurance",
+      "consulting analytics",
+      "transaction advisory"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://businessofgcc.com/ey-global-delivery-services-india",
+      "https://ey.com/en_in/gds"
+    ],
+    "notes": "SOURCING: businessofgcc.com and ey.com grounding this session. Total ~80000 across all India; Gurugram-specific split not available -- headcount null. year_established=2002."
+  },
+  {
+    "id": "gcc-ncr-004",
+    "company_name": "Deloitte US India GDS",
+    "entity_name_india": "Deloitte Support Services India Private Limited",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "Professional Services",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "tax advisory",
+      "risk advisory delivery",
+      "consulting analytics",
+      "internal technology support"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ncr-005",
+    "company_name": "KPMG Global Services",
+    "entity_name_india": "KPMG Global Services India Private Limited",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "Professional Services",
+    "parent_country": "Netherlands",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "business research",
+      "financial modeling",
+      "accounting support",
+      "consulting analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ncr-006",
+    "company_name": "JPMorgan Chase (Gurugram)",
+    "entity_name_india": "JPMorgan Services India Private Limited - Gurugram",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram / Cyber City",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "corporate banking technology",
+      "risk analytics",
+      "global finance",
+      "data engineering"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No Gurugram-specific headcount -- null. Separate Mumbai record gcc-mum-001 covers Powai GCC."
+  },
+  {
+    "id": "gcc-ncr-007",
+    "company_name": "Standard Chartered (Gurugram)",
+    "entity_name_india": "Standard Chartered Global Business Services - Gurugram",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "back-office operations",
+      "compliance",
+      "technology infrastructure"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. Primary GCC in Chennai gcc-chn-001. Gurugram secondary hub. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ncr-008",
+    "company_name": "Aon",
+    "entity_name_india": "Aon India Insurance Brokers Private Limited",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "BFSI / Insurance",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "insurance brokerage analytics",
+      "risk management solutions",
+      "actuarial consulting"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://flexiple.com/gcc/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: flexiple.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ncr-009",
+    "company_name": "MetLife (Noida)",
+    "entity_name_india": "MetLife Global Operations Support Center India Private Limited",
+    "city": "Delhi NCR",
+    "state": "Uttar Pradesh",
+    "location_detail": "Noida",
+    "industry": "BFSI / Insurance",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "insurance processing",
+      "financial reporting",
+      "customer service delivery"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. State = Uttar Pradesh (Noida). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ncr-010",
+    "company_name": "S&P Global",
+    "entity_name_india": "S&P Global Market Intelligence India Private Limited",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "BFSI / Financial Data",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "financial research",
+      "risk assessment",
+      "market intelligence",
+      "data analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ncr-011",
+    "company_name": "PwC India Acceleration Centre",
+    "entity_name_india": "PricewaterhouseCoopers Service Delivery Centre India Private Limited",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "Professional Services",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "assurance delivery",
+      "tax support",
+      "consulting execution",
+      "global client support"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ncr-012",
+    "company_name": "American International Group",
+    "entity_name_india": "AIG Shared Services India Private Limited",
+    "city": "Delhi NCR",
+    "state": "Haryana",
+    "location_detail": "Gurugram",
+    "industry": "BFSI / Insurance",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "actuarial science",
+      "risk management",
+      "financial analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/delhi-ncr-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-mum-001",
+    "company_name": "JPMorgan Chase (Mumbai)",
+    "entity_name_india": "JPMorgan Services India Private Limited - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "Powai, Mumbai (new GCC campus under construction)",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": 1945,
+    "headcount": null,
+    "functions": [
+      "investment banking technology",
+      "risk management",
+      "quantitative analytics",
+      "global operations",
+      "trade lifecycle management"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://jpmorgan.com/global/india",
+      "https://economictimes.com/jpmorgan-powai-gcc-30000-employees",
+      "https://peoplematters.in/jpmorgan-largest-gcc-asia-powai"
+    ],
+    "notes": "SOURCING: jpmorgan.com grounding (predecessor Chase National Bank Mumbai 1945). economictimes.com and peoplematters.in grounding (2 million sqft Powai campus capacity 30000 employees completion 2029). Total India ~55000. year_established=1945. Current city-level headcount not available -- null."
+  },
+  {
+    "id": "gcc-mum-002",
+    "company_name": "Morgan Stanley",
+    "entity_name_india": "Morgan Stanley Advantage Services Private Limited",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "Commerz III, Goregaon, Mumbai",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": {
+      "min": 8000,
+      "max": 8500,
+      "as_of": "2024-06"
+    },
+    "functions": [
+      "investment banking technology",
+      "wealth management tools",
+      "equity research",
+      "risk analytics",
+      "compliance"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://analyticsindiamag.com/morgan-stanley-india-gcc",
+      "https://businessofgcc.com/morgan-stanley-india"
+    ],
+    "notes": "SOURCING: analyticsindiamag.com grounding (Commerz III campus designed for 8500+ employees). businessofgcc.com grounding (India total 8000-8500). Headcount range 8000-8500. year_established not found -- null."
+  },
+  {
+    "id": "gcc-mum-003",
+    "company_name": "Goldman Sachs (Mumbai)",
+    "entity_name_india": "Goldman Sachs Services Private Limited - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "BKC / Nariman Point, Mumbai",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "investment banking",
+      "quantitative risk modeling",
+      "trading platform engineering",
+      "wealth management"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/mumbai-gcc-directory",
+      "https://gccjournal.in/mumbai-bfsi-gcc"
+    ],
+    "notes": "SOURCING: gccxglobal.com and gccjournal.in search grounding. Primary India GCC is Bengaluru gcc-blr-001. No Mumbai-specific headcount -- null."
+  },
+  {
+    "id": "gcc-mum-004",
+    "company_name": "Deutsche Bank (Mumbai)",
+    "entity_name_india": "Deutsche India Private Limited - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "BKC / Andheri East, Mumbai",
+    "industry": "BFSI",
+    "parent_country": "Germany",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "corporate banking operations",
+      "quantitative analytics",
+      "technology",
+      "compliance"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://indiatimes.com/deutsche-bank-india-gcc-headcount",
+      "https://businessofgcc.com/deutsche-bank-mumbai"
+    ],
+    "notes": "SOURCING: indiatimes.com grounding (Mumbai hosts corporate banking analytics and tech for Deutsche India). Primary GCC is Pune gcc-pun-003. No Mumbai-specific headcount -- null."
+  },
+  {
+    "id": "gcc-mum-005",
+    "company_name": "Nomura",
+    "entity_name_india": "Nomura Services India Private Limited",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "Powai, Mumbai",
+    "industry": "BFSI",
+    "parent_country": "Japan",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "capital markets execution",
+      "research",
+      "compliance",
+      "financial technology"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/mumbai-gcc-directory",
+      "https://gccjournal.in/mumbai-bfsi-gcc"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding (Nomura cited in Mumbai BFSI GCC ecosystem). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-mum-006",
+    "company_name": "Barclays (Mumbai)",
+    "entity_name_india": "Barclays Shared Services Private Limited - Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "BKC, Mumbai",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "capital markets support",
+      "compliance",
+      "financial technology"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/mumbai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. Primary Barclays GCC is Pune gcc-pun-001. Mumbai secondary. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-mum-007",
+    "company_name": "BNP Paribas",
+    "entity_name_india": "BNP Paribas India Solutions Private Limited",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "Navi Mumbai / BKC, Mumbai",
+    "industry": "BFSI",
+    "parent_country": "France",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "capital markets research",
+      "compliance",
+      "financial technology",
+      "operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/mumbai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-mum-008",
+    "company_name": "HSBC (Mumbai)",
+    "entity_name_india": "HSBC Software Development India Private Limited",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "Powai / Navi Mumbai",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "technology operations",
+      "digital banking",
+      "financial operations",
+      "risk"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/mumbai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-mum-009",
+    "company_name": "Societe Generale",
+    "entity_name_india": "Societe Generale Global Solution Centre India Private Limited",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "Navi Mumbai / Airoli",
+    "industry": "BFSI",
+    "parent_country": "France",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "capital markets technology",
+      "compliance",
+      "financial analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/mumbai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-mum-010",
+    "company_name": "Citi (Mumbai)",
+    "entity_name_india": "Citibank India - Technology Hub Mumbai",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "location_detail": "BKC, Mumbai",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "digital banking technology",
+      "operations",
+      "risk analytics"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://gccxglobal.com/mumbai-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com search grounding. Primary Citi GCC is Chennai gcc-chn-003. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-001",
+    "company_name": "State Bank of India GIFT City IFSC Unit",
+    "entity_name_india": "State Bank of India - GIFT City IFSC Branch",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City IFSC Zone",
+    "industry": "BFSI",
+    "parent_country": "India",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "cross-border banking",
+      "foreign currency operations",
+      "trade finance",
+      "global treasury"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://giftgujarat.in/about/entities",
+      "https://longfinance.net/gift-city-financial-centre-report"
+    ],
+    "notes": "SOURCING: giftgujarat.in and longfinance.net grounding this session (30+ global and domestic banks in GIFT City). SBI GIFT IFSC captive regulated unit meets GCC-equivalent definition. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-002",
+    "company_name": "HDFC Bank GIFT City IFSC Unit",
+    "entity_name_india": "HDFC Bank - GIFT City IFSC Branch",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City IFSC Zone",
+    "industry": "BFSI",
+    "parent_country": "India",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "cross-border banking",
+      "global treasury",
+      "foreign currency lending"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://giftgujarat.in/about/entities",
+      "https://longfinance.net/gift-city-financial-centre-report"
+    ],
+    "notes": "SOURCING: giftgujarat.in grounding (30+ banks). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-003",
+    "company_name": "Deloitte GIFT City",
+    "entity_name_india": "Deloitte Shared Services India Private Limited - GIFT City",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City",
+    "industry": "Professional Services",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "legal and tax consulting for IFSC clients",
+      "fund administration",
+      "compliance advisory"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
+      "https://giftgujarat.in/about/entities"
+    ],
+    "notes": "SOURCING: pib.gov.in and giftgujarat.in grounding (Big Four expanded capability centres in GIFT City). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-004",
+    "company_name": "EY GIFT City",
+    "entity_name_india": "EY Global Delivery Services - GIFT City",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City",
+    "industry": "Professional Services",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "fund administration",
+      "tax advisory for IFSC",
+      "legal and compliance services"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
+      "https://giftgujarat.in/about/entities"
+    ],
+    "notes": "SOURCING: pib.gov.in and giftgujarat.in grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-005",
+    "company_name": "KPMG GIFT City",
+    "entity_name_india": "KPMG Global Services India - GIFT City",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City",
+    "industry": "Professional Services",
+    "parent_country": "Netherlands",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "fund administration",
+      "regulatory compliance for IFSC",
+      "advisory"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
+      "https://giftgujarat.in/about/entities"
+    ],
+    "notes": "SOURCING: pib.gov.in grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-006",
+    "company_name": "PwC GIFT City",
+    "entity_name_india": "PricewaterhouseCoopers Service Delivery Centre - GIFT City",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City",
+    "industry": "Professional Services",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "fund administration",
+      "tax advisory for IFSC clients",
+      "compliance"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
+      "https://giftgujarat.in/about/entities"
+    ],
+    "notes": "SOURCING: pib.gov.in grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-007",
+    "company_name": "NSE IFSC",
+    "entity_name_india": "NSE IFSC Limited",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City - India International Exchange area",
+    "industry": "BFSI",
+    "parent_country": "India",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "international equities trading",
+      "derivatives settlement",
+      "capital markets operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://giftgujarat.in/about/entities",
+      "https://longfinance.net/gift-city-financial-centre-report"
+    ],
+    "notes": "SOURCING: giftgujarat.in and longfinance.net grounding. IFSCA regulated entity. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-008",
+    "company_name": "KFintech GIFT City",
+    "entity_name_india": "KFin Technologies Limited - GIFT City Unit",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City",
+    "industry": "BFSI / Fintech",
+    "parent_country": "India",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "registrar and transfer agent services",
+      "mutual fund platform",
+      "wealth tech"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://giftgujarat.in/about/entities",
+      "https://rkhrm.com/gift-city-gcc-ecosystem"
+    ],
+    "notes": "SOURCING: giftgujarat.in and rkhrm.com grounding (KFintech explicitly cited as leveraging IFSC sandbox). No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-009",
+    "company_name": "India International Bullion Exchange",
+    "entity_name_india": "India International Bullion Exchange IFSC Limited",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City IFSC Zone",
+    "industry": "BFSI",
+    "parent_country": "India",
+    "year_established": 2022,
+    "headcount": null,
+    "functions": [
+      "bullion trading",
+      "gold spot contracts",
+      "settlement operations",
+      "risk management"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://longfinance.net/gift-city-financial-centre-report",
+      "https://giftgujarat.in/about/entities"
+    ],
+    "notes": "SOURCING: longfinance.net grounding (IIBX creating demand for captive risk-analytics and trading desks). giftgujarat.in grounding. year_established=2022 (IIBX launched September 2022). No headcount -- null."
+  },
+  {
+    "id": "gcc-ahm-010",
+    "company_name": "Standard Chartered GIFT City IFSC Unit",
+    "entity_name_india": "Standard Chartered Bank - GIFT City IFSC Branch",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City IFSC Zone",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "cross-border banking",
+      "trade finance",
+      "global treasury",
+      "foreign currency operations"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://giftgujarat.in/about/entities",
+      "https://longfinance.net/gift-city-financial-centre-report"
+    ],
+    "notes": "SOURCING: giftgujarat.in grounding (30+ global banks). Standard Chartered known IFSC presence. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-011",
+    "company_name": "HSBC GIFT City IFSC Unit",
+    "entity_name_india": "HSBC Bank - GIFT City IFSC Branch",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City IFSC Zone",
+    "industry": "BFSI",
+    "parent_country": "UK",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "cross-border banking",
+      "multi-currency treasury",
+      "trade finance"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://giftgujarat.in/about/entities",
+      "https://longfinance.net/gift-city-financial-centre-report"
+    ],
+    "notes": "SOURCING: giftgujarat.in grounding. No headcount or year_established -- both null."
+  },
+  {
+    "id": "gcc-ahm-012",
+    "company_name": "Citibank GIFT City IFSC Unit",
+    "entity_name_india": "Citibank N.A. - GIFT City IFSC Branch",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "location_detail": "GIFT City IFSC Zone",
+    "industry": "BFSI",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "cross-border banking",
+      "global treasury management",
+      "foreign currency trade finance"
+    ],
+    "confidence": "reported",
+    "source_urls": [
+      "https://giftgujarat.in/about/entities",
+      "https://longfinance.net/gift-city-financial-centre-report"
+    ],
+    "notes": "SOURCING: giftgujarat.in grounding. No headcount or year_established -- both null."
+  }
+]

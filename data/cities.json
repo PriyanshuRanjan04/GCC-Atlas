@@ -2,7 +2,7 @@
   {
     "city": "Bengaluru",
     "state": "Karnataka",
-    "gcc_count_in_dataset": null,
+    "gcc_count_in_dataset": 14,
     "talent": {
       "notes": "India's largest GCC talent hub with ~2.1 million tech professionals. Approximately 40% of all India GCC setups are here. Dominant in AI/ML (~50% of India's AI/ML talent pool), cloud architecture, cybersecurity, and deep-tech R&D. Serves as pay ceiling for GCC compensation nationally. High attrition (~18-22%) is a known risk. Strong pipeline from IISc, IIMs, IIIT-B, and dozens of engineering colleges.",
       "annual_salary_inr_lakhs_by_role": [
@@ -43,7 +43,7 @@
   {
     "city": "Hyderabad",
     "state": "Telangana",
-    "gcc_count_in_dataset": null,
+    "gcc_count_in_dataset": 10,
     "talent": {
       "notes": "~1.2 million tech professionals. Second-largest GCC hub in India, hosting 350-400+ major GCCs. Strong in cloud (Azure, AWS, Google Cloud hyperscaler operations), BFSI, life sciences, and pharmatech. 5-10% salary discount vs. Bengaluru for most roles, with cloud and AI profiles approaching parity. Strong pipeline from IIIT-H, Osmania University, and numerous private engineering colleges.",
       "annual_salary_inr_lakhs_by_role": [
@@ -84,7 +84,7 @@
   {
     "city": "Pune",
     "state": "Maharashtra",
-    "gcc_count_in_dataset": null,
+    "gcc_count_in_dataset": 12,
     "talent": {
       "notes": "~800,000 tech professionals. Fastest-growing GCC destination for engineering R&D, automotive tech, SaaS, and manufacturing. 10-20% cost advantage over Bengaluru in salaries, with notably lower attrition (14-16% vs. 20-22% in Bengaluru). Strong engineering talent pipeline from College of Engineering Pune, COEP, Symbiosis, and MIT Pune. Hub for ER&D and product engineering GCCs.",
       "annual_salary_inr_lakhs_by_role": [
@@ -125,7 +125,7 @@
   {
     "city": "Chennai",
     "state": "Tamil Nadu",
-    "gcc_count_in_dataset": null,
+    "gcc_count_in_dataset": 10,
     "talent": {
       "notes": "~750,000 tech professionals. Foundational hub for manufacturing, automotive, semiconductors, traditional and digital BFSI, and SaaS. Deep engineering pipeline from IIT Madras, Anna University, and large number of affiliated engineering colleges. Known for high operational longevity and lower attrition than Bengaluru. Strong in manufacturing-adjacent tech (embedded systems, VLSI, automotive R&D) and BFSI shared services.",
       "annual_salary_inr_lakhs_by_role": [
@@ -166,7 +166,7 @@
   {
     "city": "Delhi NCR",
     "state": "Haryana / Uttar Pradesh / Delhi",
-    "gcc_count_in_dataset": null,
+    "gcc_count_in_dataset": 12,
     "talent": {
       "notes": "~600,000+ tech and enterprise professionals across the tri-state NCR cluster (Gurugram, Noida, Greater Noida, Delhi). NCR excels in management consulting, financial services, retail, telecom, and digital analytics. Gurugram is the anchor for BFSI and global management consulting GCCs; Noida is the anchor for tech, BPO-evolved GCCs, and e-commerce. Strong pipeline from IIT Delhi, BITS Pilani, IIM-L, Delhi University. Noida offers 25-40% cost arbitrage vs. Gurugram for equivalent roles.",
       "annual_salary_inr_lakhs_by_role": [
@@ -207,7 +207,7 @@
   {
     "city": "Mumbai",
     "state": "Maharashtra",
-    "gcc_count_in_dataset": null,
+    "gcc_count_in_dataset": 10,
     "talent": {
       "notes": "Mumbai's GCC talent pool is smaller in headcount than Bengaluru or Hyderabad for pure tech roles, but is unmatched for BFSI domain expertise (investment banking, capital markets, insurance, fintech). Hosts GCCs of global investment banks (Morgan Stanley, JPMorgan, Nomura, Deutsche Bank, Barclays) and insurance majors. Software and data engineers in Mumbai's financial GCCs command a 10-20% premium over standard enterprise GCC bands due to BFSI domain complexity. Strong pipeline from IIT Bombay, IIM-A alumni network, NMIMS, and SP Jain.",
       "annual_salary_inr_lakhs_by_role": [
@@ -246,48 +246,9 @@
     "ecosystem_notes": "Mumbai is India's BFSI GCC capital — the only city where financial services GCCs significantly outnumber tech GCCs. BKC is the premier financial district. Real estate is the most expensive of all 8 cities, making it less competitive for large-footprint tech GCCs. Strongest case for companies needing proximity to capital markets, regulatory bodies (SEBI, RBI, NSE/BSE), and India's largest HNWI/institutional investor base."
   },
   {
-    "city": "Kolkata",
-    "state": "West Bengal",
-    "gcc_count_in_dataset": null,
-    "talent": {
-      "notes": "Large regional talent base across IT-BPM, software engineering, finance, and analytics. Engineering salaries run 25-40% below Bengaluru/Hyderabad, making Kolkata highly cost-competitive. Lower attrition than Tier-1 metros. Key GCC functions here: finance and accounting shared services, analytics, IT support, and back-office operations. Strong pipeline from Jadavpur University, IIT Kharagpur, Presidency University, and numerous regional engineering colleges. Relatively limited pool of senior tech talent for advanced roles (AI/ML, cloud architecture) compared to Tier-1 cities.",
-      "annual_salary_inr_lakhs_by_role": [
-        { "role": "software engineer (3-5 yrs)", "min": 10, "max": 22 },
-        { "role": "data / AI engineer (3-5 yrs)", "min": 10, "max": 20 },
-        { "role": "finance / accounting analyst (3-5 yrs)", "min": 8, "max": 16 },
-        { "role": "engineering manager (8-12 yrs)", "min": 25, "max": 50 }
-      ],
-      "as_of": "2025-06",
-      "source_urls": [
-        "https://nasscom.in/knowledge-center/gcc-talent-india",
-        "https://digitalaptech.com/kolkata-it-salary-guide",
-        "https://indiatimes.com/kolkata-gcc-leasing-growth"
-      ],
-      "confidence": "estimated",
-      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries. 25-40% discount to Bengaluru benchmarks is directly cited by digitalaptech.com in search results. Applied that discount to Bengaluru base to derive ranges. Senior AI/ML talent ranges are particularly uncertain — pool is thin and the discount may be smaller for scarce specialists. Engineering manager ceiling of ₹50 LPA is a conservative estimate; experienced leaders often relocate to Tier-1 cities. 'Estimated' confidence applies."
-    },
-    "office_space": {
-      "grade_a_rent_inr_per_sqft_per_month": { "min": 42, "max": 67 },
-      "key_clusters": [
-        "Salt Lake Sector V (IT hub)",
-        "Rajarhat / New Town (Silicon Valley Hub)",
-        "STPI locations (Sector V)"
-      ],
-      "as_of": "2025-06",
-      "source_urls": [
-        "https://cushmanwakefield.com/en/india/research/kolkata-office-market",
-        "https://indiatimes.com/kolkata-office-market-2025",
-        "https://propertywala.com/kolkata-office-rents"
-      ],
-      "confidence": "reported",
-      "notes": "SOURCING: No URL was directly opened and read. Data from Google search result summaries. Cushman & Wakefield is cited as primary source; indiatimes.com article on Kolkata GCC growth corroborates. Salt Lake Sector V: ₹52-67/sqft; Rajarhat: ₹42-62/sqft (baseline ₹47-50 average, up to 27% YoY growth cited in top-spec buildings). Min/max reflect Rajarhat floor to Sector V prime ceiling. Kolkata is significantly cheaper than all other cities in this dataset."
-    },
-    "ecosystem_notes": "Kolkata is the most cost-competitive city in this dataset for both office space and talent. Best suited for finance and accounting shared services, IT-BPM, analytics, and back-office GCC functions. Not yet competitive for advanced tech R&D due to thinner senior tech talent pool. Fast-growing GCC leasing (crossing 0.5 mn sqft/year). West Bengal IT Policy provides 50% property tax exemption (up to 12 years) and capital subsidies. Salt Lake Sector V is the established hub; Rajarhat is the high-growth emerging cluster."
-  },
-  {
     "city": "Ahmedabad",
     "state": "Gujarat",
-    "gcc_count_in_dataset": null,
+    "gcc_count_in_dataset": 12,
     "talent": {
       "notes": "Estimated ~90,000-95,000 active technology professionals in the broader Ahmedabad/Gandhinagar corridor. Annual graduate output ~55,000-60,000 from regional engineering and management institutions (IIM-A, IIT-Gn, DAIICT, NID). Lowest attrition of all 8 cities (~7-12%). GIFT City specifically targets BFSI and fintech talent. Strong for finance, accounting, and BFSI-adjacent roles. Tech talent depth for advanced AI/ML, cloud architecture is more limited than Tier-1 cities. Significant cost advantage: salary benchmarks typically 30-40% below Bengaluru for equivalent roles.",
       "annual_salary_inr_lakhs_by_role": [
