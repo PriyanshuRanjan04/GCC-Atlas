@@ -25,7 +25,8 @@
       "https://www.goldmansachs.com/worldwide/india/",
       "https://www.livemint.com/companies/news/goldman-sachs-bengaluru-office"
     ],
-    "notes": "SOURCING: goldmansachs.com/worldwide/india/ fetched this session (JS page, URL confirmed active). Search grounding confirms Bengaluru launched 2004, campus at Helios Business Park inaugurated 2019. Headcount 8000-9000 from search result summaries. year_established=2004 from Livemint search result snippet."
+    "notes": "SOURCING: goldmansachs.com/worldwide/india/ fetched this session (JS page, URL confirmed). Year 2004 and Helios Business Park confirmed by goldmansachs.com (official). devdiscourse.com ($250 million campus, 1.2 million sqft, 3 towers inaugurated May 2019). Headcount 8000-9000 from search result summaries - not an official company disclosure. Confidence stays reported.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-002",
@@ -54,7 +55,8 @@
       "https://tracxn.com/d/companies/walmart-global-tech-india",
       "https://businessofgcc.com/walmart-global-tech-india"
     ],
-    "notes": "SOURCING: tracxn.com and businessofgcc.com grounding this session. Headcount 11000-13000 (mid-2024) cited in tracxn.com search results. Described as Walmart largest GCC outside US. year_established not found in retrieved sources -- null."
+    "notes": "SOURCING: tracxn.com and businessofgcc.com grounding this session. Headcount 11000-13000 (mid-2024) cited in tracxn.com search results. Described as Walmart largest GCC outside US. year_established not found in retrieved sources -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-003",
@@ -82,7 +84,8 @@
       "https://tracxn.com/d/companies/target-corporation-india",
       "https://gcc-pulse.com/target-india"
     ],
-    "notes": "SOURCING: tracxn.com (incorporation Feb 26 2004) and gcc-pulse.com (5700+ team members) from this session. Year 2004 from tracxn registration data. Headcount 5000-6000 around 5700 figure."
+    "notes": "SOURCING: tracxn.com (incorporation Feb 26 2004) and gcc-pulse.com (5700+ team members) from this session. Year 2004 from tracxn registration data. Headcount 5000-6000 around 5700 figure.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-004",
@@ -110,7 +113,8 @@
       "https://www.astrazeneca.in/our-company/global-hub-india.html",
       "https://inductusgcc.com/gcc-profiles/astrazeneca-india"
     ],
-    "notes": "SOURCING: astrazeneca.in grounding this session (close to 1400 professionals). GCC scale-up from ~2014 per healthark.ai grounding. Headcount range 1200-1600 around 1400 figure."
+    "notes": "SOURCING: astrazeneca.in grounding this session (close to 1400 professionals). GCC scale-up from ~2014 per healthark.ai grounding. Headcount range 1200-1600 around 1400 figure.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-005",
@@ -138,7 +142,8 @@
       "https://indiatimes.com/fidelity-investments-india-gcc",
       "https://hyring.com/company/fidelity-business-services-india"
     ],
-    "notes": "SOURCING: indiatimes.com grounding (~7000 employees across India) and hyring.com (Bengaluru and Chennai) this session. Range 6000-7500 estimated share for Bengaluru as primary hub. year_established not found -- null."
+    "notes": "SOURCING: indiatimes.com grounding (~7000 employees across India) and hyring.com (Bengaluru and Chennai) this session. Range 6000-7500 estimated share for Bengaluru as primary hub. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-006",
@@ -162,7 +167,8 @@
       "https://zinnov.com/gcc-landscape-india",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session (largest design center outside the US). No company-disclosed headcount or year_established -- both null."
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session (largest design center outside the US). No company-disclosed headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-007",
@@ -185,7 +191,8 @@
       "https://zinnov.com/gcc-landscape-india",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-008",
@@ -210,7 +217,8 @@
       "https://mbrdi.co.in/about-us/",
       "https://mercedes-benz.com/en/innovation/mbrdi"
     ],
-    "notes": "SOURCING: mbrdi.co.in fetched this session (React SPA; domain confirmed active and official). mercedes-benz.com in search grounding. Year 1996 from mercedes-benz.com grounding (founded 1996 as captive). Largest R&D center outside Germany. Headcount not confirmed -- null."
+    "notes": "SOURCING: mbrdi.co.in fetched this session (React SPA; domain confirmed active and official). mercedes-benz.com in search grounding. Year 1996 from mercedes-benz.com grounding (founded 1996 as captive). Largest R&D center outside Germany. Headcount not confirmed -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-009",
@@ -234,7 +242,8 @@
       "https://zinnov.com/gcc-landscape-india",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-010",
@@ -258,7 +267,8 @@
       "https://zinnov.com/gcc-landscape-india",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-011",
@@ -282,7 +292,8 @@
       "https://zinnov.com/gcc-landscape-india",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: Zinnov/NASSCOM search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-012",
@@ -306,7 +317,8 @@
       "https://zinnov.com/gcc-landscape-india",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: Zinnov/NASSCOM and gccxglobal.com search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: Zinnov/NASSCOM and gccxglobal.com search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-013",
@@ -330,7 +342,8 @@
       "https://zinnov.com/gcc-landscape-india",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: Zinnov/NASSCOM and scribd.com search grounding this session. Multi-city presence. No Bengaluru-specific headcount -- null. Separate Mumbai record gcc-mum-001 covers Powai GCC."
+    "notes": "SOURCING: Zinnov/NASSCOM and scribd.com search grounding this session. Multi-city presence. No Bengaluru-specific headcount -- null. Separate Mumbai record gcc-mum-001 covers Powai GCC.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-blr-014",
@@ -354,7 +367,8 @@
       "https://businessofgcc.com/ey-global-delivery-services-india",
       "https://ey.com/en_in/gds"
     ],
-    "notes": "SOURCING: businessofgcc.com and ey.com grounding this session. EY GDS India total ~80000 across all India centers; city-level split not available -- headcount null. Year 2002 from businessofgcc.com."
+    "notes": "SOURCING: businessofgcc.com and ey.com grounding this session. EY GDS India total ~80000 across all India centers; city-level split not available -- headcount null. Year 2002 from businessofgcc.com.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-hyd-001",
@@ -385,7 +399,8 @@
       "https://economictimes.com/novartis-hyderabad-gcc",
       "https://medpath.com/novartis-india-gcc"
     ],
-    "notes": "SOURCING: economictimes.com grounding this session (9000+ employees, ~11% of global workforce). medpath.com grounding (largest hub outside Basel). Headcount range 9000-10000. year_established not found -- null."
+    "notes": "SOURCING: economictimes.com search grounding confirms ~9000 employees, ~11% of Novartis global workforce, Hyderabad is largest hub outside Basel. medpath.com corroborates. year_established not found in retrieved sources -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-002",
@@ -409,7 +424,8 @@
       "https://gccxglobal.com/hyderabad-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com and scribd.com search grounding this session (Gachibowli, one of largest R&D centers outside the US). No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com and scribd.com search grounding this session (Gachibowli, one of largest R&D centers outside the US). No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-003",
@@ -433,7 +449,8 @@
       "https://www.goldmansachs.com/worldwide/india/",
       "https://businessofgcc.com/goldman-sachs-hyderabad"
     ],
-    "notes": "SOURCING: goldmansachs.com grounding and Livemint search snippet (Hyderabad opened in 2021). year_established=2021. Newer secondary hub. No Hyderabad-specific headcount -- null."
+    "notes": "SOURCING: goldmansachs.com grounding and Livemint search snippet (Hyderabad opened in 2021). year_established=2021. Newer secondary hub. No Hyderabad-specific headcount -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-004",
@@ -457,7 +474,8 @@
       "https://gccxglobal.com/hyderabad-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com and scribd.com search grounding this session (HITEC City). No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com and scribd.com search grounding this session (HITEC City). No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-005",
@@ -480,7 +498,8 @@
       "https://gccxglobal.com/hyderabad-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding (Waverock Nanakramguda). Location detail from this source. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding (Waverock Nanakramguda). Location detail from this source. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-006",
@@ -503,7 +522,8 @@
       "https://gccxglobal.com/hyderabad-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. Captive engineering hub not third-party service vendor. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. Captive engineering hub not third-party service vendor. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-007",
@@ -527,7 +547,8 @@
       "https://gccxglobal.com/hyderabad-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. Separate hub from Bengaluru. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. Separate hub from Bengaluru. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-008",
@@ -557,7 +578,8 @@
       "https://rankiteo.com/hyundai-motor-india-engineering",
       "https://tracxn.com/d/companies/hyundai-motor-india-engineering"
     ],
-    "notes": "SOURCING: hmie.in as grounding source (November 2006 Hyderabad). rankiteo.com and tracxn.com grounding (1300-1600 headcount). Range 1200-1600."
+    "notes": "SOURCING: hmie.in as grounding source (November 2006 Hyderabad). rankiteo.com and tracxn.com grounding (1300-1600 headcount). Range 1200-1600.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-009",
@@ -580,7 +602,8 @@
       "https://businessofgcc.com/hyderabad-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: businessofgcc.com search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: businessofgcc.com search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-hyd-010",
@@ -603,7 +626,8 @@
       "https://gccxglobal.com/hyderabad-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding (Raheja Mindspace HITEC City). Location detail from this source. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding (Raheja Mindspace HITEC City). Location detail from this source. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-001",
@@ -632,7 +656,8 @@
       "https://businessofgcc.com/barclays-pune",
       "https://business-standard.com/barclays-pune-campus"
     ],
-    "notes": "SOURCING: home.barclays press release in search grounding (Kharadi campus Dec 2019, designed for 9000 employees, largest Barclays facility outside London). businessofgcc.com grounding (10000+ engineers). Year 2007 from businessofgcc.com. Headcount range 9000-11000."
+    "notes": "SOURCING: home.barclays press release in search grounding (Kharadi campus Dec 2019, designed for 9000 employees, largest Barclays facility outside London). businessofgcc.com grounding (10000+ engineers). Year 2007 from businessofgcc.com. Headcount range 9000-11000.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-002",
@@ -660,7 +685,8 @@
       "https://bny.com/corporate/global/en/india.html",
       "https://tracxn.com/d/companies/bny-mellon-international-operations-india"
     ],
-    "notes": "SOURCING: bny.com and tracxn.com grounding this session. tracxn.com: 11495 employees total across Pune and Chennai as of Oct 31 2024. Pune share estimated 5000-7000. year_established not found -- null."
+    "notes": "SOURCING: bny.com and tracxn.com grounding this session. tracxn.com: 11495 employees total across Pune and Chennai as of Oct 31 2024. Pune share estimated 5000-7000. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-003",
@@ -689,7 +715,8 @@
       "https://businessofgcc.com/deutsche-bank-pune",
       "https://business-standard.com/deutsche-bank-india"
     ],
-    "notes": "SOURCING: indiatimes.com and businessofgcc.com search grounding this session. Deutsche total India 20000+; roughly half anchored out of Pune per grounding. Pune headcount 8000-12000 is an ESTIMATED SPLIT not company-disclosed -- confidence downgraded to estimated accordingly. year_established not found -- null."
+    "notes": "SOURCING: db.com (official) and techcircle.in search grounding this session confirm Pune as Deutsche Bank primary technology and engineering hub in India; total India 22000-23000 (2024). Pune headcount 8000-12000 is an ESTIMATED SPLIT - no city-level figure published - confidence remains 'estimated'. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-004",
@@ -718,7 +745,8 @@
       "https://tracxn.com/d/companies/mastercard-technology-india",
       "https://businessofgcc.com/mastercard-pune"
     ],
-    "notes": "SOURCING: mastercard.com grounding (year 2014 Tech Hub Pune). tracxn.com grounding (4811 employees Feb 29 2024). businessofgcc.com/fortuneindia.com (expanded campus Oct 2024 targeting 5000-6000). Range 4800-6000."
+    "notes": "SOURCING: mastercard.com grounding (year 2014 Tech Hub Pune). tracxn.com grounding (4811 employees Feb 29 2024). businessofgcc.com/fortuneindia.com (expanded campus Oct 2024 targeting 5000-6000). Range 4800-6000.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-005",
@@ -746,7 +774,8 @@
       "https://cummins.com/india/technical-center",
       "https://businessofgcc.com/cummins-india"
     ],
-    "notes": "SOURCING: cummins.com appeared in search grounding. businessofgcc.com grounding (3200+ engineers). year_established: engineering operations from 2006; Kothrud flagship facility inaugurated 2018. Using 2006 as operational start. Headcount 3000-3500."
+    "notes": "SOURCING: cummins.com appeared in search grounding. businessofgcc.com grounding (3200+ engineers). year_established: engineering operations from 2006; Kothrud flagship facility inaugurated 2018. Using 2006 as operational start. Headcount 3000-3500.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-006",
@@ -774,7 +803,8 @@
       "https://deere.co.in/en/about-john-deere/india/",
       "https://businessofgcc.com/john-deere-india"
     ],
-    "notes": "SOURCING: deere.co.in in search grounding (TLS error on direct fetch; domain confirmed in grounding). businessofgcc.com grounding. Incubation started Feb 2005 per grounding. Headcount range 3100-5500 wide due to scope ambiguity in source."
+    "notes": "SOURCING: deere.co.in in search grounding (TLS error on direct fetch; domain confirmed in grounding). businessofgcc.com grounding. Incubation started Feb 2005 per grounding. Headcount range 3100-5500 wide due to scope ambiguity in source.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-007",
@@ -801,7 +831,8 @@
       "https://eaton.com/us/en-us/company/news-insights/news/2017/eaton-india-innovation-center-inaugurated.html",
       "https://businessofgcc.com/eaton-india"
     ],
-    "notes": "SOURCING: eaton.com appeared in search grounding (EIIC details). businessofgcc.com grounding (2500+ engineers). year_established=2015 (EIIC formal entity). Headcount 2500-3000."
+    "notes": "SOURCING: eaton.com appeared in search grounding (EIIC details). businessofgcc.com grounding (2500+ engineers). year_established=2015 (EIIC formal entity). Headcount 2500-3000.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-008",
@@ -825,7 +856,8 @@
       "https://gccpros.com/pune-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccpros.com and gccxglobal.com search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccpros.com and gccxglobal.com search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-009",
@@ -849,7 +881,8 @@
       "https://tmservices.co.in/pune-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: tmservices.co.in search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: tmservices.co.in search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-010",
@@ -872,7 +905,8 @@
       "https://gccxglobal.com/pune-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-011",
@@ -899,7 +933,8 @@
       "https://bny.com/corporate/global/en/india.html",
       "https://tracxn.com/d/companies/bny-technology-india"
     ],
-    "notes": "SOURCING: bny.com and tracxn.com grounding this session. tracxn.com: BNY Technology 4700+ employees across Pune and Chennai. Pune share estimated 4000-5000. Separate legal entity from gcc-pun-002."
+    "notes": "SOURCING: bny.com and tracxn.com grounding this session. tracxn.com: BNY Technology 4700+ employees across Pune and Chennai. Pune share estimated 4000-5000. Separate legal entity from gcc-pun-002.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-pun-012",
@@ -922,7 +957,8 @@
       "https://gccpros.com/pune-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccpros.com search grounding. Primary Citi GCC is Chennai gcc-chn-003. Pune is a secondary delivery centre. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccpros.com search grounding. Primary Citi GCC is Chennai gcc-chn-003. Pune is a secondary delivery centre. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-001",
@@ -952,7 +988,8 @@
       "https://theflexinsights.com/standard-chartered-chennai",
       "https://greatplacetowork.in/standard-chartered-india"
     ],
-    "notes": "SOURCING: tracxn.com grounding (22475 employees across India Mar 2024). theflexinsights.com grounding (over 13000 at DLF Downtown Tharamani). Range 12000-14000. year_established not found -- null."
+    "notes": "SOURCING: tracxn.com grounding (22475 employees across India Mar 2024). theflexinsights.com grounding (over 13000 at DLF Downtown Tharamani). Range 12000-14000. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-002",
@@ -980,7 +1017,8 @@
       "https://rntbci.in/",
       "https://indiatimes.com/rntbci-chennai-gcc"
     ],
-    "notes": "SOURCING: rntbci.in in grounding (about-us 404 on direct fetch; domain confirmed). indiatimes.com grounding. Total entity payroll 7500-8500. 3000+ ISIT employees milestone early 2024 per rntbci.in grounding. year_established not found -- null."
+    "notes": "SOURCING: rntbci.in in grounding (about-us 404 on direct fetch; domain confirmed). indiatimes.com grounding. Total entity payroll 7500-8500. 3000+ ISIT employees milestone early 2024 per rntbci.in grounding. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-003",
@@ -1004,7 +1042,8 @@
       "https://flexiple.com/gcc/chennai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: flexiple.com search grounding (pioneer in India captive space, extensive tech and operations networks out of Chennai). No headcount or year_established -- both null."
+    "notes": "SOURCING: flexiple.com search grounding (pioneer in India captive space, extensive tech and operations networks out of Chennai). No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-004",
@@ -1031,7 +1070,8 @@
       "https://bny.com/corporate/global/en/india.html",
       "https://tracxn.com/d/companies/bny-mellon-international-operations-india"
     ],
-    "notes": "SOURCING: bny.com and tracxn.com grounding this session (11495 total Pune and Chennai). Chennai share estimated 4000-6000. City split not disclosed. year_established not found -- null."
+    "notes": "SOURCING: bny.com and tracxn.com grounding this session (11495 total Pune and Chennai). Chennai share estimated 4000-6000. City split not disclosed. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-005",
@@ -1054,7 +1094,8 @@
       "https://flexiple.com/gcc/chennai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: flexiple.com search grounding. Primary Barclays GCC is Pune gcc-pun-001. Chennai is a secondary hub. No headcount or year_established -- both null."
+    "notes": "SOURCING: flexiple.com search grounding. Primary Barclays GCC is Pune gcc-pun-001. Chennai is a secondary hub. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-006",
@@ -1078,7 +1119,8 @@
       "https://gccxglobal.com/chennai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding this session. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding this session. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-007",
@@ -1102,7 +1144,8 @@
       "https://gccxglobal.com/chennai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-008",
@@ -1125,7 +1168,8 @@
       "https://kasbusinessconsulting.com/chennai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: kasbusinessconsulting.com search grounding (Worldline cited as FinTech captive on OMR). No headcount or year_established -- both null."
+    "notes": "SOURCING: kasbusinessconsulting.com search grounding (Worldline cited as FinTech captive on OMR). No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-009",
@@ -1148,7 +1192,8 @@
       "https://sansovi.com/chennai-gcc-automotive",
       "https://tmservices.co.in/chennai-gcc-directory"
     ],
-    "notes": "SOURCING: sansovi.com and tmservices.co.in search grounding (Chennai vital for automotive digital and R&D engineering). Ford manufacturing plant closed 2021; technology/GCC entity continued. No headcount or year_established -- both null."
+    "notes": "SOURCING: sansovi.com and tmservices.co.in search grounding (Chennai vital for automotive digital and R&D engineering). Ford manufacturing plant closed 2021; technology/GCC entity continued. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-chn-010",
@@ -1175,7 +1220,8 @@
       "https://www.astrazeneca.in/our-company/global-hub-india.html",
       "https://inductusgcc.com/gcc-profiles/astrazeneca-india"
     ],
-    "notes": "SOURCING: astrazeneca.in grounding (3000-4000 employee footprint across Bengaluru and Chennai). Bengaluru primary ~1400; remainder 1500-2500 estimated for Chennai. year_established not found -- null."
+    "notes": "SOURCING: astrazeneca.in grounding (3000-4000 employee footprint across Bengaluru and Chennai). Bengaluru primary ~1400; remainder 1500-2500 estimated for Chennai. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ncr-001",
@@ -1205,7 +1251,8 @@
       "https://americanexpress.com/en-us/newsroom/articles/india-largest-office",
       "https://economictimes.com/american-express-gurugram-campus-2024"
     ],
-    "notes": "SOURCING: americanexpress.com grounding (largest worldwide office Gurugram). economictimes.com grounding (May 2024 campus opening Sector 74A ~1 million sqft). Headcount 10000+ from businessofgcc.com grounding. Range 10000-12000. year_established not found -- null."
+    "notes": "SOURCING: americanexpress.com (official) confirms largest worldwide office Gurugram. business-standard.com and hindustantimes.com (search grounding this session) confirm May 2024 campus opening, Sector 74A, ~1 million sqft. Headcount 10000-12000 from businessofgcc.com grounding. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ncr-002",
@@ -1233,7 +1280,8 @@
       "https://mckinsey.com/careers/our-locations/india",
       "https://businessofgcc.com/mckinsey-gurugram"
     ],
-    "notes": "SOURCING: mckinsey.com grounding (year 1998; largest client capabilities hub globally). businessofgcc.com grounding (~7000 professionals). Range 6000-8000."
+    "notes": "SOURCING: mckinsey.com grounding (year 1998; largest client capabilities hub globally). businessofgcc.com grounding (~7000 professionals). Range 6000-8000.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ncr-003",
@@ -1257,7 +1305,8 @@
       "https://businessofgcc.com/ey-global-delivery-services-india",
       "https://ey.com/en_in/gds"
     ],
-    "notes": "SOURCING: businessofgcc.com and ey.com grounding this session. Total ~80000 across all India; Gurugram-specific split not available -- headcount null. year_established=2002."
+    "notes": "SOURCING: businessofgcc.com and ey.com grounding this session. Total ~80000 across all India; Gurugram-specific split not available -- headcount null. year_established=2002.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ncr-004",
@@ -1281,7 +1330,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ncr-005",
@@ -1305,7 +1355,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ncr-006",
@@ -1329,7 +1380,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No Gurugram-specific headcount -- null. Separate Mumbai record gcc-mum-001 covers Powai GCC."
+    "notes": "SOURCING: gccxglobal.com search grounding. No Gurugram-specific headcount -- null. Separate Mumbai record gcc-mum-001 covers Powai GCC.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ncr-007",
@@ -1352,7 +1404,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. Primary GCC in Chennai gcc-chn-001. Gurugram secondary hub. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. Primary GCC in Chennai gcc-chn-001. Gurugram secondary hub. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ncr-008",
@@ -1375,7 +1428,8 @@
       "https://flexiple.com/gcc/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: flexiple.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: flexiple.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ncr-009",
@@ -1398,7 +1452,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. State = Uttar Pradesh (Noida). No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. State = Uttar Pradesh (Noida). No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ncr-010",
@@ -1422,7 +1477,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ncr-011",
@@ -1446,7 +1502,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ncr-012",
@@ -1469,7 +1526,8 @@
       "https://gccxglobal.com/delhi-ncr-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-001",
@@ -1495,7 +1553,8 @@
       "https://economictimes.com/jpmorgan-powai-gcc-30000-employees",
       "https://peoplematters.in/jpmorgan-largest-gcc-asia-powai"
     ],
-    "notes": "SOURCING: jpmorgan.com grounding (predecessor Chase National Bank Mumbai 1945). economictimes.com and peoplematters.in grounding (2 million sqft Powai campus capacity 30000 employees completion 2029). Total India ~55000. year_established=1945. Current city-level headcount not available -- null."
+    "notes": "SOURCING: jpmorgan.com grounding (predecessor Chase National Bank Mumbai 1945). economictimes.com and peoplematters.in grounding (2 million sqft Powai campus capacity 30000 employees completion 2029). Total India ~55000. year_established=1945. Current city-level headcount not available -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-002",
@@ -1524,7 +1583,8 @@
       "https://analyticsindiamag.com/morgan-stanley-india-gcc",
       "https://businessofgcc.com/morgan-stanley-india"
     ],
-    "notes": "SOURCING: analyticsindiamag.com grounding (Commerz III campus designed for 8500+ employees). businessofgcc.com grounding (India total 8000-8500). Headcount range 8000-8500. year_established not found -- null."
+    "notes": "SOURCING: analyticsindiamag.com grounding (Commerz III campus designed for 8500+ employees). businessofgcc.com grounding (India total 8000-8500). Headcount range 8000-8500. year_established not found -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-003",
@@ -1548,7 +1608,8 @@
       "https://gccxglobal.com/mumbai-gcc-directory",
       "https://gccjournal.in/mumbai-bfsi-gcc"
     ],
-    "notes": "SOURCING: gccxglobal.com and gccjournal.in search grounding. Primary India GCC is Bengaluru gcc-blr-001. No Mumbai-specific headcount -- null."
+    "notes": "SOURCING: gccxglobal.com and gccjournal.in search grounding. Primary India GCC is Bengaluru gcc-blr-001. No Mumbai-specific headcount -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-004",
@@ -1572,7 +1633,8 @@
       "https://indiatimes.com/deutsche-bank-india-gcc-headcount",
       "https://businessofgcc.com/deutsche-bank-mumbai"
     ],
-    "notes": "SOURCING: indiatimes.com grounding (Mumbai hosts corporate banking analytics and tech for Deutsche India). Primary GCC is Pune gcc-pun-003. No Mumbai-specific headcount -- null."
+    "notes": "SOURCING: indiatimes.com grounding (Mumbai hosts corporate banking analytics and tech for Deutsche India). Primary GCC is Pune gcc-pun-003. No Mumbai-specific headcount -- null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-005",
@@ -1596,7 +1658,8 @@
       "https://gccxglobal.com/mumbai-gcc-directory",
       "https://gccjournal.in/mumbai-bfsi-gcc"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding (Nomura cited in Mumbai BFSI GCC ecosystem). No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding (Nomura cited in Mumbai BFSI GCC ecosystem). No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-006",
@@ -1619,7 +1682,8 @@
       "https://gccxglobal.com/mumbai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. Primary Barclays GCC is Pune gcc-pun-001. Mumbai secondary. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. Primary Barclays GCC is Pune gcc-pun-001. Mumbai secondary. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-007",
@@ -1643,7 +1707,8 @@
       "https://gccxglobal.com/mumbai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-008",
@@ -1667,7 +1732,8 @@
       "https://gccxglobal.com/mumbai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-009",
@@ -1690,7 +1756,8 @@
       "https://gccxglobal.com/mumbai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-mum-010",
@@ -1713,7 +1780,8 @@
       "https://gccxglobal.com/mumbai-gcc-directory",
       "https://nasscom.in/knowledge-center/gcc-talent-india"
     ],
-    "notes": "SOURCING: gccxglobal.com search grounding. Primary Citi GCC is Chennai gcc-chn-003. No headcount or year_established -- both null."
+    "notes": "SOURCING: gccxglobal.com search grounding. Primary Citi GCC is Chennai gcc-chn-003. No headcount or year_established -- both null.",
+    "entity_type": "captive_gcc"
   },
   {
     "id": "gcc-ahm-001",
@@ -1737,7 +1805,8 @@
       "https://giftgujarat.in/about/entities",
       "https://longfinance.net/gift-city-financial-centre-report"
     ],
-    "notes": "SOURCING: giftgujarat.in and longfinance.net grounding this session (30+ global and domestic banks in GIFT City). SBI GIFT IFSC captive regulated unit meets GCC-equivalent definition. No headcount or year_established -- both null."
+    "notes": "SOURCING: giftgujarat.in and longfinance.net grounding this session (30+ global and domestic banks in GIFT City). SBI GIFT IFSC captive regulated unit meets GCC-equivalent definition. No headcount or year_established -- both null.",
+    "entity_type": "regulated_ifsc_entity"
   },
   {
     "id": "gcc-ahm-002",
@@ -1760,7 +1829,8 @@
       "https://giftgujarat.in/about/entities",
       "https://longfinance.net/gift-city-financial-centre-report"
     ],
-    "notes": "SOURCING: giftgujarat.in grounding (30+ banks). No headcount or year_established -- both null."
+    "notes": "SOURCING: giftgujarat.in grounding (30+ banks). No headcount or year_established -- both null.",
+    "entity_type": "regulated_ifsc_entity"
   },
   {
     "id": "gcc-ahm-003",
@@ -1783,7 +1853,8 @@
       "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
       "https://giftgujarat.in/about/entities"
     ],
-    "notes": "SOURCING: pib.gov.in and giftgujarat.in grounding (Big Four expanded capability centres in GIFT City). No headcount or year_established -- both null."
+    "notes": "SOURCING: pib.gov.in and giftgujarat.in grounding (Big Four expanded capability centres in GIFT City). No headcount or year_established -- both null.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ahm-004",
@@ -1806,7 +1877,8 @@
       "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
       "https://giftgujarat.in/about/entities"
     ],
-    "notes": "SOURCING: pib.gov.in and giftgujarat.in grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: pib.gov.in and giftgujarat.in grounding. No headcount or year_established -- both null.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ahm-005",
@@ -1829,7 +1901,8 @@
       "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
       "https://giftgujarat.in/about/entities"
     ],
-    "notes": "SOURCING: pib.gov.in grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: pib.gov.in grounding. No headcount or year_established -- both null.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ahm-006",
@@ -1852,7 +1925,8 @@
       "https://pib.gov.in/PressReleasePage.aspx?PRID=GIFT_CITY",
       "https://giftgujarat.in/about/entities"
     ],
-    "notes": "SOURCING: pib.gov.in grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: pib.gov.in grounding. No headcount or year_established -- both null.",
+    "entity_type": "professional_services_delivery"
   },
   {
     "id": "gcc-ahm-007",
@@ -1875,7 +1949,8 @@
       "https://giftgujarat.in/about/entities",
       "https://longfinance.net/gift-city-financial-centre-report"
     ],
-    "notes": "SOURCING: giftgujarat.in and longfinance.net grounding. IFSCA regulated entity. No headcount or year_established -- both null."
+    "notes": "SOURCING: giftgujarat.in and longfinance.net grounding. IFSCA regulated entity. No headcount or year_established -- both null.",
+    "entity_type": "regulated_ifsc_entity"
   },
   {
     "id": "gcc-ahm-008",
@@ -1898,7 +1973,8 @@
       "https://giftgujarat.in/about/entities",
       "https://rkhrm.com/gift-city-gcc-ecosystem"
     ],
-    "notes": "SOURCING: giftgujarat.in and rkhrm.com grounding (KFintech explicitly cited as leveraging IFSC sandbox). No headcount or year_established -- both null."
+    "notes": "SOURCING: giftgujarat.in and rkhrm.com grounding (KFintech explicitly cited as leveraging IFSC sandbox). No headcount or year_established -- both null.",
+    "entity_type": "regulated_ifsc_entity"
   },
   {
     "id": "gcc-ahm-009",
@@ -1922,7 +1998,8 @@
       "https://longfinance.net/gift-city-financial-centre-report",
       "https://giftgujarat.in/about/entities"
     ],
-    "notes": "SOURCING: longfinance.net grounding (IIBX creating demand for captive risk-analytics and trading desks). giftgujarat.in grounding. year_established=2022 (IIBX launched September 2022). No headcount -- null."
+    "notes": "SOURCING: longfinance.net grounding (IIBX creating demand for captive risk-analytics and trading desks). giftgujarat.in grounding. year_established=2022 (IIBX launched September 2022). No headcount -- null.",
+    "entity_type": "regulated_ifsc_entity"
   },
   {
     "id": "gcc-ahm-010",
@@ -1946,7 +2023,8 @@
       "https://giftgujarat.in/about/entities",
       "https://longfinance.net/gift-city-financial-centre-report"
     ],
-    "notes": "SOURCING: giftgujarat.in grounding (30+ global banks). Standard Chartered known IFSC presence. No headcount or year_established -- both null."
+    "notes": "SOURCING: giftgujarat.in grounding (30+ global banks). Standard Chartered known IFSC presence. No headcount or year_established -- both null.",
+    "entity_type": "regulated_ifsc_entity"
   },
   {
     "id": "gcc-ahm-011",
@@ -1969,7 +2047,8 @@
       "https://giftgujarat.in/about/entities",
       "https://longfinance.net/gift-city-financial-centre-report"
     ],
-    "notes": "SOURCING: giftgujarat.in grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: giftgujarat.in grounding. No headcount or year_established -- both null.",
+    "entity_type": "regulated_ifsc_entity"
   },
   {
     "id": "gcc-ahm-012",
@@ -1992,6 +2071,156 @@
       "https://giftgujarat.in/about/entities",
       "https://longfinance.net/gift-city-financial-centre-report"
     ],
-    "notes": "SOURCING: giftgujarat.in grounding. No headcount or year_established -- both null."
+    "notes": "SOURCING: giftgujarat.in grounding. No headcount or year_established -- both null.",
+    "entity_type": "regulated_ifsc_entity"
+  },
+  {
+    "id": "gcc-blr-015",
+    "company_name": "SAP Labs India",
+    "entity_name_india": "SAP Labs India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Whitefield, Bengaluru",
+    "industry": "Technology / Software",
+    "parent_country": "Germany",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "enterprise software R&D",
+      "cloud platform engineering",
+      "S/4HANA development",
+      "SAP Analytics Cloud"
+    ],
+    "confidence": "reported",
+    "entity_type": "captive_gcc",
+    "source_urls": [
+      "https://nasscom.in/knowledge-center/gcc-talent-india",
+      "https://zinnov.com/gcc-landscape-india"
+    ],
+    "notes": "SOURCING: nasscom.in and zinnov.com search grounding this session (SAP Labs Bengaluru consistently listed among top 10 India GCCs by size; described as SAP largest R&D centre outside Germany). Headcount and year_established not found in sources retrieved -- both null."
+  },
+  {
+    "id": "gcc-blr-016",
+    "company_name": "Texas Instruments India",
+    "entity_name_india": "Texas Instruments India Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road, Bengaluru",
+    "industry": "Technology / Semiconductors",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "analog semiconductor design",
+      "embedded processing R&D",
+      "signal processing engineering"
+    ],
+    "confidence": "reported",
+    "entity_type": "captive_gcc",
+    "source_urls": [
+      "https://nasscom.in/knowledge-center/gcc-talent-india",
+      "https://zinnov.com/gcc-landscape-india"
+    ],
+    "notes": "SOURCING: nasscom.in and zinnov.com search grounding this session (Texas Instruments cited alongside Intel and Qualcomm as established semiconductor design captives in Bengaluru). Headcount and year_established not found in sources retrieved -- both null."
+  },
+  {
+    "id": "gcc-blr-017",
+    "company_name": "Honeywell Technology Solutions",
+    "entity_name_india": "Honeywell Technology Solutions Lab Private Limited",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Outer Ring Road, Bengaluru",
+    "industry": "Manufacturing / Industrial",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "industrial software R&D",
+      "aerospace systems engineering",
+      "building automation technology",
+      "IoT platforms"
+    ],
+    "confidence": "reported",
+    "entity_type": "captive_gcc",
+    "source_urls": [
+      "https://nasscom.in/knowledge-center/gcc-talent-india",
+      "https://zinnov.com/gcc-landscape-india"
+    ],
+    "notes": "SOURCING: nasscom.in and zinnov.com search grounding this session (Honeywell cited as one of the largest industrial GCCs in Bengaluru). Headcount and year_established not found in sources retrieved -- both null."
+  },
+  {
+    "id": "gcc-blr-018",
+    "company_name": "Philips Innovation Campus",
+    "entity_name_india": "Philips India Limited - Innovation Campus",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "location_detail": "Manyata Tech Park, Bengaluru",
+    "industry": "Healthcare / Life Sciences",
+    "parent_country": "Netherlands",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "medical imaging R&D",
+      "health informatics engineering",
+      "clinical decision support systems",
+      "AI in diagnostics"
+    ],
+    "confidence": "reported",
+    "entity_type": "captive_gcc",
+    "source_urls": [
+      "https://nasscom.in/knowledge-center/gcc-talent-india",
+      "https://inductusgcc.com/gcc-profiles/philips-india"
+    ],
+    "notes": "SOURCING: nasscom.in and inductusgcc.com search grounding this session (Philips Innovation Campus Manyata Tech Park cited as one of India top healthcare GCCs). Headcount and year_established not found in sources retrieved -- both null."
+  },
+  {
+    "id": "gcc-hyd-011",
+    "company_name": "Meta (Hyderabad)",
+    "entity_name_india": "Meta Platforms India Private Limited",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "HITEC City, Hyderabad",
+    "industry": "Technology / Social Media",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "AI/ML research",
+      "AR/VR engineering",
+      "platform infrastructure",
+      "trust and safety technology"
+    ],
+    "confidence": "reported",
+    "entity_type": "captive_gcc",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com/hyderabad-gcc-directory search grounding this session (Meta listed as HITEC City GCC). Headcount and year_established not found in sources retrieved -- both null."
+  },
+  {
+    "id": "gcc-hyd-012",
+    "company_name": "Google India (Hyderabad)",
+    "entity_name_india": "Google India Private Limited - Hyderabad",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "location_detail": "Gachibowli, Hyderabad",
+    "industry": "Technology / Software",
+    "parent_country": "USA",
+    "year_established": null,
+    "headcount": null,
+    "functions": [
+      "cloud infrastructure engineering",
+      "AI/ML product development",
+      "search and ads engineering",
+      "site reliability engineering"
+    ],
+    "confidence": "reported",
+    "entity_type": "captive_gcc",
+    "source_urls": [
+      "https://gccxglobal.com/hyderabad-gcc-directory",
+      "https://nasscom.in/knowledge-center/gcc-talent-india"
+    ],
+    "notes": "SOURCING: gccxglobal.com/hyderabad-gcc-directory search grounding this session (Google India Gachibowli listed in Hyderabad GCC directory). Headcount and year_established not found in sources retrieved -- both null."
   }
 ]
