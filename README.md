@@ -1,148 +1,238 @@
-# GCC Atlas
+# 🌐 GCC Atlas: India's Global Capability Centre Intelligence Platform
 
-**A single source of truth for India's Global Capability Centre (GCC) ecosystem.**
+> **A research-grade, single source of truth for India's Global Capability Centre (GCC) ecosystem.**
 
-GCC Atlas helps companies decide *where* to set up a Global Capability Centre in India. It aggregates what is publicly known about existing GCCs, city talent markets, office real estate, and state incentive policies — labelling every figure with its confidence level and source link, and being explicit about what is not disclosed. No hallucinated headcounts. No stale estimates presented as facts.
+GCC Atlas empowers enterprises, consultants, and decision-makers to determine *where* and *how* to establish a Global Capability Centre in India. The platform aggregates verified, public data spanning existing GCC profiles, tier-1 and emerging talent markets, Grade-A commercial real estate benchmarks, and state-level incentive policies.
 
----
-
-## The Problem
-
-Decisions about where to build a GCC in India are driven by referrals, anecdote, and scattered consultant PDFs. There is no single, transparent, sourced dataset that a decision-maker can interrogate directly.
-
-GCC Atlas is that dataset, wrapped in a research-grade UI.
+Every metric in GCC Atlas is labeled with an explicit confidence level and source citation. Missing metrics are stored as `null` and displayed honestly as **Not disclosed** — with zero hallucinated headcounts or stale estimates disguised as facts.
 
 ---
 
-## Features
+## ✨ What It Does
 
-| Feature | Status |
-|---|---|
-| **GCC Directory** — 68+ captive GCC profiles across 7 cities, searchable and filterable by industry, parent country, city, entity type, and confidence level. Every record links to its sources. | ✅ Live |
-| **City Explorer** — Interactive Leaflet map with city bubbles sized by any of four layers (captive count, rent, salary, ecosystem maturity). Side-by-side comparison of up to 3 cities: salary ranges, rent, incentives, clusters — all with confidence badges and `as_of` dates. Three Recharts charts. | ✅ Live |
-| **Methodology** — Transparent explanation of data collection, confidence levels, entity type taxonomy, and what the dataset does and does not cover. | ✅ Live |
-| **Setup Advisor** — Answer questions about your GCC's function, headcount, and priorities; receive a scored city shortlist with an AI-generated explanation. | 🔧 In progress |
-| **Ask Atlas** — Grounded conversational chat over the dataset, powered by the Groq API. | 🔧 In progress |
+GCC Atlas bundles research intelligence, geospatial analysis, decision scoring, and AI into a unified platform:
 
----
+* **🗂️ GCC Directory**  
+  Explore 86 total entities (including 68 captive GCC profiles) across 7 major Indian hubs. Search and filter by industry, parent country, operating city, entity type (`captive_gcc` vs. ecosystem delivery centres), and data confidence level. Every profile links directly to public sources.
 
-## Data Principles
+* **🏙️ City Explorer & Interactive Map**  
+  Visualize the GCC landscape on an interactive Leaflet map featuring custom-pane India state outlines and responsive city markers. Switch between four metric layers:
+  * Captive GCC density
+  * Grade-A commercial rent (₹/sq ft/month)
+  * Experience-based salary ranges (₹ lakh/year)
+  * Ecosystem maturity  
+  Includes 3-city side-by-side comparison tables, micro-market cluster analysis, GIFT City financial zone indicators, and Recharts visualization charts.
 
-1. **Every record is sourced.** Each GCC profile and city data point carries one or more `source_urls` linking to the page where the figure was found.
-2. **Confidence is explicit.** Every record carries a `confidence` field: `verified` (confirmed on an official page), `reported` (from news or secondary sources), or `estimated` (inferred or calculated). The UI shows a colour-coded badge on everything.
-3. **Nulls are honest.** If a value — headcount, year established, location detail — was not found in public sources, it is stored as `null` and displayed as **Not disclosed**. We do not fill gaps with guesses.
-4. **Entity types are distinct.** Only `captive_gcc` records are counted as GCCs in statistics. Professional services delivery centres, regulated IFSC entities, and service providers are tracked separately and labelled accordingly.
-5. **Salary and rent figures are estimates.** They are sourced from public reports and consultant surveys. Treat ranges as directional, not contractual.
+* **🧭 Setup Advisor**  
+  A deterministic decision engine for market entry. Input your target industry, planned team size (1–50 up to 1,000+), budget sensitivity, timeline, and custom factor weightings (talent, cost, incentives, ecosystem). Receive a ranked city shortlist with mathematical scoring and streaming AI strategic analysis.
 
----
+* **💬 Ask Atlas (AI Assistant)**  
+  A research assistant accessible on every page via a floating drawer. Ask questions in natural language and receive real-time streaming answers grounded strictly in the platform's dataset — complete with source chips, confidence ratings, and suggested prompts.
 
-## Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Framework | Next.js 16 (App Router, TypeScript) |
-| Styling | Tailwind CSS v4, custom design system |
-| UI components | shadcn/ui |
-| Charts | Recharts |
-| Map | Leaflet (CartoDB Dark Matter tiles) |
-| Data | Static JSON files in `/data`, loaded at build time — no database |
-| AI (upcoming) | Groq API (`llama-3.3-70b-versatile`) |
-| Deployment | Vercel |
+* **📊 Methodology & Data Transparency**  
+  Complete documentation detailing data collection methods, taxonomy rules, confidence badge definitions (`verified`, `reported`, `estimated`), and catalogued dataset gaps.
 
 ---
 
-## Project Structure
+## 🏗️ Architecture
 
+GCC Atlas is designed around a zero-database, server-rendered static architecture with dynamic server-streamed AI capabilities.
+
+```mermaid
+flowchart TD
+    subgraph Client ["Client Layer (Browser)"]
+        UI["Modern UI (Syne + Inter)"]
+        ChatDrawer["Ask Atlas Drawer"]
+        AdvisorUI["Setup Advisor Form"]
+        Map["Leaflet Map (Boundary + Bubbles)"]
+    end
+
+    subgraph Server ["Next.js 16 Server (App Router)"]
+        PageRoutes["App Routes (/directory, /cities, /advisor)"]
+        ChatAPI["/api/chat (POST)"]
+        AdvisorAPI["/api/advisor/explain (POST)"]
+        ScoringEngine["lib/scoring.ts (Deterministic Scoring)"]
+        RetrievalEngine["lib/retrieval.ts (Keyword & Context Extraction)"]
+        LLMWrapper["lib/llm.ts (Groq Inference Wrapper)"]
+    end
+
+    subgraph Data ["Knowledge Layer"]
+        StaticData["/data/*.json (GCCs, Cities, Incentives)"]
+        GeoData["/public/geo/ (India States GeoJSON)"]
+    end
+
+    subgraph External ["External Services"]
+        Groq["Groq Cloud LPU (qwen/qwen3.8-27b)"]
+    end
+
+    UI --> PageRoutes
+    PageRoutes --> StaticData
+    Map --> GeoData
+
+    AdvisorUI --> AdvisorAPI
+    AdvisorAPI --> ScoringEngine
+    ScoringEngine --> StaticData
+    AdvisorAPI --> LLMWrapper
+
+    ChatDrawer --> ChatAPI
+    ChatAPI --> RetrievalEngine
+    RetrievalEngine --> StaticData
+    ChatAPI --> LLMWrapper
+
+    LLMWrapper -->|"Streaming SSE"| Groq
+    Groq -->|"Token Stream"| LLMWrapper
+    LLMWrapper -->|"Streamed Response + X-Sources"| ChatDrawer
 ```
+
+### Architectural Highlights
+
+1. **Presentation Layer**: Built on Next.js 16 with the App Router, React 19, and Tailwind CSS v4 design tokens. Optimized for zero client-side layout shift and low time-to-interactive.
+2. **Deterministic Processing**: City rankings and search queries run through mathematical scoring functions (`lib/scoring.ts`) and keyword retrieval (`lib/retrieval.ts`) without unconstrained vector hallucinations.
+3. **Server-Side AI Gateway**: API routes (`/api/chat`, `/api/advisor/explain`) invoke the Groq wrapper (`lib/llm.ts`) strictly on the server. Environment variables and keys are never sent to or visible in the client bundle.
+4. **Resilient Streaming**: Responses stream over Server-Sent Events (SSE) with built-in retry logic, automatic fallback handling, and server console logging with exact HTTP status codes and Groq response error messages.
+
+---
+
+## 🧠 AI Intelligence & Grounding Engine
+
+The platform integrates AI strictly as an analytical interface over sourced facts:
+
+* **Active Model**: Powered by **`qwen/qwen3.8-27b`** via Groq's high-throughput LPU inference platform, delivering low time-to-first-token and clean conversational reasoning.
+* **Strict Grounding Rules**: The system prompt enforces strict constraints — the model may only answer using facts provided in the dynamically retrieved context payload. If the dataset does not contain an answer, it explicitly replies: *"I don't have data on that in the current dataset."*
+* **Entity Type Distinction**: The prompt instructs the model that only `captive_gcc` records count as captive centres, preventing confusion with third-party service delivery centres.
+* **Source Attribution**: Chat responses return dynamic `X-Sources` response headers, rendering interactive source chips for every cited fact.
+* **Graceful Degradation**: If `GROQ_API_KEY` is not configured or Groq experiences rate limits, the system automatically falls back to rule-based computed figures from the dataset.
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Description |
+|---|---|---|
+| **Framework** | Next.js 16 (App Router) | React 19 server components, Turbopack, partial pre-rendering |
+| **Language** | TypeScript 5 | End-to-end type safety across schemas, state, and routes |
+| **AI Inference** | Groq Cloud API | `qwen/qwen3.8-27b` running on Groq LPUs |
+| **Geospatial** | Leaflet | Custom layered panes (boundary, bubbles, labels) with DataMeet India GeoJSON |
+| **Charts** | Recharts | Composable SVG bar, scatter, and distribution charts |
+| **Styling** | Tailwind CSS v4 & Vanilla CSS | Curated HSL dark teal design system with glassmorphic cards |
+| **Typography** | `next/font` | Syne (display headers), Inter (body UI), JetBrains Mono (data/code) |
+| **Data Storage** | Static JSON | Pre-compiled JSON datasets loaded at build time without database overhead |
+| **Runtime** | Node.js 20+ / 24 | High-performance server environment |
+
+---
+
+## 📁 Project Structure
+
+```text
 gcc-atlas/
-├── data/                        # Frozen static dataset (do not edit in dev)
-│   ├── gccs.json                # 86 entity records (68 captive + 18 ecosystem)
-│   ├── cities.json              # 7 city profiles: talent, rent, clusters
-│   └── incentives.json          # State incentive policy records
+├── app/                             # Next.js App Router routes & layouts
+│   ├── advisor/                     # Setup Advisor route
+│   │   └── page.tsx                 # Advisor page server entry
+│   ├── api/                         # Backend API routes
+│   │   ├── advisor/explain/route.ts # AI explanation streaming endpoint
+│   │   └── chat/route.ts            # Ask Atlas conversational endpoint
+│   ├── chat/                        # Legacy chat redirect handler
+│   ├── cities/                      # City Explorer route
+│   │   └── page.tsx                 # City intelligence views & charts
+│   ├── directory/                   # GCC Directory route
+│   │   ├── [id]/page.tsx            # Static profile view for each GCC
+│   │   └── page.tsx                 # Filterable directory table & cards
+│   ├── methodology/                 # Methodology & data disclosure page
+│   ├── globals.css                  # Design system tokens, utilities & cards
+│   ├── layout.tsx                   # Root layout (Navbar, Footer, FloatingAskAtlas)
+│   └── page.tsx                     # Landing home page with headline metrics
 │
-├── lib/
-│   ├── types.ts                 # TypeScript interfaces for all data models
-│   ├── data.ts                  # Data loaders and helper functions
-│   └── geo.ts                   # City and micro-market coordinates (never in /data)
+├── components/                      # Reusable UI component library
+│   ├── advisor/                     # Setup Advisor form, sliders & score cards
+│   ├── chat/                        # Ask Atlas drawer, floating button & input
+│   ├── cities/                      # Leaflet map, city panel, comparison matrix
+│   ├── directory/                   # Directory table, search filters & pagination
+│   ├── layout/                      # Navbar, Footer & navigation links
+│   └── ui/                          # ConfidenceBadge, EntityTypeBadge, SourceLinks
 │
-├── app/                         # Next.js App Router
-│   ├── layout.tsx               # Root layout: Navbar, Footer, fonts
-│   ├── page.tsx                 # Home / landing page
-│   ├── globals.css              # Tailwind v4 @theme tokens + component classes
-│   ├── directory/
-│   │   ├── page.tsx             # GCC Directory (search, filter, URL state)
-│   │   └── [id]/page.tsx        # GCC detail page (static params)
-│   ├── cities/
-│   │   └── page.tsx             # City Explorer (server shell → CitiesClient)
-│   ├── methodology/
-│   │   └── page.tsx             # Methodology & data transparency page
-│   ├── advisor/
-│   │   └── page.tsx             # Setup Advisor (placeholder, in progress)
-│   └── chat/
-│       └── page.tsx             # Ask Atlas (placeholder, in progress)
+├── data/                            # Static intelligence dataset
+│   ├── cities.json                  # 7 city profiles: rent, salary, talent, clusters
+│   ├── gccs.json                    # 86 entity records (68 captive + 18 ecosystem)
+│   └── incentives.json              # State-wise GCC and IT/ITeS policy incentives
 │
-└── components/
-    ├── layout/
-    │   ├── Navbar.tsx
-    │   └── Footer.tsx
-    ├── ui/
-    │   ├── ConfidenceBadge.tsx  # Colour-coded badge with ⓘ tooltip
-    │   ├── EntityTypeBadge.tsx  # Captive / ecosystem entity type pill
-    │   ├── NullableValue.tsx    # Renders null as "Not disclosed"
-    │   └── SourceLinks.tsx      # Linked source URL list
-    ├── directory/
-    │   └── DirectoryClient.tsx  # Client-side search + filter (URL state)
-    └── cities/
-        ├── CitiesClient.tsx     # Main City Explorer coordinator
-        ├── CityMapLeaflet.tsx   # Leaflet map (dynamic, ssr: false)
-        ├── CityPanel.tsx        # City side panel / mobile bottom section
-        ├── CityComparison.tsx   # 3-city comparison table
-        └── CityCharts.tsx       # Recharts: GCC count, rent vs salary, ecosystem
+├── lib/                             # Core utilities & calculation engines
+│   ├── data.ts                      # Build-time dataset loaders & aggregators
+│   ├── geo.ts                       # Geospatial coordinates & boundary anchors
+│   ├── llm.ts                       # Groq client wrapper, model config & error logging
+│   ├── retrieval.ts                 # Grounded context retrieval & prompt builder
+│   ├── scoring.ts                   # Multi-factor decision scoring algorithm
+│   └── types.ts                     # TypeScript definitions for all domain entities
+│
+├── public/                          # Public static assets
+│   └── geo/                         # GeoJSON boundary data for Indian states
+│
+├── .env.example                     # Environment template (GROQ_API_KEY)
+├── package.json                     # Project manifest and scripts
+├── tsconfig.json                    # TypeScript configuration
+└── README.md                        # Project documentation
 ```
 
 ---
 
-## Setup
+## 🚀 Setup Instructions
 
 ### Prerequisites
 
-- Node.js 20+
-- A [Groq API key](https://console.groq.com) (required only for the AI features; the rest of the app runs without it)
+* **Node.js**: `v20.0.0` or higher (Node 24 recommended)
+* **npm**: `v9.0.0` or higher
+* **Groq API Key**: Obtain a free API key at [console.groq.com](https://console.groq.com) (required for AI Chat & Advisor explanations; all other directory/map features work without it)
 
-### Steps
+### Quick Start
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your-handle>/gcc-atlas.git
-cd gcc-atlas
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/PriyanshuRanjan04/GCC-Atlas.git
+   cd GCC-Atlas
+   ```
 
-# 2. Install dependencies
-npm install
+2. **Install project dependencies:**
+   ```bash
+   npm install
+   ```
 
-# 3. Configure environment variables
-cp .env.example .env.local
-# Open .env.local and add your Groq key:
-# GROQ_API_KEY=gsk_...
+3. **Configure environment variables:**
+   ```bash
+   cp .env.example .env.local
+   ```
+   Open `.env.local` in your editor and provide your Groq API key:
+   ```env
+   GROQ_API_KEY=gsk_your_groq_api_key_here
+   ```
 
-# 4. Start the dev server
-npm run dev
+4. **Launch the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-# 5. Open the app
-# http://localhost:3000
-```
-
-> The AI features (Setup Advisor, Ask Atlas) will gracefully degrade if `GROQ_API_KEY` is absent — they show a "not yet available" placeholder.
+5. **Create a production build:**
+   ```bash
+   npm run build
+   npm run start
+   ```
 
 ---
 
-## Status
+## 🛡️ Data Principles & Integrity
 
-This is a **prototype under active development**. The dataset is a seed — it covers publicly reported information and is not exhaustive. Figures should not be used for investment decisions.
-
-See the [Methodology page](http://localhost:3000/methodology) for a full explanation of data sources, confidence levels, and known gaps.
+1. **Every Record is Sourced**: Each GCC profile and city data point contains direct `source_urls` to public corporate filings, news reports, or state policy documents.
+2. **Explicit Confidence Levels**: Every metric is badged with an explicit confidence rating:
+   * 🟢 `verified`: Confirmed via primary official page or corporate release.
+   * 🟡 `reported`: Documented in secondary industry news or reputable press.
+   * 🟠 `estimated`: Derived from consultant surveys, benchmark medians, or range averages.
+3. **Honest Nulls**: Unknown attributes (headcount, founding year, square footage) remain `null` and render cleanly as **Not disclosed** rather than guessed values.
+4. **Strict Entity Classification**: Captive GCCs (`captive_gcc`) are tracked separately from third-party IT service providers and ecosystem delivery centres.
+5. **Directional Financial Metrics**: Real estate rental rates and tech salary bands are compiled from secondary benchmarks to serve as directional guidance rather than contracted figures.
 
 ---
 
-## Licence
+## 📜 Status & Licence
 
-Private — prototype only. Not for redistribution.
+* **Current Status**: Active prototype. Data represents a curated baseline dataset.
+* **Notice**: Figures are gathered from public records and are for research and exploratory planning. Consult official channels before committing capital.
+* **Licence**: Private repository — all rights reserved.
