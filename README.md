@@ -1,4 +1,4 @@
-# 🌐 GCC Atlas: India's Global Capability Centre Intelligence Platform
+# 🌐 GCC Atlas : India's Global Capability Centre Intelligence Platform
 
 > **A research-grade, single source of truth for India's Global Capability Centre (GCC) ecosystem.**
 
@@ -31,6 +31,18 @@ GCC Atlas bundles research intelligence, geospatial analysis, decision scoring, 
 
 * **📊 Methodology & Data Transparency**  
   Complete documentation detailing data collection methods, taxonomy rules, confidence badge definitions (`verified`, `reported`, `estimated`), and catalogued dataset gaps.
+
+---
+
+## 🧠 AI & Grounding Engine
+
+The platform integrates AI strictly as an analytical interface over sourced facts:
+
+* **Active Model**: Powered by **`qwen/qwen3.8-27b`** via Groq's high-throughput LPU inference platform, delivering low time-to-first-token and clean conversational reasoning.
+* **Strict Grounding Rules**: The system prompt enforces strict constraints — the model may only answer using facts provided in the dynamically retrieved context payload. If the dataset does not contain an answer, it explicitly replies: *"I don't have data on that in the current dataset."*
+* **Entity Type Distinction**: The prompt instructs the model that only `captive_gcc` records count as captive centres, preventing confusion with third-party service delivery centres.
+* **Source Attribution**: Chat responses return dynamic `X-Sources` response headers, rendering interactive source chips for every cited fact.
+* **Server-Side Diagnostics & Graceful Degradation**: Server routes log exact HTTP status codes and Groq response error messages to the console on failure (never logging keys or request headers). If `GROQ_API_KEY` is not configured or Groq experiences rate limits, the system automatically falls back to rule-based computed figures from the dataset.
 
 ---
 
@@ -90,18 +102,6 @@ flowchart TD
 2. **Deterministic Processing**: City rankings and search queries run through mathematical scoring functions (`lib/scoring.ts`) and keyword retrieval (`lib/retrieval.ts`) without unconstrained vector hallucinations.
 3. **Server-Side AI Gateway**: API routes (`/api/chat`, `/api/advisor/explain`) invoke the Groq wrapper (`lib/llm.ts`) strictly on the server. Environment variables and keys are never sent to or visible in the client bundle.
 4. **Resilient Streaming**: Responses stream over Server-Sent Events (SSE) with built-in retry logic, automatic fallback handling, and server console logging with exact HTTP status codes and Groq response error messages.
-
----
-
-## 🧠 AI Intelligence & Grounding Engine
-
-The platform integrates AI strictly as an analytical interface over sourced facts:
-
-* **Active Model**: Powered by **`qwen/qwen3.8-27b`** via Groq's high-throughput LPU inference platform, delivering low time-to-first-token and clean conversational reasoning.
-* **Strict Grounding Rules**: The system prompt enforces strict constraints — the model may only answer using facts provided in the dynamically retrieved context payload. If the dataset does not contain an answer, it explicitly replies: *"I don't have data on that in the current dataset."*
-* **Entity Type Distinction**: The prompt instructs the model that only `captive_gcc` records count as captive centres, preventing confusion with third-party service delivery centres.
-* **Source Attribution**: Chat responses return dynamic `X-Sources` response headers, rendering interactive source chips for every cited fact.
-* **Graceful Degradation**: If `GROQ_API_KEY` is not configured or Groq experiences rate limits, the system automatically falls back to rule-based computed figures from the dataset.
 
 ---
 
